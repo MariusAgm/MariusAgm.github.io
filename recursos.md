@@ -20,6 +20,9 @@ Estoy concentrando recursos para profesores que les permitan dar clases en líne
 
 * **Canal de YouTube**: [Market Power](https://www.youtube.com/channel/UC9a_V7YbGGmWphAzk8_4LFQ). Un canal de Economía muy divertido.
 
+* **YouTube**: [Crash Course: Economics](https://www.youtube.com/playlist?list=PL8dPuuaLjXtPNZwz5_o_5uirJ8gQXnhEO) Es una serie dentro del canal Crash Course, de los hermanos Greene. Vienen temas importante de cursos básicos de economía.
+
+
 #### Sitios web
 
 * **Instagram**: Mi cuenta de instagram, [marionomics](https://www.instagram.com/marionomics/)
@@ -27,3 +30,5 @@ Estoy concentrando recursos para profesores que les permitan dar clases en líne
 * **Juego**: [Chair The FED](https://www.sffed-education.org/chairthefed/) Es una simulación de decisiones de política monetaria.
 
 * **Juegos**: [Economics Games](https://www.sffed-education.org/chairthefed/) Juegos online gratuitos para enseñar economía.
+
+* **Videos**: [Khan Academy: Economía](https://es.khanacademy.org/economics-finance-domain) Contiene videos con cursos de Microeconomía, Mercados financieros y de capitales, espíritu emprendedor y macroeconomía.
