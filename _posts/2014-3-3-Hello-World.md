@@ -3,9 +3,7 @@ layout: post
 title: Bienvenido
 ---
 
-Bienvenido.
-
-Mi nombre es Mario García. Soy profesor - investigador en la FECA-UJED en la Universidad Juárez del Estado de Durango. En esta página puedes encontrar novedades de mi trabajo de investigación, blog y otros temas. Espero que te sea de utilidad.
+Bienvenido. Mi nombre es Mario García. Soy profesor - investigador en la FECA-UJED en la Universidad Juárez del Estado de Durango. En esta página puedes encontrar novedades de mi trabajo de investigación, blog y otros temas. Espero que te sea de utilidad.
 
 Echa un ojo a mis cuentas en [Instagram](https://www.instagram.com/marionomics/) y [Twitter](https://twitter.com/marionomics_) para información relevante.
 
