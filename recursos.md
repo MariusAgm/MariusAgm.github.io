@@ -1,3 +1,9 @@
+---
+layout: page
+title: Recursos
+permalink: /recursos/
+---
+
 ### Recursos
 
 En esta página encontrarás recursos para las clases, recursos en línea, tutoriales y más.
