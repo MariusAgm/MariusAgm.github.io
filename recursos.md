@@ -1,0 +1,29 @@
+---
+layout: page
+title: Recursos
+permalink: /recursos/
+---
+
+### Recursos para profesores
+
+Estoy concentrando recursos para profesores que les permitan dar clases en línea.
+
+#### Texto
+
+* **Libro**: [The Economy](https://www.core-econ.org/the-economy/) por The CORE Team. Es un libro online gratuito con todo lo relevante de la economía moderna. La versión en español está completa hasta el capítulo 16 hasta el momento, pero la versión en inglés está completa. También existen ya versiones en francés e italiano disponibles.
+
+* **Libro**: [Doing Economics](https://www.core-econ.org/doing-economics/index.html) por The CORE Team. Es un libro online gratuito con aplicaciones prácticas para economistas. Los ejercicios vienen con tutoriales en texto y en video que se pueden seguir en Excel, R o Google Sheets. El libro está en inglés.
+
+#### Video 
+
+* **Canal de YouTube**: [3blue1brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw). Es un canal sobre matemáticas en formato visual. Recomiendo ampliamente para todos los economistas que sigan la lista de reproducción sobre la esencia del cálculo y de álgebra lineal. También podría ser de interés a quienes están en áreas de desarrollo económico y finanzas la serie de ecuaciones diferenciales.
+
+* **Canal de YouTube**: [Market Power](https://www.youtube.com/channel/UC9a_V7YbGGmWphAzk8_4LFQ). Un canal de Economía muy divertido.
+
+#### Sitios web
+
+* **Instagram**: Mi cuenta de instagram, [marionomics](https://www.instagram.com/marionomics/)
+
+* **Juego**: [Chair The FED](https://www.sffed-education.org/chairthefed/) Es una simulación de decisiones de política monetaria.
+
+* **Juegos**: [Economics Games](https://www.sffed-education.org/chairthefed/) Juegos online gratuitos para enseñar economía.

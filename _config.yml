@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: Mario Alberto García MEza
+name: Mario Alberto García Meza
 
 # Short bio or description (displayed in the header)
 description: Professor of Economics
@@ -18,7 +18,7 @@ avatar: https://i1.rgstatic.net/ii/profile.image/389261783257089-1469818649986_Q
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email:mario.agm@ujed.mx
   facebook:
   flickr:
   github: MariusAgm
@@ -28,7 +28,7 @@ footer-links:
   rss: # just type anything here for a working RSS icon
   twitter: marionomics_
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
+  youtube:  channel/UCk40tRIuaTLnNWqHgrNx3kQ
   googleplus: # anything in your profile username that comes after plus.google.com/
 
 
