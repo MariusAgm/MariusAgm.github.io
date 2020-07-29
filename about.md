@@ -4,12 +4,16 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Mario A. García Meza
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I am professor of economics at Universidad Juárez del Estado de Durango, in Durango, México.
+
+I study quantitative methods for economic analysis. This includes mostly causal analysis for empirical studies about business development and game-theoretical models for Industrial Organization.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[mario.agm@ujed.mx](mailto:mario.agm@ujed.mx)
+
+Twitter: [@marionomics_](https://twitter.com/marionomics_)
