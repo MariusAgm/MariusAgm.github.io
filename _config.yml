@@ -10,6 +10,7 @@ description: Professor of Economics
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://i1.rgstatic.net/ii/profile.image/389261783257089-1469818649986_Q512/Mario_Garcia_Meza.jpg
+round-avatar: true
 
 #
 # Flags below are optional
@@ -25,11 +26,12 @@ footer-links:
   instagram: marionomics
   linkedin: marius7
   pinterest:
-  rss: hola # just type anything here for a working RSS icon
+  rss: # just type anything here for a working RSS icon
   twitter: marionomics_
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube:  channel/UCk40tRIuaTLnNWqHgrNx3kQ
   googleplus: # anything in your profile username that comes after plus.google.com/
+  substack: https://marionomics.substack.com/p/coming-soon?r=bi5y8&utm_campaign=post&utm_medium=web&utm_source=copy
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
@@ -42,6 +44,8 @@ google_analytics:
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
 url: http://marionomics.com
+
+url-pretty: "marionomics.com"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
