@@ -27,16 +27,3 @@ Por si fuera poco, existen efectos psicológicos a tomar en consideración. ¿Al
 Hubo un estudio en el que analizaron los incidentes en miles de vuelos. Encontraron que en aquellos vuelos en que la clase turista tiene que pasar por esta experiencia tiene mayor probabilidad de enojarse y causar algún problema dentro del avión en pleno vuelo.
 
 No se ustedes, pero yo pienso que si es posible hacer algo para disminuir esta clase de sufrimiento, vale la pena explorarlo?
-
-#### Addendum
-
-Este es mi primer post ya con mi blog en marionomics.com. Estoy experimentando un poco y quiero ver cómo responde. Este texto es en Markdown, así que me interesa saber cómo ejecuta el código y las ecuaciones. Puedes ignorar esto.
-
-\begin{equation}
-	e^{i\pi}+1 = 0
-\end{equation}
-
-```
-print("hola mundo")
-```
-Listo. Puedes seguir con tu vida.

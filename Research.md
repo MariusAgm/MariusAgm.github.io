@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Research
-permalink: /Research/
-group: navigation
+permalink: /research/
 ---
 
 
