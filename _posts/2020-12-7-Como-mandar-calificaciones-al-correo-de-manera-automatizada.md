@@ -53,3 +53,5 @@ Cambia el ID de la hoja de cálculo de Google. Esa la puedes identificar en el n
 Cambia también la fila de inicio `startRow` y el número de filas `numRows`. En mi caso requiero de 38 filas porque son el número de alumnos que tengo en ese grupo y estoy saltando la fila de los nombres de variable.
 
 Sólo queda modificar el ciclo `for`, especificando la fila en la que se encuentra cada cosa. Es importante recordar que los lenguajes de programación comienzan sus iteraciones en 0, por lo que si deseas extraer la columna 3, necesitas poner `row[2]`; lo mismo aplica para el mensaje, tienes que ubicar la fila en la que se encuentra. En mi caso está en la columna 29, por lo que `row[28]` logró extraerlo. Escribe en `var subject` el título del correo.
+
+Aprieta el botón **Run** y verifica en tu correo que se mandó. Recuerda que el script se debe correr con la misma cuenta de Google con la del archivo en Drive. También recuerda que Google te permite mandar hasta 100 correos diariamente y 1000 si tienes una cuenta en GSuite.

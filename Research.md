@@ -4,18 +4,17 @@ title: Research
 permalink: /research/
 ---
 
+## Spanish
 
-In construction
+Mario Alberto García Meza
 
-### Game Theory
+Profesor de Tiempo Completo en la Universidad Juárez del Estado de Durango
+Miembro del Sistema Nacional de Investigadores Nivel I desde 2021
 
-Lorem ipsum
+### Publicaciones
 
-### SMEs and Technology
-
-Lorem ipsum
-
-### Contact me
+* **Complementarity of goods and cooperation among firms in a dynamic duopoly**
+Garcia-Meza M.A., Gurrola-Rios C. (2020) Complementarity of Goods and Cooperation Among Firms in a Dynamic Duopoly. In: Petrosyan L.A., Mazalov V.V., Zenkevich N.A. (eds) _Frontiers of Dynamic Games. Static & Dynamic Game Theory: Foundations & Applications._ Birkhäuser, Cham. https://doi.org/10.1007/978-3-030-51941-4_11
 
 [mario.agm@ujed.mx](mailto:mario.agm@ujed.mx)
 
