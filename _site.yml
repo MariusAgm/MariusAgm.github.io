@@ -2,7 +2,7 @@ name: "Marionomics"
 title: "Marionomics"
 description: |
   Blog de Mario Alberto García Meza
-base_url: http://marionomics.com
+url: http://marionomics.com
 output_dir: "."
 navbar:
   right:
@@ -17,3 +17,8 @@ collections:
   posts:
     disqus: marionomics
     share: [twitter]
+footer-links:
+  instagram: marionomics
+  linkedin: marius7
+  twitter: marionomics_
+  youtube: channel/UCk40tRIuaTLnNWqHgrNx3kQ
