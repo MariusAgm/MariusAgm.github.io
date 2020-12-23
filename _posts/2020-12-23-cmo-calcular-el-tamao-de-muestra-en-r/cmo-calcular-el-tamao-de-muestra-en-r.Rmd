@@ -41,7 +41,7 @@ Finalmente, tenemos que definir el poder de nuestra prueba, que definimos con $1
 El cálculo del tamaño total de la muestra es
 
 \begin{equation}
-  n = \frac{4(Z_\alpha + Z_\beta)^2\sigma^2}{\delta^2}
+  n = \frac{4(Z_\alpha + Z_\beta)^2\sigma^2}{\Delta^2}
 \end{equation}
 
 sólo cambiando $Z_{\alpha}$ por $Z_{\alpha/2}$ si la prueba es de dos lados.
@@ -49,7 +49,7 @@ sólo cambiando $Z_{\alpha}$ por $Z_{\alpha/2}$ si la prueba es de dos lados.
 Por ejemplo, imaginemos que el tamaño de la diferencia que queremos estimar es de 20 unidades, con un poder de 90% en una prueba de dos lados con un nivel de significancia de 0.05. Investigaciones previas nos indican que la desviación estándar $\sigma$ es de alrededor de 60 unidades. Entonces
 
 \begin{equation}
-  n = \frac{4(1.96 + 1.28)^2\sigma^2}{\10^2} \approx 378
+  n = \frac{4(1.96 + 1.28)^2\sigma^2}{20^2} \approx 378
 \end{equation}
 
 o aproximadamente 189 para cada uno de los dos grupos de tratamiento.
@@ -60,7 +60,7 @@ La función `pwr.t.test()` de la librería  `pwr` en R está diseñada para real
 
 Esta función nos sirve para calcular el valor de nuestro estadístico $t$ en función del tamaño de la muestra, pero si, en lugar de eso dejamos el parámetro $n$ sin aplicar en la función, esta nos va a regresar nuestro tamaño de muestra. Veamos cómo se vería el ejemplo que hicimos anteriormente
 
-```{r sample-size}
+```{r sample-size, echo=TRUE}
 delta <- 20
 sigma <- 60
 d <- delta/sigma
