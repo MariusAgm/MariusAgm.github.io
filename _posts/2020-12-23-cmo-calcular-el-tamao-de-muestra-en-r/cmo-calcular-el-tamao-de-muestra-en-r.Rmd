@@ -1,9 +1,9 @@
 ---
 title: "Como calcular el tamaño de muestra en R"
 description: |
-  A short description of the post.
+  Descripción y código
 author:
-  - name: Mario Alberto García Meza
+  - name: Mario Alberto García-Meza
     url: https://example.com/norajones
 date: 12-23-2020
 output:
@@ -25,3 +25,49 @@ Para calcular el tamaño de muestra, es necesario conocer cuatro cosas
 2. La varianza de la respuesta
 3. Los niveles de significancia deseados
 4. el poder deseado
+
+Al tamaño de la respuesta se le puede llamar **delta** y se refiere a la diferencia entre los grupos de tratamiento y de control en un experimento. Definamos $\Delta = \mu_1-\mu_2$, donde $\mu_1$ representa a el grupo de tratamiento y $\mu_2$ es el grupo de control. Entonces entre más pequeña la diferencia que se está buscando detectar, más grande tiene que ser el tamaño de la muestra para poderlo encontrar.
+
+El segundo punto es la varianza. Es el _ruido_ que tiene nuestra información. Entre más grande sea el ruido, más grande tiene que ser el tamaño de la muestra para poder identificar las diferencias que se capturan en $\Delta$.
+
+Definamos la varianza como $\sigma^2$, que nos ayuda a identificar el mencionado ruido. Entonces el **tamaño del efecto** combina la diferencia con la varianza y lo podemos definir con $\Delta/\sigma^2$.
+
+Definamos como $\alpha$ la probabilidad de tener un [error de tipo 1](https://es.wikipedia.org/wiki/Errores_de_tipo_I_y_de_tipo_II), es decir, que rechacemos nuestra hipótesis nula de manera falsa, o tengamos un falso positivo. El valor de $\alpha$ se fija regularmente en 0.05, para alcanzar una significancia de 95%.
+
+Finalmente, tenemos que definir el poder de nuestra prueba, que definimos con $1-\beta$ donde $\beta$ representa la probabilidad de no rechazar la hipótesis nula cuando la hipótesis alternativa es verdadera ([error tipo 2](https://es.wikipedia.org/wiki/Errores_de_tipo_I_y_de_tipo_II)). Si, por ejemplo, tienes un 20% de **no detectar** una diferencia que es real, entonces el poder de tu prueba es de 0.8.
+
+### Cálculo del tamaño de la muestra
+
+El cálculo del tamaño total de la muestra es
+
+\begin{equation}
+  n = \frac{4(Z_\alpha + Z_\beta)^2\sigma^2}{\delta^2}
+\end{equation}
+
+sólo cambiando $Z_{\alpha}$ por $Z_{\alpha/2}$ si la prueba es de dos lados.
+
+Por ejemplo, imaginemos que el tamaño de la diferencia que queremos estimar es de 20 unidades, con un poder de 90% en una prueba de dos lados con un nivel de significancia de 0.05. Investigaciones previas nos indican que la desviación estándar $\sigma$ es de alrededor de 60 unidades. Entonces
+
+\begin{equation}
+  n = \frac{4(1.96 + 1.28)^2\sigma^2}{\10^2} \approx 378
+\end{equation}
+
+o aproximadamente 189 para cada uno de los dos grupos de tratamiento.
+
+### Cálculo en R
+
+La función `pwr.t.test()` de la librería  `pwr` en R está diseñada para realizar el cálculo del tamaño de muestra que nosotros buscamos.
+
+Esta función nos sirve para calcular el valor de nuestro estadístico $t$ en función del tamaño de la muestra, pero si, en lugar de eso dejamos el parámetro $n$ sin aplicar en la función, esta nos va a regresar nuestro tamaño de muestra. Veamos cómo se vería el ejemplo que hicimos anteriormente
+
+```{r sample-size}
+delta <- 20
+sigma <- 60
+d <- delta/sigma
+
+pwr::pwr.t.test(d = d,
+                sig.level = 0.5,
+                power = .90,
+                type = 'two.sample')
+
+```

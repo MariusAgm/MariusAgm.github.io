@@ -87,30 +87,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>Como calcular el tamaño de muestra en R</title>
 
-  <meta property="description" itemprop="description" content="A short description of the post."/>
+  <meta property="description" itemprop="description" content="Descripción y código"/>
 
 
   <!--  https://schema.org/Article -->
   <meta property="article:published" itemprop="datePublished" content="2020-12-23"/>
   <meta property="article:created" itemprop="dateCreated" content="2020-12-23"/>
-  <meta name="article:author" content="Mario Alberto García Meza"/>
+  <meta name="article:author" content="Mario Alberto García-Meza"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Como calcular el tamaño de muestra en R"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="A short description of the post."/>
+  <meta property="og:description" content="Descripción y código"/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Como calcular el tamaño de muestra en R"/>
-  <meta property="twitter:description" content="A short description of the post."/>
+  <meta property="twitter:description" content="Descripción y código"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Como calcular el tamaño de muestra en R"]},{"type":"character","attributes":{},"value":["A short description of the post.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Mario Alberto García Meza"]},{"type":"character","attributes":{},"value":["https://example.com/norajones"]}]}]},{"type":"character","attributes":{},"value":["12-23-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Como calcular el tamaño de muestra en R"]},{"type":"character","attributes":{},"value":["Descripción y código\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Mario Alberto García-Meza"]},{"type":"character","attributes":{},"value":["https://example.com/norajones"]}]}]},{"type":"character","attributes":{},"value":["12-23-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1420,7 +1420,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Como calcular el tamaño de muestra en R","description":"A short description of the post.","authors":[{"author":"Mario Alberto García Meza","authorURL":"https://example.com/norajones","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-12-23T00:00:00.000+00:00","citationText":"Meza, 2020"}
+{"title":"Como calcular el tamaño de muestra en R","description":"Descripción y código","authors":[{"author":"Mario Alberto García-Meza","authorURL":"https://example.com/norajones","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-12-23T00:00:00.000+00:00","citationText":"García-Meza, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1433,11 +1433,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Como calcular el tamaño de muestra en R</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>A short description of the post.</p></p>
+<p><p>Descripción y código</p></p>
 </div>
 
 <div class="d-byline">
-  Mario Alberto García Meza <a href="https://example.com/norajones" class="uri">https://example.com/norajones</a> 
+  Mario Alberto García-Meza <a href="https://example.com/norajones" class="uri">https://example.com/norajones</a> 
   
 <br/>12-23-2020
 </div>
@@ -1452,7 +1452,38 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>Los niveles de significancia deseados</li>
 <li>el poder deseado</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Al tamaño de la respuesta se le puede llamar <strong>delta</strong> y se refiere a la diferencia entre los grupos de tratamiento y de control en un experimento. Definamos <span class="math inline">\(\Delta = \mu_1-\mu_2\)</span>, donde <span class="math inline">\(\mu_1\)</span> representa a el grupo de tratamiento y <span class="math inline">\(\mu_2\)</span> es el grupo de control. Entonces entre más pequeña la diferencia que se está buscando detectar, más grande tiene que ser el tamaño de la muestra para poderlo encontrar.</p>
+<p>El segundo punto es la varianza. Es el <em>ruido</em> que tiene nuestra información. Entre más grande sea el ruido, más grande tiene que ser el tamaño de la muestra para poder identificar las diferencias que se capturan en <span class="math inline">\(\Delta\)</span>.</p>
+<p>Definamos la varianza como <span class="math inline">\(\sigma^2\)</span>, que nos ayuda a identificar el mencionado ruido. Entonces el <strong>tamaño del efecto</strong> combina la diferencia con la varianza y lo podemos definir con <span class="math inline">\(\Delta/\sigma^2\)</span>.</p>
+<p>Definamos como <span class="math inline">\(\alpha\)</span> la probabilidad de tener un <a href="https://es.wikipedia.org/wiki/Errores_de_tipo_I_y_de_tipo_II">error de tipo 1</a>, es decir, que rechacemos nuestra hipótesis nula de manera falsa, o tengamos un falso positivo. El valor de <span class="math inline">\(\alpha\)</span> se fija regularmente en 0.05, para alcanzar una significancia de 95%.</p>
+<p>Finalmente, tenemos que definir el poder de nuestra prueba, que definimos con <span class="math inline">\(1-\beta\)</span> donde <span class="math inline">\(\beta\)</span> representa la probabilidad de no rechazar la hipótesis nula cuando la hipótesis alternativa es verdadera (<a href="https://es.wikipedia.org/wiki/Errores_de_tipo_I_y_de_tipo_II">error tipo 2</a>). Si, por ejemplo, tienes un 20% de <strong>no detectar</strong> una diferencia que es real, entonces el poder de tu prueba es de 0.8.</p>
+<h3 id="cálculo-del-tamaño-de-la-muestra">Cálculo del tamaño de la muestra</h3>
+<p>El cálculo del tamaño total de la muestra es</p>
+<p><span class="math display">\[\begin{equation}
+  n = \frac{4(Z_\alpha + Z_\beta)^2\sigma^2}{\delta^2}
+\end{equation}\]</span></p>
+<p>sólo cambiando <span class="math inline">\(Z_{\alpha}\)</span> por <span class="math inline">\(Z_{\alpha/2}\)</span> si la prueba es de dos lados.</p>
+<p>Por ejemplo, imaginemos que el tamaño de la diferencia que queremos estimar es de 20 unidades, con un poder de 90% en una prueba de dos lados con un nivel de significancia de 0.05. Investigaciones previas nos indican que la desviación estándar <span class="math inline">\(\sigma\)</span> es de alrededor de 60 unidades. Entonces</p>
+<p><span class="math display">\[\begin{equation}
+  n = \frac{4(1.96 + 1.28)^2\sigma^2}{\10^2} \approx 378
+\end{equation}\]</span></p>
+<p>o aproximadamente 189 para cada uno de los dos grupos de tratamiento.</p>
+<h3 id="cálculo-en-r">Cálculo en R</h3>
+<p>La función <code>pwr.t.test()</code> de la librería <code>pwr</code> en R está diseñada para realizar el cálculo del tamaño de muestra que nosotros buscamos.</p>
+<p>Esta función nos sirve para calcular el valor de nuestro estadístico <span class="math inline">\(t\)</span> en función del tamaño de la muestra, pero si, en lugar de eso dejamos el parámetro <span class="math inline">\(n\)</span> sin aplicar en la función, esta nos va a regresar nuestro tamaño de muestra. Veamos cómo se vería el ejemplo que hicimos anteriormente</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+     Two-sample t test power calculation 
+
+              n = 67.18309
+              d = 0.3333333
+      sig.level = 0.5
+          power = 0.9
+    alternative = two.sided
+
+NOTE: n is number in *each* group</code></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1460,6 +1491,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
