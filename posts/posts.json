@@ -32,5 +32,22 @@
     "preview": {},
     "last_modified": "2020-12-23T14:23:08-06:00",
     "input_file": "cmo-calcular-el-tamao-de-muestra-en-r.utf8.md"
+  },
+  {
+    "path": "posts/2020-12-23-tamaos-de-muestra-para-una-encuesta/",
+    "title": "Tamaños de muestra para una encuesta",
+    "description": "Cómo obtener el tamaño de muestra.",
+    "author": [
+      {
+        "name": "Mario A. García-Meza",
+        "url": "https://marionomics.com/blog"
+      }
+    ],
+    "date": "2020-12-23",
+    "categories": [],
+    "contents": "\nEn un post anterior hablamos sobre cómo obtener el tamaño de muestra cuando hacemos un experimento. En economía también es importante conocer esto cuando hacemos RCTs o estudios expemimentales, pero en ocasiones queremos saber el tamaño de nuestra muestra en función del tamaño de la población.\nEste tipo de inferencia es importante, pues nos ayuda a conocer el tamaño que necesitamos al momento de diseñar una encuesta. Digamos que queremos conocer algo relacionado al municipio de Durango, Durango, México. De acuerdo al INEGI, en la encuesta intercensal 2015, Durango tiene 654,876 habitantes. Esto lo definimos como \\(N\\) y lo incluimos en nuestra fórmula\n\\[\\begin{equation}\nn = \\frac{\\frac{z^2 \\times p (1-p)}{e^2}}{1 + \\frac{z^2\\times p(1-p)}{e^2 N}}\n\\end{equation}\\]\ndonde \\(e\\) es el margen de error y \\(z\\) es el z-score, el número de desviaciones estándar que una proporción dada se desvía de la media. La siguiente tabla tiene una serie de puntajes z para elegir, según el nivel de confianza deseado.\nNivel de confianza deseado\nz-score\n80%\n1.28\n85%\n1.44\n90%\n1.65\n95%\n1.96\n99%\n2.58\nEl margen de error se estima como\n\\[\\begin{equation}\n  e = z \\times \\frac{\\sigma}{n},\n\\end{equation}\\]\nlo cual hace esta exposición un tanto circular porque aquí necesitaríamos del tamaño de la muestra. Un estándar es aceptar un margen de error de 5% si no se tiene más información.\nHagamos entonces una función que nos regrese el z-score al entregarle el intervalo de confianza\n\n\n\nSin embargo, la fórmula de arriba no es necesaria, pues R cuenta con la función qnorm() que nos ayuda a obtener nuestros niveles de z bajo el supuesto de normalidad. Hagamos una función en R que nos genere nuestro tamaño de muestra entonces bajo este supuesto. Pongamos el margen de error con valor de 0.5 por default y el intervalo de confianza con valor 0.05 también por default. Esto nos permitirá no tener que establecer tantos parámetros al llamar la función, si es que no tenemos que especificar estos valores.\n\n\n\nAhora vamos a llamar la función con nuestros niveles de confianza y la población que hemos establecido\n\n\n     Tama<U+00F1>o de muestra recomendado para una poblacion de  654876 a un 95% de nivel de confianza \n\n                          Population = 654876\n                  Nivel de confianza = 95\n                     Margen de error = 0.05\n Distribuci<U+00F3>n de la respuesta = 0.5\nTama<U+00F1>o de muestra recomendado = 384\n\nEl resultado es sorprendentemente pequeño. Sólamente se necesitan 384 encuestas. Sin embargo, esta respuesta tiene un problema: estamos asumiendo que toda la población de Durango es completamente homogénea y con distribución normal. Pero como nosotros sabemos, las poblaciones en las ciudades no tienen ese beneficio.\nPor eso tenemos que tener cuidado con nuestros supuestos. Esto lo veremos en próximos posts.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2020-12-23T16:55:08-06:00",
+    "input_file": "tamaos-de-muestra-para-una-encuesta.utf8.md"
   }
 ]

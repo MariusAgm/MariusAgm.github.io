@@ -1,0 +1,89 @@
+---
+title: "Tamaños de muestra para una encuesta"
+description: |
+  Cómo obtener el tamaño de muestra.
+author:
+  - name: Mario A. García-Meza
+    url: https://marionomics.com/blog
+date: 12-23-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+En un [post anterior](https://www.marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r/) hablamos sobre cómo obtener el tamaño de muestra cuando hacemos un experimento. En economía también es importante conocer esto cuando hacemos RCTs o estudios expemimentales, pero en ocasiones queremos saber el tamaño de nuestra muestra en función del tamaño de la población.
+
+Este tipo de inferencia es importante, pues nos ayuda a conocer el tamaño que necesitamos al momento de diseñar una encuesta. Digamos que queremos conocer algo relacionado al municipio de [Durango, Durango, México](https://es.wikipedia.org/wiki/Victoria_de_Durango). 
+De acuerdo al INEGI, en la encuesta intercensal 2015, [Durango tiene 654,876 habitantes](http://cuentame.inegi.org.mx/monografias/informacion/dur/territorio/div_municipal.aspx?tem..). Esto lo definimos como $N$ y lo incluimos en nuestra fórmula
+
+\begin{equation}
+n = \frac{\frac{z^2 \times p (1-p)}{e^2}}{1 + \frac{z^2\times p(1-p)}{e^2 N}}
+\end{equation}
+
+donde $e$ es el margen de error y $z$ es el _z-score_, el número de desviaciones estándar que una proporción dada se desvía de la media. La siguiente tabla tiene una serie de puntajes _z_ para elegir, según el nivel de confianza deseado.
+
+|  Nivel de confianza deseado | z-score  |
+|---|---|
+| 80%  |  1.28 |
+| 85%  |  1.44 |
+| 90%  |  1.65 |
+| 95%  |  1.96 |
+| 99%  |  2.58 |
+
+El margen de error se estima como
+
+\begin{equation}
+  e = z \times \frac{\sigma}{n},
+\end{equation}
+
+lo cual hace esta exposición un tanto circular porque aquí necesitaríamos del tamaño de la muestra. Un estándar es aceptar un margen de error de 5% si no se tiene más información.
+
+Hagamos entonces una función que nos regrese el _z-score_ al entregarle el intervalo de confianza
+
+```{r z-score, include=TRUE, eval=FALSE}
+z_score <- function(intervalo_de_confianza){
+  if (intervalo_de_confianza == .8){return(1.28)}
+  else if(intervalo_de_confianza == .85){return(1.44)}
+  else if(intervalo_de_confianza == .90){return(1.65)}
+  else if(intervalo_de_confianza == .95){return(1.96)}
+  else if(intervalo_de_confianza == .99){return(2.58)}
+  else return(NA)
+}
+```
+
+Sin embargo, la fórmula de arriba no es necesaria, pues R cuenta con la función `qnorm()` que nos ayuda a obtener nuestros niveles de _z_ bajo el supuesto de normalidad. Hagamos una función en R que nos genere nuestro tamaño de muestra entonces bajo este supuesto. Pongamos el margen de error con valor de 0.5 por default y el intervalo de confianza con valor 0.05 también por default. Esto nos permitirá no tener que establecer tantos parámetros al llamar la función, si es que no tenemos que especificar estos valores.
+
+```{r sample-size-function, include=TRUE}
+sample.size = function(c.lev, margin=.5,
+                       c.interval=.05, population) {
+  z.val = qnorm(.5+c.lev/200)
+  ss = (z.val^2 * margin * (1-margin))/c.interval^2
+  p.ss = round((ss/(1 + ((ss-1)/population))), digits=0)
+  METHOD = paste("Tamaño de muestra recomendado para una poblacion de  ",
+                 population, " a un ", c.lev,
+                 "% de nivel de confianza", sep = "")
+  structure(list(Population = population,
+                 "Nivel de confianza" = c.lev,
+                 "Margen de error" = c.interval,
+                 "Distribución de la respuesta" = margin,
+                 "Tamaño de muestra recomendado" = p.ss,
+                 method = METHOD),
+            class = "power.htest")
+}
+```
+
+
+Ahora vamos a llamar la función con nuestros niveles de confianza y la población que hemos establecido
+
+```{r eval_sample_size, eval=TRUE, include=TRUE}
+sample.size(c.lev = 95, population = 654876)
+```
+
+El resultado es sorprendentemente pequeño. Sólamente se necesitan 384 encuestas. Sin embargo, esta respuesta tiene un problema: estamos asumiendo que toda la población de Durango es completamente homogénea y con distribución normal. Pero como nosotros sabemos, las poblaciones en las ciudades no tienen ese beneficio.
+
+Por eso tenemos que tener cuidado con nuestros supuestos. Esto lo veremos en próximos posts.
