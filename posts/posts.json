@@ -2,19 +2,19 @@
   {
     "path": "posts/welcome/",
     "title": "Welcome to Marionomics",
-    "description": "Welcome to our new blog, Marionomics. We hope you enjoy \nreading what we have to say!",
+    "description": "Bienvenidos a mi blog. Estoy haciendo cambios actualmente. ¿Cómo se ve?",
     "author": [
       {
-        "name": "Nora Jones",
-        "url": "https://example.com/norajones"
+        "name": "Mario",
+        "url": "https://marionomics.com/about"
       }
     ],
     "date": "2020-12-23",
     "categories": [],
     "contents": "\n\n\n\n",
     "preview": {},
-    "last_modified": "2020-12-23T12:55:54-06:00",
-    "input_file": {}
+    "last_modified": "2020-12-23T14:09:29-06:00",
+    "input_file": "welcome.utf8.md"
   },
   {
     "path": "posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r/",
