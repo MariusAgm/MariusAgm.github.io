@@ -4,6 +4,7 @@ description: |
   Blog de Mario Alberto García Meza
 url: http://marionomics.com
 output_dir: "."
+base_url: http://marionomics.com
 navbar:
   right:
     - text: "Home"

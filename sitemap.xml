@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>http://marionomics.com/Research.html</loc>
-    <lastmod>2020-12-23T12:10:35-06:00</lastmod>
+    <lastmod>2020-12-23T12:55:54-06:00</lastmod>
   </url>
   <url>
     <loc>http://marionomics.com/about.html</loc>
-    <lastmod>2020-12-23T12:10:03-06:00</lastmod>
+    <lastmod>2020-12-23T12:55:54-06:00</lastmod>
   </url>
   <url>
     <loc>http://marionomics.com/</loc>
-    <lastmod>2020-12-23T12:17:23-06:00</lastmod>
+    <lastmod>2020-12-23T12:55:54-06:00</lastmod>
   </url>
   <url>
     <loc>http://marionomics.com/posts/welcome/</loc>
-    <lastmod>2020-12-23T12:10:03-06:00</lastmod>
+    <lastmod>2020-12-23T12:55:54-06:00</lastmod>
+  </url>
+  <url>
+    <loc>http://marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r/</loc>
+    <lastmod>2020-12-23T13:17:23-06:00</lastmod>
   </url>
 </urlset>
