@@ -2,7 +2,7 @@ name: "Marionomics"
 title: "Marionomics"
 description: |
   Mario Alberto García Meza
-output_dir: "_site"
+output_dir: "."
 navbar:
   right:
     - text: "Home"

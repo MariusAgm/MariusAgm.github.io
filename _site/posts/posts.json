@@ -13,7 +13,24 @@
     "categories": [],
     "contents": "\n\n\n\n",
     "preview": {},
-    "last_modified": "2020-12-23T11:42:12-06:00",
+    "last_modified": "2020-12-23T12:10:03-06:00",
     "input_file": {}
+  },
+  {
+    "path": "posts/2020-12-23-como-calcular-el-tamao-de-muestra-en-r/",
+    "title": "Como Calcular el tamaño de muestra en R",
+    "description": "Un tutorial corto",
+    "author": [
+      {
+        "name": "Mario Alberto García Meza",
+        "url": "https://marionomics.com/muestra"
+      }
+    ],
+    "date": "2020-12-23",
+    "categories": [],
+    "contents": "\nLa base de la estadística inferencial es, como su nombre lo indica, obtener inferencias de una población a partir de una muestra. Normalmente es una cuestión de administración de recursos escasos lo que nos obliga a hacerlo de esta manera, por lo que una pregunta razonable en un experimento o en un estudio es ¿De qué tamaño es la muestra que se necesita?.\nUna muestra más grande genera resultados más precisos, pero esto naturalmente incrementa los costos de operación, que vienen por el tiempo, el trabajo y el dinero que se debe invertir a la recolección de la información. Por el otro lado, si un tamaño de muestra es demasiado pequeña, los resultados pierden confiabilidad.\nPara calcular el tamaño de muestra, es necesario conocer cuatro cosas\nEl tamaño de la respuesta que quieres detectar\nLa varianza de la respuesta\nLos niveles de significancia deseados\nel poder deseado\n\n\n\n",
+    "preview": {},
+    "last_modified": "2020-12-23T12:23:02-06:00",
+    "input_file": "como-calcular-el-tamao-de-muestra-en-r.utf8.md"
   }
 ]
