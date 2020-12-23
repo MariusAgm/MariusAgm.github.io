@@ -125,7 +125,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"NULL"}
+  {"type":"character","attributes":{},"value":["tamaos-de-muestra-para-una-encuesta_files/anchor-4.2.2/anchor.min.js","tamaos-de-muestra-para-una-encuesta_files/bowser-1.9.3/bowser.min.js","tamaos-de-muestra-para-una-encuesta_files/distill-2.2.21/template.v2.js","tamaos-de-muestra-para-una-encuesta_files/header-attrs-2.6/header-attrs.js","tamaos-de-muestra-para-una-encuesta_files/jquery-1.11.3/jquery.min.js","tamaos-de-muestra-para-una-encuesta_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2102,11 +2102,36 @@ n = \frac{\frac{z^2 \times p (1-p)}{e^2}}{1 + \frac{z^2\times p(1-p)}{e^2 N}}
 <p>lo cual hace esta exposición un tanto circular porque aquí necesitaríamos del tamaño de la muestra. Un estándar es aceptar un margen de error de 5% si no se tiene más información.</p>
 <p>Hagamos entonces una función que nos regrese el <em>z-score</em> al entregarle el intervalo de confianza</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre><code><span class='va'>z_score</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>intervalo_de_confianza</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='kw'>if</span> <span class='op'>(</span><span class='va'>intervalo_de_confianza</span> <span class='op'>==</span> <span class='fl'>.8</span><span class='op'>)</span><span class='op'>{</span><span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='fl'>1.28</span><span class='op'>)</span><span class='op'>}</span>
+  <span class='kw'>else</span> <span class='kw'>if</span><span class='op'>(</span><span class='va'>intervalo_de_confianza</span> <span class='op'>==</span> <span class='fl'>.85</span><span class='op'>)</span><span class='op'>{</span><span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='fl'>1.44</span><span class='op'>)</span><span class='op'>}</span>
+  <span class='kw'>else</span> <span class='kw'>if</span><span class='op'>(</span><span class='va'>intervalo_de_confianza</span> <span class='op'>==</span> <span class='fl'>.90</span><span class='op'>)</span><span class='op'>{</span><span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='fl'>1.65</span><span class='op'>)</span><span class='op'>}</span>
+  <span class='kw'>else</span> <span class='kw'>if</span><span class='op'>(</span><span class='va'>intervalo_de_confianza</span> <span class='op'>==</span> <span class='fl'>.95</span><span class='op'>)</span><span class='op'>{</span><span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='fl'>1.96</span><span class='op'>)</span><span class='op'>}</span>
+  <span class='kw'>else</span> <span class='kw'>if</span><span class='op'>(</span><span class='va'>intervalo_de_confianza</span> <span class='op'>==</span> <span class='fl'>.99</span><span class='op'>)</span><span class='op'>{</span><span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='fl'>2.58</span><span class='op'>)</span><span class='op'>}</span>
+  <span class='kw'>else</span> <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='cn'>NA</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
 </div>
 <p>Sin embargo, la fórmula de arriba no es necesaria, pues R cuenta con la función <code>qnorm()</code> que nos ayuda a obtener nuestros niveles de <em>z</em> bajo el supuesto de normalidad. Hagamos una función en R que nos genere nuestro tamaño de muestra entonces bajo este supuesto. Pongamos el margen de error con valor de 0.5 por default y el intervalo de confianza con valor 0.05 también por default. Esto nos permitirá no tener que establecer tantos parámetros al llamar la función, si es que no tenemos que especificar estos valores.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre><code><span class='va'>sample.size</span> <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>c.lev</span>, <span class='va'>margin</span><span class='op'>=</span><span class='fl'>.5</span>,
+                       <span class='va'>c.interval</span><span class='op'>=</span><span class='fl'>.05</span>, <span class='va'>population</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='va'>z.val</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>qnorm</a></span><span class='op'>(</span><span class='fl'>.5</span><span class='op'>+</span><span class='va'>c.lev</span><span class='op'>/</span><span class='fl'>200</span><span class='op'>)</span>
+  <span class='va'>ss</span> <span class='op'>=</span> <span class='op'>(</span><span class='va'>z.val</span><span class='op'>^</span><span class='fl'>2</span> <span class='op'>*</span> <span class='va'>margin</span> <span class='op'>*</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>-</span><span class='va'>margin</span><span class='op'>)</span><span class='op'>)</span><span class='op'>/</span><span class='va'>c.interval</span><span class='op'>^</span><span class='fl'>2</span>
+  <span class='va'>p.ss</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>ss</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='op'>(</span><span class='op'>(</span><span class='va'>ss</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>/</span><span class='va'>population</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>, digits<span class='op'>=</span><span class='fl'>0</span><span class='op'>)</span>
+  <span class='va'>METHOD</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Tama&lt;U+00F1&gt;o de muestra recomendado para una poblacion de  "</span>NA<span class='va'>population</span>, <span class='st'>" a un "</span>, <span class='va'>c.lev</span>,
+                 <span class='st'>"% de nivel de confianza"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/structure.html'>structure</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>Population <span class='op'>=</span> <span class='va'>population</span>,
+                 <span class='st'>"Nivel de confianza"</span> <span class='op'>=</span> <span class='va'>c.lev</span>,
+                 <span class='st'>"Margen de error"</span> <span class='op'>=</span> <span class='va'>c.interval</span>,
+                 <span class='st'>"Distribuci&lt;U+00F3&gt;n de la respuesta"</span>i<span class='op'>=</span>,<span class='va'>margin</span>NA<span class='st'>"Tama&lt;U+00F1&gt;o de muestra recomendado"</span>,<span class='op'>=</span>NA<span class='va'>p.ss</span>NA<span class='op'>=</span> <span class='va'>METHOD</span><span class='op'>)</span>,
+            class <span class='op'>=</span> <span class='st'>"power.htest"</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
 </div>
 <p>Ahora vamos a llamar la función con nuestros niveles de confianza y la población que hemos establecido</p>
 <div class="layout-chunk" data-layout="l-body">

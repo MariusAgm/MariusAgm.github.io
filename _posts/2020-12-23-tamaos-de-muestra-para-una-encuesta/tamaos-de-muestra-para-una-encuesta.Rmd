@@ -45,7 +45,7 @@ lo cual hace esta exposición un tanto circular porque aquí necesitaríamos del
 
 Hagamos entonces una función que nos regrese el _z-score_ al entregarle el intervalo de confianza
 
-```{r z-score, include=TRUE, eval=FALSE}
+```{r z-score, include=TRUE, eval=FALSE, echo=TRUE}
 z_score <- function(intervalo_de_confianza){
   if (intervalo_de_confianza == .8){return(1.28)}
   else if(intervalo_de_confianza == .85){return(1.44)}
@@ -58,7 +58,7 @@ z_score <- function(intervalo_de_confianza){
 
 Sin embargo, la fórmula de arriba no es necesaria, pues R cuenta con la función `qnorm()` que nos ayuda a obtener nuestros niveles de _z_ bajo el supuesto de normalidad. Hagamos una función en R que nos genere nuestro tamaño de muestra entonces bajo este supuesto. Pongamos el margen de error con valor de 0.5 por default y el intervalo de confianza con valor 0.05 también por default. Esto nos permitirá no tener que establecer tantos parámetros al llamar la función, si es que no tenemos que especificar estos valores.
 
-```{r sample-size-function, include=TRUE}
+```{r sample-size-function, include=TRUE, echo=TRUE}
 sample.size = function(c.lev, margin=.5,
                        c.interval=.05, population) {
   z.val = qnorm(.5+c.lev/200)
