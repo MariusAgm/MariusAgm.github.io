@@ -1460,18 +1460,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h3 id="cálculo-del-tamaño-de-la-muestra">Cálculo del tamaño de la muestra</h3>
 <p>El cálculo del tamaño total de la muestra es</p>
 <p><span class="math display">\[\begin{equation}
-  n = \frac{4(Z_\alpha + Z_\beta)^2\sigma^2}{\delta^2}
+  n = \frac{4(Z_\alpha + Z_\beta)^2\sigma^2}{\Delta^2}
 \end{equation}\]</span></p>
 <p>sólo cambiando <span class="math inline">\(Z_{\alpha}\)</span> por <span class="math inline">\(Z_{\alpha/2}\)</span> si la prueba es de dos lados.</p>
 <p>Por ejemplo, imaginemos que el tamaño de la diferencia que queremos estimar es de 20 unidades, con un poder de 90% en una prueba de dos lados con un nivel de significancia de 0.05. Investigaciones previas nos indican que la desviación estándar <span class="math inline">\(\sigma\)</span> es de alrededor de 60 unidades. Entonces</p>
 <p><span class="math display">\[\begin{equation}
-  n = \frac{4(1.96 + 1.28)^2\sigma^2}{\10^2} \approx 378
+  n = \frac{4(1.96 + 1.28)^2\sigma^2}{20^2} \approx 378
 \end{equation}\]</span></p>
 <p>o aproximadamente 189 para cada uno de los dos grupos de tratamiento.</p>
 <h3 id="cálculo-en-r">Cálculo en R</h3>
 <p>La función <code>pwr.t.test()</code> de la librería <code>pwr</code> en R está diseñada para realizar el cálculo del tamaño de muestra que nosotros buscamos.</p>
 <p>Esta función nos sirve para calcular el valor de nuestro estadístico <span class="math inline">\(t\)</span> en función del tamaño de la muestra, pero si, en lugar de eso dejamos el parámetro <span class="math inline">\(n\)</span> sin aplicar en la función, esta nos va a regresar nuestro tamaño de muestra. Veamos cómo se vería el ejemplo que hicimos anteriormente</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>delta</span> <span class='op'>&lt;-</span> <span class='fl'>20</span>
+<span class='va'>sigma</span> <span class='op'>&lt;-</span> <span class='fl'>60</span>
+<span class='va'>d</span> <span class='op'>&lt;-</span> <span class='va'>delta</span><span class='op'>/</span><span class='va'>sigma</span>
+
+<span class='fu'>pwr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/pwr/man/pwr.t.test.html'>pwr.t.test</a></span><span class='op'>(</span>d <span class='op'>=</span> <span class='va'>d</span>,
+                sig.level <span class='op'>=</span> <span class='fl'>0.5</span>,
+                power <span class='op'>=</span> <span class='fl'>.90</span>,
+                type <span class='op'>=</span> <span class='st'>'two.sample'</span><span class='op'>)</span>
+</code></pre>
+</div>
 <pre><code>
      Two-sample t test power calculation 
 

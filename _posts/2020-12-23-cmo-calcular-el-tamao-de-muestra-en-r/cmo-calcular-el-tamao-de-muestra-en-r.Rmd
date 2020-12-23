@@ -60,7 +60,7 @@ La función `pwr.t.test()` de la librería  `pwr` en R está diseñada para real
 
 Esta función nos sirve para calcular el valor de nuestro estadístico $t$ en función del tamaño de la muestra, pero si, en lugar de eso dejamos el parámetro $n$ sin aplicar en la función, esta nos va a regresar nuestro tamaño de muestra. Veamos cómo se vería el ejemplo que hicimos anteriormente
 
-```{r sample-size, echo=TRUE}
+```{r sample-size, echo=TRUE, include=TRUE}
 delta <- 20
 sigma <- 60
 d <- delta/sigma
