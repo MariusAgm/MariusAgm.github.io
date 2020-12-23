@@ -1,7 +1,8 @@
 name: "Marionomics"
 title: "Marionomics"
 description: |
-  Mario Alberto García Meza
+  Blog de Mario Alberto García Meza
+base_url: http://marionomics.com
 output_dir: "."
 navbar:
   right:
@@ -12,3 +13,7 @@ navbar:
     - text: "Research"
       href: research.html
 output: distill::distill_article
+collections:
+  posts:
+    disqus: marionomics
+    share: [twitter]
