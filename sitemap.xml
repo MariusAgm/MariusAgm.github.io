@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
-    <loc>http://marionomics.com/Research.html</loc>
-    <lastmod>2020-12-23T12:55:54-06:00</lastmod>
-  </url>
-  <url>
     <loc>http://marionomics.com/about.html</loc>
-    <lastmod>2020-12-23T12:55:54-06:00</lastmod>
+    <lastmod>2020-12-23T21:59:07-06:00</lastmod>
   </url>
   <url>
     <loc>http://marionomics.com/</loc>
-    <lastmod>2020-12-23T12:55:54-06:00</lastmod>
+    <lastmod>2020-12-23T21:59:07-06:00</lastmod>
+  </url>
+  <url>
+    <loc>http://marionomics.com/Research.html</loc>
+    <lastmod>2020-12-23T21:59:07-06:00</lastmod>
   </url>
   <url>
     <loc>http://marionomics.com/posts/welcome/</loc>
@@ -23,5 +23,9 @@
   <url>
     <loc>http://marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta/</loc>
     <lastmod>2020-12-23T16:57:40-06:00</lastmod>
+  </url>
+  <url>
+    <loc>http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/</loc>
+    <lastmod>2020-12-23T23:08:21-06:00</lastmod>
   </url>
 </urlset>

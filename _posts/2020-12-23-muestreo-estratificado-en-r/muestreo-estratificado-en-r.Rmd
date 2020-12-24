@@ -4,7 +4,7 @@ description: |
   Un tutorial de cómo hacer muestreo, cuando la población es más compleja.
 author:
   - name: Mario A. García-Meza
-    url: https://marionomics.com/about
+    url: https://marionomics.com/
 date: 12-23-2020
 output:
   distill::distill_article:

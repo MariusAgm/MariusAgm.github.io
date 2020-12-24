@@ -49,5 +49,24 @@
     "preview": {},
     "last_modified": "2020-12-23T16:57:40-06:00",
     "input_file": "tamaos-de-muestra-para-una-encuesta.utf8.md"
+  },
+  {
+    "path": "posts/2020-12-23-muestreo-estratificado-en-r/",
+    "title": "Muestreo estratificado en R",
+    "description": "Un tutorial de cómo hacer muestreo, cuando la población es más compleja.",
+    "author": [
+      {
+        "name": "Mario A. García-Meza",
+        "url": "https://marionomics.com/"
+      }
+    ],
+    "date": "2020-12-23",
+    "categories": [],
+    "contents": "\nHay que admitir que la mayoría de las ocasiones este es el caso: la población no es tan simple como para que un muestreo simple sea la solución. En este post hice un tutorial de cómo obtener los tamaños de muestra para una encuesta con una función hecha por nosotros mismos y aquí explico parte de la teoría y cómo obtener las muestras con la función pwr.t.test().\nPero en esta ocasión, vamos a llevar el análisis un paso más allá y preguntarnos que sucede si la población con la que nos encontramos tiene características heterogéneas. Y siendo sinceros, toda población que vale la pena estudiarse es al menos un poco heterogénea.\nRecordemos que nuestro objetivo es la inferencia estadística, es decir, obtener la misma información que obtendríamos de la población, pero usando un conjunto de datos más pequeño. Sin embargo, supongamos que existen tres tipos distintos de población en nuestra muestra. Estos representan el 50%, 40% y 10% de la población respectivamente. Si nosotros tomaramos una muestra uniforme, de los datos, existe la probabilidad de sobrerepresentar o subrepresentar algún estrato.\n\n\n\nNo solamente se trata de la proporción. Los estratos pueden variar en su desviación estándar. Esto hace que el muestreo estratificado proporcione una visión más clara de lo que está pasando al muestreo simple.\nVeamos cómo se realiza este muestreo. Consideremos este ejemplo, donde se encuentra la siguiente distribución de trabajadores en una compañía\nTipo de personal\nNúmero\nHombre, tiempo completo\n9000\nHombre, tiempo parcial\n1800\nMujer, tiempo completo\n900\nMujer, tiempo parcial\n6300\n–\n–\nTotal\n18000\nNaturalmente, podemos ver que los estratos difieren mucho entre si, y una distribución uniforme nos daría resultados probablemente sesgados.\nUsaremos nuevamente la librería samplingbook, pero en esta ocasión haremos uso de la función stratasize(), usando los datos de este ejemplo. Consideramos para esto que las desviaciones estándar en cada uno de los estratos están dados por el vector sh. También estamos considerando un margen de error de 10%.\n\n\nNh <- c(9000,1800,900,6300)\nsh <- c(25,10,40,80)\nsum(Nh)\n\n\n[1] 18000\n\nsamplingbook::stratasize(0.1, Nh = Nh, Sh = c(5,1,4,.80),\n                         level = 0.95, type = 'prop')\n\n\n\nstratamean object: Stratified sample size determination\n\ntype of sample: prop\n\ntotal sample size determinated: 4056\n\nEn este ejemplo, los argumentos level y type vienen por default con esos valores. Sólo los estoy incluyendo con fines ilustrativos.\nNotamos aquí entonces que de los 18 mil sujetos que tenemos, sólo es necesario obtener información acerca de alrededor de 4 mil para conocerlos, de acuerdo a la información que tenemos disponible.\n¿Cuáles son aplicaciones interesantes para lo que usarías esta información?\n\n\n\n",
+    "preview": "posts/2020-12-23-muestreo-estratificado-en-r/muestreo-estratificado-en-r_files/figure-html5/stratified-plot-1.png",
+    "last_modified": "2020-12-23T23:08:21-06:00",
+    "input_file": "muestreo-estratificado-en-r.utf8.md",
+    "preview_width": 1248,
+    "preview_height": 768
   }
 ]
