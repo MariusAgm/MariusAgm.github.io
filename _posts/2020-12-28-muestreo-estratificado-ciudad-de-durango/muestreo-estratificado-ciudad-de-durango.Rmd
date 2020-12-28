@@ -1,0 +1,70 @@
+---
+title: "Muestreo estratificado: Ciudad de Durango"
+description: |
+  Otro tutorial en R para hacer muestreo estratificado.
+author:
+  - name: Mario
+    url: https://marionomics.com/about
+date: 12-28-2020
+categories:
+  - R
+  - Estadística
+  - Tutoriales
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Este post es parte de una serie sobre muestreo estratificado en este blog. En esta parte de la serie vamos a hacer un ejemplo de un muestreo estratificado con datos reales del INEGI, llevando un paso más allá el ejemplo que hicimos en [posts anteriores](https://www.marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/).
+
+Digamos que queremos hacer un estudio en la ciudad de Durango, Durango y queremos conocer cuál es el tamaño de muestra que requerimos para el mismo.
+
+Como vimos en [este post](https://www.marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta/), si nosotros tomáramos el valiente supuesto de que la población es homogénea, entonces sólo requeriríamos de la información de 384 encuestas para saber lo que necesitamos saber considerando un margen de confianza de 95% y un margen de error de 5%.
+
+Pero como lo sabemos, a pesar de vivir en la misma zona, las personas en Durango somos muy diferentes entre si. Existen muchos factores que nos pueden generar esas diferencias, pero es el mismo investigador el que decide cuáles de estas diferencias son importantes.
+
+Para este ejemplo tomaremos como principal factor de diferenciación las características de la ocupación del individuo. Para eso, tomaremos la información de la [encuesta intercensal 2015](https://www.inegi.org.mx/programas/intercensal/2015/#Tabulados) para los municipios de Durango. Entramos al link previo y descargamos el archivo Excel de [características económicas](https://www.inegi.org.mx/contenidos/programas/intercensal/2015/tabulados/08_caracteristicas_economicas_dgo.xls).
+
+De la tabla que nos genera, necesitamos de dos _estimadores_: el valor y el error estándar. Los errores estándar nos ayudarán a generar el vector de _ruido_ de nuestra información que nos ayudan a identificar el valor de la muestra que requerimos.
+
+En la tabla siguiente, mostramos la estratificación que decidí hacer para este ejemplo, donde tomamos como un estrato a la población No Económicamente Activa (PNEA) y la Población Económicamente Activa (PEA) la segmentamos en la población No Ocupada y Ocupada. Sin embargo, la población Ocupada se divide a su vez entre los sectores en los que trabaja y el sexo de los individuos. De esta manera, vemos que la población se divide de la siguiente manera.
+
+
+| Estrato | Valor | Error Estándar |
+| --- | --- | --- |
+| **No especificado** | 252.21 | 100.89 |
+| **PNEA** |  235,586.00  |  2,471.70  |
+| **No ocupada** |  10,933.00  |  590.90  |
+| Sector Primario: Hombres |  6,977.00  |  893.96  |
+| Sector Primario: Mujeres |  418.00  |  251.69  |
+| Sector Secundario: Hombres |  53,439.00  |  2,229.03  |
+| Sector Secundario: Mujeres |  13,769.00  |  1,651.50  |
+| Sector Comercio: Hombres |  25,644.00  |  1,499.21  |
+| Sector Comercio: Mujeres |  21,477.00  |  2,039.55  |
+| Sector Servicios: Hombres |  68,935.00  |  2,329.13  |
+| Sector Servicios: Mujeres |  64,838.00  |  2,488.86  |
+| NE: Hombres |  1,002.00  |  301.19  |
+| NE: Mujeres |  1,158.00  |  467.57  |
+| ** Total** | |  504,428.21 |
+| **PEA** |  268,590.00 | | 
+| **Ocupada** | 257,657.00  | |
+
+
+Usaremos entonces la función `stratasize()`, que usamos previamente en [el post de muestreo estratificado](https://www.marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/). 
+
+```{r durango-stratified, echo=TRUE, include=TRUE}
+Nh <- c(252,235586,10933,6977,418,53439,13769,25644,21477,
+        68935,64838,1002,1158)
+#Sh <- c(100,2471,591,894,252,2229,1651,1499,2039,2329,
+#        2489,301,468)
+Sh <- c(0.4, 0.01, 0.05, 0.12, 0.6, 0.04, 0.11,
+        0.05, 0.09, 0.03, 0.03, 0.3, 0.4)
+samplingbook::stratasize(0.1, Nh = Nh, Sh = Sh*100,
+                         level = 0.95, type = 'prop')
+```
+
