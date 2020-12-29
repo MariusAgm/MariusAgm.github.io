@@ -7,7 +7,7 @@ author:
     url: https://marionomics.com/blog
 date: 12-23-2020
 categories:
-  - Estadística
+  - Estadistica
 output:
   distill::distill_article:
     self_contained: false

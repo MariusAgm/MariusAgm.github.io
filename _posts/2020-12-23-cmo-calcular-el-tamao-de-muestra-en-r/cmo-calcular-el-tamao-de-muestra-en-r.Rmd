@@ -4,8 +4,12 @@ description: |
   Descripción y código
 author:
   - name: Mario Alberto García-Meza
-    url: https://example.com/norajones
+    url: https://marionomics.com/about
 date: 12-23-2020
+categories:
+  - R
+  - Tutorial
+  - Estadística
 output:
   distill::distill_article:
     self_contained: false

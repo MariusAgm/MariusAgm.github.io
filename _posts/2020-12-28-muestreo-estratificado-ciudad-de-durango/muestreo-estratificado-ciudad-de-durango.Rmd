@@ -3,13 +3,13 @@ title: "Muestreo estratificado: Ciudad de Durango"
 description: |
   Otro tutorial en R para hacer muestreo estratificado.
 author:
-  - name: Mario
+  - name: Mario A. García-Meza
     url: https://marionomics.com/about
 date: 12-28-2020
 categories:
   - R
-  - Estadística
-  - Tutoriales
+  - Estadistica
+  - Tutorial
 output:
   distill::distill_article:
     self_contained: false
@@ -68,3 +68,18 @@ samplingbook::stratasize(0.1, Nh = Nh, Sh = Sh*100,
                          level = 0.95, type = 'prop')
 ```
 
+El tamaño que obtenemos es de 9 mil observaciones. Estas se tienen que dividir de manera proporcional entre los estratos.
+
+```{r strata-divide, echo=TRUE, include=TRUE}
+Nh_prop <- Nh/sum(Nh)
+Nh_prop <- 9190 * Nh_prop
+Nh_prop
+```
+
+Esto nos indica que hay algunas secciones de la población que requieren de 4 mil observaciones y otras sólo 4.
+
+### Elige tus estratos de manera práctica
+
+El lector con más experiencia práctica se podría dar cuenta con este post que esta distribución resulta un tanto impráctica, pues tendríamos que tener bien identificadas a las personas por su lugar de trabajo. En el caso, por ejemplo de los no especificados, tenemos que localizar a 5 personas en todo el municipio que no cumplan con las otras características de los estratos.
+
+Por esta razón, es necesario tener conocimiento práctico de la zona en la que se está haciendo el trabajo de investigación.
