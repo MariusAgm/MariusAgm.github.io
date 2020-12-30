@@ -1,0 +1,30 @@
+---
+title: "El éxodo de Mariel"
+description: |
+  ¿Cómo afecta la migración al empleo?
+author:
+  - name: Mario A. García-Meza
+    url: https://marionomics.com/about
+date: 12-30-2020
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - Labor
+  - Econometría
+  - APPEE
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+El 20 de Abril de 1980, Fidel Castro, Presidente de Cuba, declaró que todos aquellos que quisieran, podrían tomar un barco en el puerto de Mariel y salir de Cuba. En un [discurso energético](https://youtu.be/_wAAp_5JZfI) el presidente aseguró que quienes se fueran, no serían bienvenidos de vuelta, pues no estaban dispuestos a soportar "el esfuerzo y el heroismo de una revolución".
+
+ > No los queremos. No los necesitamos.
+- _Fidel Castro_
+
+Entre el 21 de Abril y Septiembre de ese año salieron más de 124 mil personas, la gran mayoría en dirección a los Estados Unidos, y una gran proporción de ellos con dirección a Miami, Florida.
+
+
