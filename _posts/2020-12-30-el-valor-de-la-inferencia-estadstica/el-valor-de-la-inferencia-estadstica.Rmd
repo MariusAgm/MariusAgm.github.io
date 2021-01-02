@@ -1,0 +1,35 @@
+---
+title: "El valor de la inferencia estadística"
+description: |
+  La Ley de los Rendimientos Decrecientes
+author:
+  - name: Mario
+    url: https://marionomics.com/about
+date: 12-30-2020
+categories:
+  - Estadistica
+  - Muestreo
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> El Azar no es más que la medida de nuesta ignorancia.Los fenómenos fortuitos son, por definición, aquellos cuyas leyes o causas simplemente ignoramos.
+> _Henry Poincairé_
+
+La mayoría de los diseños de encuestas basan la metodología de muestreo en un _tradeoff_ entre costos y el valor de la información que se obtiene.
+
+En la mayoría de los casos en los que vale la pena hacer un estudio, los costos no permiten que este se realice usando a la población en su totalidad. Aquí es donde entra en juego el muestreo.
+
+Los economistas tenemos entre nuestras herramientas una que es muy útil para determinar el tamaño óptimo de una encuesta en base a los costos: la Ley de los Rendimientos decrecientes.
+
+Para que esta ley tenga sentido, es importante saber pensar en el margen. Pensar en el margen significa que, en lugar de pensar en el costo total de la encuesta, pensamos en el costo de una observación adicional. Cada observación adicional representa un costo adicional, derivado del tiempo que esta toma y de los recursos que se usen. 
+
+Pero también, cada observación adicional tiene un beneficio adicional en la claridad de la información. Sin embargo, si el muestreo está bien diseñado, el beneficio adicional que generan las primeras observaciones es significativamente mayor que las posteriores.
+
+Este beneficio es cuantificable. Se puede calcular, siempre que se tenga información suficiente sobre las desviaciones estándar de los estratos o de la población a estudiarse. Esto significa que el problema se transforma en un cálculo de optimización.

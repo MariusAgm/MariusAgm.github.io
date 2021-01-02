@@ -2,15 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>http://marionomics.com/Research.html</loc>
-    <lastmod>2020-12-23T12:55:54-06:00</lastmod>
+    <lastmod>2020-12-30T11:23:36-06:00</lastmod>
   </url>
   <url>
     <loc>http://marionomics.com/about.html</loc>
-    <lastmod>2020-12-23T12:55:54-06:00</lastmod>
+    <lastmod>2021-01-02T12:09:55-06:00</lastmod>
   </url>
   <url>
     <loc>http://marionomics.com/</loc>
     <lastmod>2020-12-28T10:48:23-06:00</lastmod>
+  </url>
+  <url>
+    <loc>http://marionomics.com/posts/2020-12-30-el-valor-de-la-inferencia-estadstica/</loc>
+    <lastmod>2021-01-02T14:39:35-06:00</lastmod>
   </url>
   <url>
     <loc>http://marionomics.com/posts/2020-12-28-muestreo-estratificado-ciudad-de-durango/</loc>
