@@ -8,3 +8,5 @@ listing: posts
 Mi nombre es Mario, soy profesor en la [Universidad Juárez del Estado de Durango](ujed.mx) y este es mi blog.
 
 Soy economista, profesor, investigador, miembro del SNI nivel I y nerd de tiempo completo.
+
+Puedes ver mis publicaciones en [este sitio](marionomics.com/Research).

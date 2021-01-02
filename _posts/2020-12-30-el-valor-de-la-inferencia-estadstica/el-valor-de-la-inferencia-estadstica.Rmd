@@ -3,7 +3,7 @@ title: "El valor de la inferencia estadística"
 description: |
   La Ley de los Rendimientos Decrecientes
 author:
-  - name: Mario
+  - name: Mario A. García Meza
     url: https://marionomics.com/about
 date: 12-30-2020
 categories:

@@ -5,22 +5,22 @@
       "title": "Research",
       "author": [],
       "contents": "\nPublicaciones\nComplementarity of goods and cooperation among firms in a dynamic duopoly Garcia-Meza M.A., Gurrola-Rios C. (2020) Complementarity of Goods and Cooperation Among Firms in a Dynamic Duopoly. In: Petrosyan L.A., Mazalov V.V., Zenkevich N.A. (eds) Frontiers of Dynamic Games. Static & Dynamic Game Theory: Foundations & Applications. Birkhäuser, Cham. DOI\nInnovación a nivel Individual en las MIPES de la Ciudad de México: habilidades y resultados Neme-Castillo, O., Garcia-Meza, M.A., Valderrama-Santibáñez, A.L., (2020) Investigación Administrativa (En proceso de publicación)\nImportancia económica de las ciudades medias en México García Meza, M. A., Valderrama Santibáñez, A. L., & Neme Castillo, O. (2019). Importancia económica de las ciudades medias en México. Región Y Sociedad, 31, e1241. DOI\nEfectos de la deuda pública subnacional en la inversión pública productiva en México (Effects of subnational public debt on public productive investment in Mexico) García Meza, M. A. (2019). Efectos de la deuda pública subnacional en la inversión pública productiva en México. Análisis Económico 34(87). Link\nDeterminantes de las habilidades de innovación en las mypes de la Zona Metropolitana del Valle de México Valderrama Santibáñez, A. L., Neme Castillo, O., & García Meza, M. A. (2019). Determinantes de las habilidades de innovación en las mypes de la Zona Metropolitana del Valle de México. Innovar, 29(74), 11-23. link\nEvaluation of Portfolio Decision Improvements by Markov Modulated Diffusion Processes: A Shapley Value Approach Vallejo-Jimenez B., Garcia-Meza M.A. (2019) Evaluation of Portfolio Decision Improvements by Markov Modulated Diffusion Processes: A Shapley Value Approach. In: Petrosyan L., Mazalov V., Zenkevich N. (eds) Frontiers of Dynamic Games. Static & Dynamic Game Theory: Foundations & Applications. Birkhäuser, Cham. doi\nStable Marketing Cooperation in a Differential Game for an Oligopoly Mario A. García-Meza & Ekaterina Viktorovna Gromova & José Daniel López-Barrientos, 2018. “Stable Marketing Cooperation in a Differential Game for an Oligopoly,” International Game Theory Review (IGTR), World Scientific Publishing Co. Pte. Ltd., vol. 20(03), pages 1-18, September. doi\nA Bayesian structural time series approach to forecast Mexico’s consumer index García-Meza, M. A., & Venegas-Martínez, F. (2018). A Bayesian structural time series approach to forecast Mexico’s consumer index. Journal of Applied Economic Sciences, 615-626. link\nA Differential Game on Military Intervention and competition between drug cartels García, M. A. & Venegas-Martínez, F. (2018). A Differential Game on Military Intervention and competition between drug cartels. International Journal of Pure and Applied Mathematics, 119(4), 603-616. DOI: 10.12732/ijpam.v119i4.3 link\nA Differential Game of a Duopoly with Network Externalities García-Meza M.A., López-Barrientos J.D. (2016) A Differential Game of a Duopoly with Network Externalities. In: Petrosyan L., Mazalov V. (eds) Recent Advances in Game Theory and Applications. Static & Dynamic Game Theory: Foundations & Applications. Birkhäuser, Cham. doi\nEl motivo precautorio en la demanda de saldos reales: un enfoque ortodoxo. Venegas-Martínez, Francisco and Avendaño-Vargas, Blanca Lilia and García-Meza, Mario Alberto (2016): El motivo precautorio en la demanda de saldos reales: un enfoque ortodoxo. eseconomía, Escuela Superior de Economía, Instituto Politécnico Nacional, vol. 12(46), pages 7-20, link\n\n\n\n",
-      "last_modified": "2020-12-23T12:49:19-06:00"
+      "last_modified": "2021-01-02T14:42:39-06:00"
     },
     {
       "path": "about.html",
-      "title": "About this blog",
-      "description": "Some additional details about the blog",
+      "title": "Acerca de mi",
+      "description": "Algunos datos sobre mi",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2020-12-23T12:49:19-06:00"
+      "last_modified": "2020-12-23T13:12:42-06:00"
     },
     {
       "path": "index.html",
       "title": "Marionomics",
       "author": [],
-      "contents": "\nBienvenidos\nMi nombre es Mario, soy profesor en la Universidad Juárez del Estado de Durango y este es mi blog.\nSoy economista, profesor, investigador, miembro del SNI nivel I y nerd de tiempo completo.\n\n\n\n",
-      "last_modified": "2020-12-23T12:49:19-06:00"
+      "contents": "\nBienvenidos\nMi nombre es Mario, soy profesor en la Universidad Juárez del Estado de Durango y este es mi blog.\nSoy economista, profesor, investigador, miembro del SNI nivel I y nerd de tiempo completo.\nPuedes ver mis publicaciones en este sitio.\n\n\n\n",
+      "last_modified": "2021-01-02T14:45:59-06:00"
     }
   ],
   "collections": ["posts/posts.json"]

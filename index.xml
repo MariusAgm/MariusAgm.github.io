@@ -7,17 +7,7 @@
     <description>Blog de Mario Alberto García Meza
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 30 Dec 2020 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>El valor de la inferencia estadística</title>
-      <dc:creator>Mario</dc:creator>
-      <link>http://marionomics.com/posts/2020-12-30-el-valor-de-la-inferencia-estadstica</link>
-      <description>La Ley de los Rendimientos Decrecientes</description>
-      <category>Estadistica</category>
-      <category>Muestreo</category>
-      <guid>http://marionomics.com/posts/2020-12-30-el-valor-de-la-inferencia-estadstica</guid>
-      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 28 Dec 2020 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Muestreo estratificado: Ciudad de Durango</title>
       <dc:creator>Mario</dc:creator>
@@ -28,43 +18,6 @@
       <category>Tutoriales</category>
       <guid>http://marionomics.com/posts/2020-12-28-muestreo-estratificado-ciudad-de-durango</guid>
       <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Welcome to Marionomics</title>
-      <dc:creator>Mario</dc:creator>
-      <link>http://marionomics.com/posts/welcome</link>
-      <description>Bienvenidos a mi blog. Estoy haciendo cambios actualmente. ¿Cómo se ve?</description>
-      <guid>http://marionomics.com/posts/welcome</guid>
-      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Como calcular el tamaño de muestra en R</title>
-      <dc:creator>Mario Alberto García-Meza</dc:creator>
-      <link>http://marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r</link>
-      <description>Descripción y código</description>
-      <category>R</category>
-      <category>Tutorial</category>
-      <category>Estadística</category>
-      <guid>http://marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r</guid>
-      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Tamaños de muestra para una encuesta</title>
-      <dc:creator>Mario A. García-Meza</dc:creator>
-      <link>http://marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta</link>
-      <description>Cómo obtener el tamaño de muestra.</description>
-      <category>Estadistica</category>
-      <guid>http://marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta</guid>
-      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Muestreo estratificado en R</title>
-      <dc:creator>Mario A. García-Meza</dc:creator>
-      <link>http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r</link>
-      <description>Un tutorial de cómo hacer muestreo, cuando la población es más compleja.</description>
-      <guid>http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r</guid>
-      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
-      <media:content url="http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/muestreo-estratificado-en-r_files/figure-html5/stratified-plot-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
   </channel>
 </rss>
