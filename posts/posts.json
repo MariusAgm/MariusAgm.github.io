@@ -1,5 +1,25 @@
 [
   {
+    "path": "posts/2020-12-30-el-valor-de-la-inferencia-estadstica/",
+    "title": "El valor de la inferencia estadística",
+    "description": "La Ley de los Rendimientos Decrecientes",
+    "author": [
+      {
+        "name": "Mario A. García Meza",
+        "url": "https://marionomics.com/about"
+      }
+    ],
+    "date": "2020-12-30",
+    "categories": [
+      "Estadistica",
+      "Muestreo"
+    ],
+    "contents": "\n\nEl Azar no es más que la medida de nuesta ignorancia.Los fenómenos fortuitos son, por definición, aquellos cuyas leyes o causas simplemente ignoramos. Henry Poincairé\n\nLa mayoría de los diseños de encuestas basan la metodología de muestreo en un tradeoff entre costos y el valor de la información que se obtiene.\nEn la mayoría de los casos en los que vale la pena hacer un estudio, los costos no permiten que este se realice usando a la población en su totalidad. Aquí es donde entra en juego el muestreo.\nLos economistas tenemos entre nuestras herramientas una que es muy útil para determinar el tamaño óptimo de una encuesta en base a los costos: la Ley de los Rendimientos decrecientes.\nPara que esta ley tenga sentido, es importante saber pensar en el margen. Pensar en el margen significa que, en lugar de pensar en el costo total de la encuesta, pensamos en el costo de una observación adicional. Cada observación adicional representa un costo adicional, derivado del tiempo que esta toma y de los recursos que se usen.\nPero también, cada observación adicional tiene un beneficio adicional en la claridad de la información. Sin embargo, si el muestreo está bien diseñado, el beneficio adicional que generan las primeras observaciones es significativamente mayor que las posteriores.\nEste beneficio es cuantificable. Se puede calcular, siempre que se tenga información suficiente sobre las desviaciones estándar de los estratos o de la población a estudiarse. Esto significa que el problema se transforma en un cálculo de optimización.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-01-02T18:55:37-06:00",
+    "input_file": "el-valor-de-la-inferencia-estadstica.utf8.md"
+  },
+  {
     "path": "posts/2020-12-28-muestreo-estratificado-ciudad-de-durango/",
     "title": "Muestreo estratificado: Ciudad de Durango",
     "description": "Otro tutorial en R para hacer muestreo estratificado.",
@@ -40,5 +60,22 @@
     "preview": {},
     "last_modified": "2021-01-02T18:27:42-06:00",
     "input_file": "cmo-calcular-el-tamao-de-muestra-en-r.utf8.md"
+  },
+  {
+    "path": "posts/2020-12-23-muestreo-estratificado-en-r/",
+    "title": "Muestreo estratificado en R",
+    "description": "Un tutorial de cómo hacer muestreo, cuando la población es más compleja.",
+    "author": [
+      {
+        "name": "Mario A. García-Meza",
+        "url": "https://marionomics.com/about"
+      }
+    ],
+    "date": "2020-12-23",
+    "categories": [],
+    "contents": "\nHay que admitir que la mayoría de las ocasiones este es el caso: la población no es tan simple como para que un muestreo simple sea la solución. En este post hice un tutorial de cómo obtener los tamaños de muestra para una encuesta con una función hecha por nosotros mismos y aquí explico parte de la teoría y cómo obtener las muestras con la función pwr.t.test().\nPero en esta ocasión, vamos a llevar el análisis un paso más allá y preguntarnos que sucede si la población con la que nos encontramos tiene características heterogéneas. Y siendo sinceros, toda población que vale la pena estudiarse es al menos un poco heterogénea.\nRecordemos que nuestro objetivo es la inferencia estadística, es decir, obtener la misma información que obtendríamos de la población, pero usando un conjunto de datos más pequeño. Sin embargo, supongamos que existen tres tipos distintos de población en nuestra muestra. Estos representan el 50%, 40% y 10% de la población respectivamente. Si nosotros tomaramos una muestra uniforme, de los datos, existe la probabilidad de sobrerepresentar o subrepresentar algún estrato.\n\n\n\nNo solamente se trata de la proporción. Los estratos pueden variar en su desviación estándar. Esto hace que el muestreo estratificado proporcione una visión más clara de lo que está pasando al muestreo simple.\nVeamos cómo se realiza este muestreo. Consideremos este ejemplo, donde se encuentra la siguiente distribución de trabajadores en una compañía\nTipo de personal\nNúmero\nHombre, tiempo completo\n9000\nHombre, tiempo parcial\n1800\nMujer, tiempo completo\n900\nMujer, tiempo parcial\n6300\n–\n–\nTotal\n18000\nNaturalmente, podemos ver que los estratos difieren mucho entre si, y una distribución uniforme nos daría resultados probablemente sesgados.\nUsaremos nuevamente la librería samplingbook, pero en esta ocasión haremos uso de la función stratasize(), usando los datos de este ejemplo. Consideramos para esto que las desviaciones estándar en cada uno de los estratos están dados por el vector sh. También estamos considerando un margen de error de 10%.\n\n\nNh <- c(9000,1800,900,6300)\nsh <- c(25,10,40,80)\nsum(Nh)\n\n\n[1] 18000\n\nsamplingbook::stratasize(0.1, Nh = Nh, Sh = c(5,1,4,.80),\n                         level = 0.95, type = 'prop')\n\n\n\nstratamean object: Stratified sample size determination\n\ntype of sample: prop\n\ntotal sample size determinated: 4056\n\nEn este ejemplo, los argumentos level y type vienen por default con esos valores. Sólo los estoy incluyendo con fines ilustrativos.\nNotamos aquí entonces que de los 18 mil sujetos que tenemos, sólo es necesario obtener información acerca de alrededor de 4 mil para conocerlos, de acuerdo a la información que tenemos disponible.\n¿Cuáles son aplicaciones interesantes para lo que usarías esta información?\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-01-02T18:56:33-06:00",
+    "input_file": "muestreo-estratificado-en-r.utf8.md"
   }
 ]

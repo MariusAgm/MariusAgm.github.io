@@ -7,7 +7,30 @@
     <description>Blog de Mario Alberto García Meza
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 28 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>El valor de la inferencia estadística</title>
+      <dc:creator>Mario A. García Meza</dc:creator>
+      <link>http://marionomics.com/posts/2020-12-30-el-valor-de-la-inferencia-estadstica</link>
+      <description>
+
+
+&lt;blockquote&gt;
+&lt;p&gt;El Azar no es más que la medida de nuesta ignorancia.Los fenómenos fortuitos son, por definición, aquellos cuyas leyes o causas simplemente ignoramos. &lt;em&gt;Henry Poincairé&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;La mayoría de los diseños de encuestas basan la metodología de muestreo en un &lt;em&gt;tradeoff&lt;/em&gt; entre costos y el valor de la información que se obtiene.&lt;/p&gt;
+&lt;p&gt;En la mayoría de los casos en los que vale la pena hacer un estudio, los costos no permiten que este se realice usando a la población en su totalidad. Aquí es donde entra en juego el muestreo.&lt;/p&gt;
+&lt;p&gt;Los economistas tenemos entre nuestras herramientas una que es muy útil para determinar el tamaño óptimo de una encuesta en base a los costos: la Ley de los Rendimientos decrecientes.&lt;/p&gt;
+&lt;p&gt;Para que esta ley tenga sentido, es importante saber pensar en el margen. Pensar en el margen significa que, en lugar de pensar en el costo total de la encuesta, pensamos en el costo de una observación adicional. Cada observación adicional representa un costo adicional, derivado del tiempo que esta toma y de los recursos que se usen.&lt;/p&gt;
+&lt;p&gt;Pero también, cada observación adicional tiene un beneficio adicional en la claridad de la información. Sin embargo, si el muestreo está bien diseñado, el beneficio adicional que generan las primeras observaciones es significativamente mayor que las posteriores.&lt;/p&gt;
+&lt;p&gt;Este beneficio es cuantificable. Se puede calcular, siempre que se tenga información suficiente sobre las desviaciones estándar de los estratos o de la población a estudiarse. Esto significa que el problema se transforma en un cálculo de optimización.&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>9740a864578842ca8c2446d05e40ebc5</distill:md5>
+      <category>Estadistica</category>
+      <category>Muestreo</category>
+      <guid>http://marionomics.com/posts/2020-12-30-el-valor-de-la-inferencia-estadstica</guid>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Muestreo estratificado: Ciudad de Durango</title>
       <dc:creator>Mario</dc:creator>
@@ -78,6 +101,75 @@ NOTE: n is number in *each* group&lt;/code&gt;&lt;/pre&gt;
       <category>Tutorial</category>
       <category>Estadística</category>
       <guid>http://marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r</guid>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Muestreo estratificado en R</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r</link>
+      <description>
+
+
+&lt;p&gt;Hay que admitir que la mayoría de las ocasiones este es el caso: la población no es tan simple como para que un muestreo simple sea la solución. En &lt;a href="https://www.marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta/"&gt;este post&lt;/a&gt; hice un tutorial de cómo obtener los tamaños de muestra para una encuesta con una función hecha por nosotros mismos y &lt;a href="https://www.marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r/"&gt;aquí&lt;/a&gt; explico parte de la teoría y cómo obtener las muestras con la función &lt;code&gt;pwr.t.test()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pero en esta ocasión, vamos a llevar el análisis un paso más allá y preguntarnos que sucede si la población con la que nos encontramos tiene características heterogéneas. Y siendo sinceros, toda población que vale la pena estudiarse es al menos un poco heterogénea.&lt;/p&gt;
+&lt;p&gt;Recordemos que nuestro objetivo es la &lt;em&gt;inferencia estadística&lt;/em&gt;, es decir, obtener la misma información que obtendríamos de la población, pero usando un conjunto de datos más pequeño. Sin embargo, supongamos que existen tres tipos distintos de población en nuestra muestra. Estos representan el 50%, 40% y 10% de la población respectivamente. Si nosotros tomaramos una muestra uniforme, de los datos, existe la probabilidad de sobrerepresentar o subrepresentar algún estrato.&lt;/p&gt;
+&lt;p&gt;&lt;img src="file302a50600cac_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;No solamente se trata de la proporción. Los estratos pueden variar en su desviación estándar. Esto hace que el muestreo estratificado proporcione una visión más clara de lo que está pasando al muestreo simple.&lt;/p&gt;
+&lt;p&gt;Veamos cómo se realiza este muestreo. Consideremos &lt;a href="https://en.wikipedia.org/wiki/Stratified_sampling"&gt;este ejemplo&lt;/a&gt;, donde se encuentra la siguiente distribución de trabajadores en una compañía&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class="header"&gt;
+&lt;th&gt;Tipo de personal&lt;/th&gt;
+&lt;th&gt;Número&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="odd"&gt;
+&lt;td&gt;Hombre, tiempo completo&lt;/td&gt;
+&lt;td&gt;9000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td&gt;Hombre, tiempo parcial&lt;/td&gt;
+&lt;td&gt;1800&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="odd"&gt;
+&lt;td&gt;Mujer, tiempo completo&lt;/td&gt;
+&lt;td&gt;900&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td&gt;Mujer, tiempo parcial&lt;/td&gt;
+&lt;td&gt;6300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="odd"&gt;
+&lt;td&gt;–&lt;/td&gt;
+&lt;td&gt;–&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;18000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Naturalmente, podemos ver que los estratos difieren mucho entre si, y una distribución uniforme nos daría resultados probablemente sesgados.&lt;/p&gt;
+&lt;p&gt;Usaremos nuevamente la librería &lt;code&gt;samplingbook&lt;/code&gt;, pero en esta ocasión haremos uso de la función &lt;code&gt;stratasize()&lt;/code&gt;, usando los datos de este ejemplo. Consideramos para esto que las desviaciones estándar en cada uno de los estratos están dados por el vector &lt;code&gt;sh&lt;/code&gt;. También estamos considerando un margen de error de 10%.&lt;/p&gt;
+&lt;pre class="r"&gt;&lt;code&gt;Nh &amp;lt;- c(9000,1800,900,6300)
+sh &amp;lt;- c(25,10,40,80)
+sum(Nh)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] 18000&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="r"&gt;&lt;code&gt;samplingbook::stratasize(0.1, Nh = Nh, Sh = c(5,1,4,.80),
+                         level = 0.95, type = &amp;#39;prop&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+stratamean object: Stratified sample size determination
+
+type of sample: prop
+
+total sample size determinated: 4056&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;En este ejemplo, los argumentos &lt;code&gt;level&lt;/code&gt; y &lt;code&gt;type&lt;/code&gt; vienen por default con esos valores. Sólo los estoy incluyendo con fines ilustrativos.&lt;/p&gt;
+&lt;p&gt;Notamos aquí entonces que de los 18 mil sujetos que tenemos, sólo es necesario obtener información acerca de alrededor de 4 mil para conocerlos, de acuerdo a la información que tenemos disponible.&lt;/p&gt;
+&lt;p&gt;¿Cuáles son aplicaciones interesantes para lo que usarías esta información?&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>296c545eb51ee6c1011c3a46786e5a99</distill:md5>
+      <guid>http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r</guid>
       <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
     </item>
   </channel>
