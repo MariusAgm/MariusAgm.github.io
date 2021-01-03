@@ -7,3 +7,7 @@ description: |
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+Mi nombre es Mario Alberto García Meza, soy profesor en la [Universidad Juárez del Estado de Durango](ujed.mx) y este es mi blog.
+
+Soy economista, profesor, investigador, miembro del SNI nivel I y nerd de tiempo completo.

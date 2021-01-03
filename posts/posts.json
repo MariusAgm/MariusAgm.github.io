@@ -19,5 +19,26 @@
     "preview": {},
     "last_modified": "2020-12-28T21:58:20-06:00",
     "input_file": {}
+  },
+  {
+    "path": "posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r/",
+    "title": "Como calcular el tamaño de muestra en R",
+    "description": "Descripción y código",
+    "author": [
+      {
+        "name": "Mario Alberto García-Meza",
+        "url": "https://marionomics.com/about"
+      }
+    ],
+    "date": "2020-12-23",
+    "categories": [
+      "R",
+      "Tutorial",
+      "Estadística"
+    ],
+    "contents": "\nLa base de la estadística inferencial es, como su nombre lo indica, obtener inferencias de una población a partir de una muestra. Normalmente es una cuestión de administración de recursos escasos lo que nos obliga a hacerlo de esta manera, por lo que una pregunta razonable en un experimento o en un estudio es ¿De qué tamaño es la muestra que se necesita?.\nUna muestra más grande genera resultados más precisos, pero esto naturalmente incrementa los costos de operación, que vienen por el tiempo, el trabajo y el dinero que se debe invertir a la recolección de la información. Por el otro lado, si un tamaño de muestra es demasiado pequeña, los resultados pierden confiabilidad.\nPara calcular el tamaño de muestra, es necesario conocer cuatro cosas\nEl tamaño de la respuesta que quieres detectar\nLa varianza de la respuesta\nLos niveles de significancia deseados\nel poder deseado\nAl tamaño de la respuesta se le puede llamar delta y se refiere a la diferencia entre los grupos de tratamiento y de control en un experimento. Definamos \\(\\Delta = \\mu_1-\\mu_2\\), donde \\(\\mu_1\\) representa a el grupo de tratamiento y \\(\\mu_2\\) es el grupo de control. Entonces entre más pequeña la diferencia que se está buscando detectar, más grande tiene que ser el tamaño de la muestra para poderlo encontrar.\nEl segundo punto es la varianza. Es el ruido que tiene nuestra información. Entre más grande sea el ruido, más grande tiene que ser el tamaño de la muestra para poder identificar las diferencias que se capturan en \\(\\Delta\\).\nDefinamos la varianza como \\(\\sigma^2\\), que nos ayuda a identificar el mencionado ruido. Entonces el tamaño del efecto combina la diferencia con la varianza y lo podemos definir con \\(\\Delta/\\sigma^2\\).\nDefinamos como \\(\\alpha\\) la probabilidad de tener un error de tipo 1, es decir, que rechacemos nuestra hipótesis nula de manera falsa, o tengamos un falso positivo. El valor de \\(\\alpha\\) se fija regularmente en 0.05, para alcanzar una significancia de 95%.\nFinalmente, tenemos que definir el poder de nuestra prueba, que definimos con \\(1-\\beta\\) donde \\(\\beta\\) representa la probabilidad de no rechazar la hipótesis nula cuando la hipótesis alternativa es verdadera (error tipo 2). Si, por ejemplo, tienes un 20% de no detectar una diferencia que es real, entonces el poder de tu prueba es de 0.8.\nCálculo del tamaño de la muestra\nEl cálculo del tamaño total de la muestra es\n\\[\\begin{equation}\n  n = \\frac{4(Z_\\alpha + Z_\\beta)^2\\sigma^2}{\\Delta^2}\n\\end{equation}\\]\nsólo cambiando \\(Z_{\\alpha}\\) por \\(Z_{\\alpha/2}\\) si la prueba es de dos lados.\nPor ejemplo, imaginemos que el tamaño de la diferencia que queremos estimar es de 20 unidades, con un poder de 90% en una prueba de dos lados con un nivel de significancia de 0.05. Investigaciones previas nos indican que la desviación estándar \\(\\sigma\\) es de alrededor de 60 unidades. Entonces\n\\[\\begin{equation}\n  n = \\frac{4(1.96 + 1.28)^2\\sigma^2}{20^2} \\approx 378\n\\end{equation}\\]\no aproximadamente 189 para cada uno de los dos grupos de tratamiento.\nCálculo en R\nLa función pwr.t.test() de la librería pwr en R está diseñada para realizar el cálculo del tamaño de muestra que nosotros buscamos.\nEsta función nos sirve para calcular el valor de nuestro estadístico \\(t\\) en función del tamaño de la muestra, pero si, en lugar de eso dejamos el parámetro \\(n\\) sin aplicar en la función, esta nos va a regresar nuestro tamaño de muestra. Veamos cómo se vería el ejemplo que hicimos anteriormente\n\n\ndelta <- 20\nsigma <- 60\nd <- delta/sigma\n\npwr::pwr.t.test(d = d,\n                sig.level = 0.5,\n                power = .90,\n                type = 'two.sample')\n\n\n\n     Two-sample t test power calculation \n\n              n = 67.18309\n              d = 0.3333333\n      sig.level = 0.5\n          power = 0.9\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-01-02T18:27:42-06:00",
+    "input_file": "cmo-calcular-el-tamao-de-muestra-en-r.utf8.md"
   }
 ]

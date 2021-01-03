@@ -4,10 +4,11 @@ description: |
   Cómo obtener el tamaño de muestra.
 author:
   - name: Mario A. García-Meza
-    url: https://marionomics.com/blog
+    url: https://marionomics.com/index
 date: 12-23-2020
 categories:
   - Estadistica
+  - muestreo
 output:
   distill::distill_article:
     self_contained: false

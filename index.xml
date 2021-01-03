@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:distill="https://distill.pub/journal/" version="2.0">
   <channel>
     <title>Marionomics</title>
     <link>http://marionomics.com</link>
@@ -18,6 +18,67 @@
       <category>Tutoriales</category>
       <guid>http://marionomics.com/posts/2020-12-28-muestreo-estratificado-ciudad-de-durango</guid>
       <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Como calcular el tamaño de muestra en R</title>
+      <dc:creator>Mario Alberto García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r</link>
+      <description>
+
+
+&lt;p&gt;La base de la estadística inferencial es, como su nombre lo indica, obtener inferencias de una &lt;em&gt;población&lt;/em&gt; a partir de una muestra. Normalmente es una cuestión de administración de recursos escasos lo que nos obliga a hacerlo de esta manera, por lo que una pregunta razonable en un experimento o en un estudio es &lt;em&gt;¿De qué tamaño es la muestra que se necesita?&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Una muestra más grande genera resultados más precisos, pero esto naturalmente incrementa los costos de operación, que vienen por el tiempo, el trabajo y el dinero que se debe invertir a la recolección de la información. Por el otro lado, si un tamaño de muestra es demasiado pequeña, los resultados pierden confiabilidad.&lt;/p&gt;
+&lt;p&gt;Para calcular el tamaño de muestra, es necesario conocer cuatro cosas&lt;/p&gt;
+&lt;ol style="list-style-type: decimal"&gt;
+&lt;li&gt;El tamaño de la respuesta que quieres detectar&lt;/li&gt;
+&lt;li&gt;La varianza de la respuesta&lt;/li&gt;
+&lt;li&gt;Los niveles de significancia deseados&lt;/li&gt;
+&lt;li&gt;el poder deseado&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Al tamaño de la respuesta se le puede llamar &lt;strong&gt;delta&lt;/strong&gt; y se refiere a la diferencia entre los grupos de tratamiento y de control en un experimento. Definamos &lt;span class="math inline"&gt;\(\Delta = \mu_1-\mu_2\)&lt;/span&gt;, donde &lt;span class="math inline"&gt;\(\mu_1\)&lt;/span&gt; representa a el grupo de tratamiento y &lt;span class="math inline"&gt;\(\mu_2\)&lt;/span&gt; es el grupo de control. Entonces entre más pequeña la diferencia que se está buscando detectar, más grande tiene que ser el tamaño de la muestra para poderlo encontrar.&lt;/p&gt;
+&lt;p&gt;El segundo punto es la varianza. Es el &lt;em&gt;ruido&lt;/em&gt; que tiene nuestra información. Entre más grande sea el ruido, más grande tiene que ser el tamaño de la muestra para poder identificar las diferencias que se capturan en &lt;span class="math inline"&gt;\(\Delta\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Definamos la varianza como &lt;span class="math inline"&gt;\(\sigma^2\)&lt;/span&gt;, que nos ayuda a identificar el mencionado ruido. Entonces el &lt;strong&gt;tamaño del efecto&lt;/strong&gt; combina la diferencia con la varianza y lo podemos definir con &lt;span class="math inline"&gt;\(\Delta/\sigma^2\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Definamos como &lt;span class="math inline"&gt;\(\alpha\)&lt;/span&gt; la probabilidad de tener un &lt;a href="https://es.wikipedia.org/wiki/Errores_de_tipo_I_y_de_tipo_II"&gt;error de tipo 1&lt;/a&gt;, es decir, que rechacemos nuestra hipótesis nula de manera falsa, o tengamos un falso positivo. El valor de &lt;span class="math inline"&gt;\(\alpha\)&lt;/span&gt; se fija regularmente en 0.05, para alcanzar una significancia de 95%.&lt;/p&gt;
+&lt;p&gt;Finalmente, tenemos que definir el poder de nuestra prueba, que definimos con &lt;span class="math inline"&gt;\(1-\beta\)&lt;/span&gt; donde &lt;span class="math inline"&gt;\(\beta\)&lt;/span&gt; representa la probabilidad de no rechazar la hipótesis nula cuando la hipótesis alternativa es verdadera (&lt;a href="https://es.wikipedia.org/wiki/Errores_de_tipo_I_y_de_tipo_II"&gt;error tipo 2&lt;/a&gt;). Si, por ejemplo, tienes un 20% de &lt;strong&gt;no detectar&lt;/strong&gt; una diferencia que es real, entonces el poder de tu prueba es de 0.8.&lt;/p&gt;
+&lt;h3 id="cálculo-del-tamaño-de-la-muestra"&gt;Cálculo del tamaño de la muestra&lt;/h3&gt;
+&lt;p&gt;El cálculo del tamaño total de la muestra es&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[\begin{equation}
+  n = \frac{4(Z_\alpha + Z_\beta)^2\sigma^2}{\Delta^2}
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;sólo cambiando &lt;span class="math inline"&gt;\(Z_{\alpha}\)&lt;/span&gt; por &lt;span class="math inline"&gt;\(Z_{\alpha/2}\)&lt;/span&gt; si la prueba es de dos lados.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, imaginemos que el tamaño de la diferencia que queremos estimar es de 20 unidades, con un poder de 90% en una prueba de dos lados con un nivel de significancia de 0.05. Investigaciones previas nos indican que la desviación estándar &lt;span class="math inline"&gt;\(\sigma\)&lt;/span&gt; es de alrededor de 60 unidades. Entonces&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[\begin{equation}
+  n = \frac{4(1.96 + 1.28)^2\sigma^2}{20^2} \approx 378
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;o aproximadamente 189 para cada uno de los dos grupos de tratamiento.&lt;/p&gt;
+&lt;h3 id="cálculo-en-r"&gt;Cálculo en R&lt;/h3&gt;
+&lt;p&gt;La función &lt;code&gt;pwr.t.test()&lt;/code&gt; de la librería &lt;code&gt;pwr&lt;/code&gt; en R está diseñada para realizar el cálculo del tamaño de muestra que nosotros buscamos.&lt;/p&gt;
+&lt;p&gt;Esta función nos sirve para calcular el valor de nuestro estadístico &lt;span class="math inline"&gt;\(t\)&lt;/span&gt; en función del tamaño de la muestra, pero si, en lugar de eso dejamos el parámetro &lt;span class="math inline"&gt;\(n\)&lt;/span&gt; sin aplicar en la función, esta nos va a regresar nuestro tamaño de muestra. Veamos cómo se vería el ejemplo que hicimos anteriormente&lt;/p&gt;
+&lt;pre class="r"&gt;&lt;code&gt;delta &amp;lt;- 20
+sigma &amp;lt;- 60
+d &amp;lt;- delta/sigma
+
+pwr::pwr.t.test(d = d,
+                sig.level = 0.5,
+                power = .90,
+                type = &amp;#39;two.sample&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+     Two-sample t test power calculation 
+
+              n = 67.18309
+              d = 0.3333333
+      sig.level = 0.5
+          power = 0.9
+    alternative = two.sided
+
+NOTE: n is number in *each* group&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>e8da7ae2a8e5d036cdb7bb052b4b91ee</distill:md5>
+      <category>R</category>
+      <category>Tutorial</category>
+      <category>Estadística</category>
+      <guid>http://marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r</guid>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
