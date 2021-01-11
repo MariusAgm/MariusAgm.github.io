@@ -46,7 +46,7 @@ Cambia `tabla.csv` por el nombre del documento que quieras obtener en formato cs
 Lo que hice ante esta situación fue generar en loop todos los archivos csv con un ciclo `for` en python.
 
 `for page in range(0,1064)`
-` df[page].to_csv('tabla'+str(page)+'.csv', encoding='utf-8')`
+`\t df[page].to_csv('tabla'+str(page)+'.csv', encoding='utf-8')`
 
 Este ciclo genera todos los archivos en csv con todos los datos que requiero. El problema es que tal vez tener múltiples archivos no sea tan práctico como tener una base de datos unificada. Para esto, [podemos unir los archivos usando `pd.concat()` con la librería `pandas`](https://www.freecodecamp.org/news/how-to-combine-multiple-csv-files-with-8-lines-of-code-265183e0854/). Esto funciona si la base de datos es bien comportada.
 
@@ -54,15 +54,15 @@ Como este no fue mi caso (casi nunca lo es), usé un script sencillo también de
 
 ### Unificar la base de datos
 
-Aprovechando que las bases de datos se generan en un ciclo con diferentes archivos que tienen el mismo nombre y sólamente diferenciados por el número, usamos el siguiente scipt en Python.
+Aprovechando que las bases de datos se generan en un ciclo con diferentes archivos que tienen el mismo nombre y sólamente diferenciados por el número, usamos el siguiente script en Python.
 
 `fout = open("tabla_consolidada.csv", "a")`
 `for line in open("tabla0.csv"):`
 ` fout.write(line)`
 `for num in range(1,1063):`
-` f = open("tabla"+str(num)+".csv")`
-` for line in f:`
-`  fout.write(line)`
-	`f.close()`
+`\t f = open("tabla"+str(num)+".csv")`
+` \t for line in f:`
+`\t \tfout.write(line)`
+`\t f.close()`
 `fout.close()`
 

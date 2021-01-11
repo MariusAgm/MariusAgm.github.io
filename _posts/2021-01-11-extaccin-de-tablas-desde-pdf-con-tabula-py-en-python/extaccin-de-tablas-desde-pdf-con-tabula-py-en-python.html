@@ -1460,12 +1460,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Cambia <code>tabla.csv</code> por el nombre del documento que quieras obtener en formato csv. En mi caso, esto no resultó ser tan sencillo, pues el documento tenía 1064 páginas, por lo que <code>df[0]</code>, por ejemplo, me mostraba en la consola la tabla correspondiente a la primera página del documento.</p>
 <h3 id="generar-múltiples-archivos-csv">Generar múltiples archivos csv</h3>
 <p>Lo que hice ante esta situación fue generar en loop todos los archivos csv con un ciclo <code>for</code> en python.</p>
-<p><code>for page in range(0,1064)</code> <code>df[page].to_csv('tabla'+str(page)+'.csv', encoding='utf-8')</code></p>
+<p><code>for page in range(0,1064)</code> <code>\t df[page].to_csv('tabla'+str(page)+'.csv', encoding='utf-8')</code></p>
 <p>Este ciclo genera todos los archivos en csv con todos los datos que requiero. El problema es que tal vez tener múltiples archivos no sea tan práctico como tener una base de datos unificada. Para esto, <a href="https://www.freecodecamp.org/news/how-to-combine-multiple-csv-files-with-8-lines-of-code-265183e0854/">podemos unir los archivos usando <code>pd.concat()</code> con la librería <code>pandas</code></a>. Esto funciona si la base de datos es bien comportada.</p>
 <p>Como este no fue mi caso (casi nunca lo es), usé un script sencillo también de python que hace un ciclo <code>for</code> para extraer las filas de cada uno de los archivos y los unifica en un sólo <code>csv</code>.</p>
 <h3 id="unificar-la-base-de-datos">Unificar la base de datos</h3>
-<p>Aprovechando que las bases de datos se generan en un ciclo con diferentes archivos que tienen el mismo nombre y sólamente diferenciados por el número, usamos el siguiente scipt en Python.</p>
-<p><code>fout = open("tabla_consolidada.csv", "a")</code> <code>for line in open("tabla0.csv"):</code> <code>fout.write(line)</code> <code>for num in range(1,1063):</code> <code>f = open("tabla"+str(num)+".csv")</code> <code>for line in f:</code> <code>fout.write(line)</code> <code>f.close()</code> <code>fout.close()</code></p>
+<p>Aprovechando que las bases de datos se generan en un ciclo con diferentes archivos que tienen el mismo nombre y sólamente diferenciados por el número, usamos el siguiente script en Python.</p>
+<p><code>fout = open("tabla_consolidada.csv", "a")</code> <code>for line in open("tabla0.csv"):</code> <code>fout.write(line)</code> <code>for num in range(1,1063):</code> <code>\t f = open("tabla"+str(num)+".csv")</code> <code>\t for line in f:</code> <code>\t \tfout.write(line)</code> <code>\t f.close()</code> <code>fout.close()</code></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
