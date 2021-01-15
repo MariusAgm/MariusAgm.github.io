@@ -4,6 +4,8 @@ description: |
   Una guía para profesores
 author:
   - name: Mario A. García-Meza
+date: 01-15-2021
+---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
