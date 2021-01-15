@@ -5,6 +5,14 @@ description: |
 author:
   - name: Mario A. García-Meza
 date: 01-15-2021
+categories:
+  - Enseñanza
+  - Hacks
+  - scripts
+  - Google
+output:
+  distill::distill_article:
+    self_contained: false
 ---
 
 ```{r setup, include=FALSE}

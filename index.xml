@@ -7,7 +7,62 @@
     <description>Blog de Mario Alberto García Meza
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 30 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Cómo mandar calificaciones al correo de manera automatizada</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2021-01-15-cmo-mandar-calificaciones-al-correo-de-manera-automatizada</link>
+      <description>
+
+
+&lt;p&gt;No les quería subir el archivo de Excel y exponer las calificaciones de todos ante los demás. Pero entregarlas de manera individual es demasiado trabajo y las probabilidades de error son muchas. ¿Cómo entregar las calificaciones de manera individual por correo?&lt;/p&gt;
+&lt;p&gt;Si tu eres como yo, probablemente tienes las calificaciones de tus alumnos en un archivo de Excel que extrae las calificaciones que se generan a partir de las entregas en el sistema de gestión de clases (Moodle o Google Classroom). Si es así, este tutorial te puede servir.&lt;/p&gt;
+&lt;p&gt;Lo único que necesitas es una cuenta de developer de Google, un correo de Google (tal vez te convenga que no sea el correo personal) y tu lista de calificaciones en una hoja de cálculo de Google Sheets. Puedes subir el archivo en Excel y guardarlo en Google Drive como hoja de cálculo de Google.&lt;/p&gt;
+&lt;h3 id="prepara-el-archivo-excel"&gt;Prepara el archivo Excel&lt;/h3&gt;
+&lt;p&gt;Necesitamos que en una columna del archivo esté el nombre del alumno (preferible), el correo electrónico (indispensable) y las calificaciones en una columna aparte. Recuérdale a tus alumnos que actualicen su dirección de correo y se aseguren de que es correcta.&lt;/p&gt;
+&lt;p&gt;En una columna puedes generar el mensaje que quieres que incluya el correo. Te muestro un ejemplo de cómo se ve la fórmula que yo usé para hacer el mensaje:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;=CONCATENATE(&amp;quot;Hola &amp;quot;,A2,&amp;quot;. Espero primeramente que te encuentres muy bien. Tu calificación final es de &amp;quot;, ROUND(AB2,2), &amp;quot;, según los archivos del SUV y el modelo de calificación que acordamos al inicio de la clase. En esta consideración tu estatus es &amp;quot;,AD2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Cambia &lt;code&gt;A2&lt;/code&gt; y el resto de las celdas por las que contienen la información que necesitas, como el nombre, la calificación y otros detalles. Por ejemplo, en la celda &lt;code&gt;AD2&lt;/code&gt; yo expreso si el alumno está reprobado, aprobado, exento, u otras características que dependen de la calificación únicamente. Todas estas fueron generadas con fórmula, de tal modo que no tuve que escribirlo yo directamente, ahorrandome la probabilidad de errores en el mensaje.&lt;/p&gt;
+&lt;h3 id="scripts-en-google"&gt;Scripts en Google&lt;/h3&gt;
+&lt;p&gt;Abre un nuevo script en &lt;a href="scripts.google.com"&gt;scripts.google.com&lt;/a&gt;. Si necesitas ayuda puedes ver el tutorial en la &lt;a href="https://developers.google.com/apps-script/overview"&gt;página de desarrolladores de Google&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Escribe el siguiente código&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/**
+ * Sends emails with data from the current spreadsheet.
+ */
+function sendEmails() {
+  var sheet = SpreadsheetApp.openById(&amp;quot;id_de_la_hoja_de_calculo&amp;quot;).getSheets()[0];
+  //var sheet = SpreadsheetApp.getActiveSheet();
+  var startRow = 2; // First row of data to process
+  var numRows = 38; // Number of rows to process
+  // Fetch the range of cells A2:B3
+  var dataRange = sheet.getRange(startRow, 1, numRows, 30);
+  // Fetch values for each row in the Range.
+  var data = dataRange.getValues();
+  for (var i in data) {
+    var row = data[i];
+    var emailAddress = row[2]; // Third column
+    var message = row[28]; // Columna 29
+    var subject = &amp;#39;Calificaciones&amp;#39;;
+    MailApp.sendEmail(emailAddress, subject, message);
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Cambia el ID de la hoja de cálculo de Google. Esa la puedes identificar en el navegador cuando la hoja está abierta. Abre la barra de navegación e identifícala. Es lo que viene después de &lt;code&gt;/d/&lt;/code&gt;. Por ejemplo&lt;/p&gt;
+&lt;pre class="https://docs.google.com/spreadsheets/d/id_de_la_hoja_de_calculo/edit```"&gt;&lt;code&gt;
+Cambia también la fila de inicio `startRow` y el número de filas `numRows`. En mi caso requiero de 38 filas porque son el número de alumnos que tengo en ese grupo y estoy saltando la fila de los nombres de variable.
+
+Sólo queda modificar el ciclo `for`, especificando la fila en la que se encuentra cada cosa. Es importante recordar que los lenguajes de programación comienzan sus iteraciones en 0, por lo que si deseas extraer la columna 3, necesitas poner `row[2]`; lo mismo aplica para el mensaje, tienes que ubicar la fila en la que se encuentra. En mi caso está en la columna 29, por lo que `row[28]` logró extraerlo. Escribe en `var subject` el título del correo.
+
+Aprieta el botón **Run** y verifica en tu correo que se mandó. Recuerda que el script se debe correr con la misma cuenta de Google con la del archivo en Drive. También recuerda que Google te permite mandar hasta 100 correos diariamente y 1000 si tienes una cuenta en GSuite.
+
+```{.r .distill-force-highlighting-css}&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>5357be3f5c7f1c9534a01ccf01da8ec1</distill:md5>
+      <category>Enseñanza</category>
+      <category>Hacks</category>
+      <category>scripts</category>
+      <category>Google</category>
+      <guid>http://marionomics.com/posts/2021-01-15-cmo-mandar-calificaciones-al-correo-de-manera-automatizada</guid>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>El valor de la inferencia estadística</title>
       <dc:creator>Mario A. García Meza</dc:creator>
@@ -113,7 +168,7 @@ NOTE: n is number in *each* group&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Hay que admitir que la mayoría de las ocasiones este es el caso: la población no es tan simple como para que un muestreo simple sea la solución. En &lt;a href="https://www.marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta/"&gt;este post&lt;/a&gt; hice un tutorial de cómo obtener los tamaños de muestra para una encuesta con una función hecha por nosotros mismos y &lt;a href="https://www.marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r/"&gt;aquí&lt;/a&gt; explico parte de la teoría y cómo obtener las muestras con la función &lt;code&gt;pwr.t.test()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Pero en esta ocasión, vamos a llevar el análisis un paso más allá y preguntarnos que sucede si la población con la que nos encontramos tiene características heterogéneas. Y siendo sinceros, toda población que vale la pena estudiarse es al menos un poco heterogénea.&lt;/p&gt;
 &lt;p&gt;Recordemos que nuestro objetivo es la &lt;em&gt;inferencia estadística&lt;/em&gt;, es decir, obtener la misma información que obtendríamos de la población, pero usando un conjunto de datos más pequeño. Sin embargo, supongamos que existen tres tipos distintos de población en nuestra muestra. Estos representan el 50%, 40% y 10% de la población respectivamente. Si nosotros tomaramos una muestra uniforme, de los datos, existe la probabilidad de sobrerepresentar o subrepresentar algún estrato.&lt;/p&gt;
-&lt;p&gt;&lt;img src="file127c70efefc2_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="file1e7b204c4419_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
 &lt;p&gt;No solamente se trata de la proporción. Los estratos pueden variar en su desviación estándar. Esto hace que el muestreo estratificado proporcione una visión más clara de lo que está pasando al muestreo simple.&lt;/p&gt;
 &lt;p&gt;Veamos cómo se realiza este muestreo. Consideremos &lt;a href="https://en.wikipedia.org/wiki/Stratified_sampling"&gt;este ejemplo&lt;/a&gt;, donde se encuentra la siguiente distribución de trabajadores en una compañía&lt;/p&gt;
 &lt;table&gt;
