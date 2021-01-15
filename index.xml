@@ -64,6 +64,31 @@ Aprieta el botón **Run** y verifica en tu correo que se mandó. Recuerda que el
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Pensar en causalidad es pensar como economista</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2021-01-15-pensar-en-causalidad-es-pensar-como-economista</link>
+      <description>
+
+
+&lt;p&gt;El trabajo más importante que hace un economista aplicado se llama &lt;em&gt;identificación causal&lt;/em&gt;. Esto es lo que distingue a los verdaderos economistas del resto de los mortales: la habilidad de realizar inferencias correctas de las causas de un fenómeno (normalmente) social.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, consideremos la migración. La migración es un tema muy recurrente en las discusiones de política alrededor del mundo. Es con la retórica con la que se hizo el referéndum en Reino Unido que nos llevó al &lt;em&gt;Brexit&lt;/em&gt; y con la que Donald Trump ganó la presidencia en las elecciones de 2016.&lt;/p&gt;
+&lt;p&gt;Existe una lógica detrás de esa retórica. Una lógica que tristemente parece resonar con muchas personas, a pesar de lo que pueda mostrar la evidencia, y es que el flujo de migrantes de un país pobre a un país rico trae como consecuencia mayor oferta de trabajo no-calificado. Esto implicaría que más personas compiten por los mismos puestos de trabajo, lo cual traería desempleo y baja general en los salarios.&lt;/p&gt;
+&lt;p&gt;La realidad, naturalmente, es más compleja de lo que parece a simple vista. En 1980, hubo una migración en masa que salió del puerto de Mariel a los Estados Unidos. Diez mil cubanos llegaron al puerto de Miami sin nada más que con lo que pudieron cargar en sus manos. Un escenario de horror si la hipótesis del desempleo causado por la migración es verdad.&lt;/p&gt;
+&lt;p&gt;Sin embargo, lo que se observó fue sorprendente. En 1990, el economista David Card &lt;a href="https://davidcard.berkeley.edu/papers/mariel-impact.pdf"&gt;recopiló información de los hechos&lt;/a&gt; . La fuerza laboral de Miami sufrió un incremento de 7% prácticamente de la noche a la mañana. Sin embargo, ni los salarios ni el nivel de empleo parece haber sido afectado por este fenómeno.&lt;/p&gt;
+&lt;p&gt;Si eres un lector curioso (y seguramente lo eres, si has llegado hasta este punto), seguramente te preguntarás cuál es la &lt;em&gt;causa&lt;/em&gt; de que no se haya dado ningún efecto. Responder a esto requiere comprender la forma en la que las personas y las empresas se comportan y no dejarse confundir por señales falsas que los datos pueden arrojar. En otras palabras, requiere &lt;strong&gt;pensar como economista&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Si bien es verdad que existe mayor oferta de trabajo (los economistas consideramos &lt;em&gt;oferta&lt;/em&gt; a las personas que ofrecen sus servicios en el mercado laboral) también es verdad que la migración suele traer consigo mayor demanda. Las personas tienen necesidades que cubrir desde el primer momento en el que llegan a un lugar nuevo: comida, ropa, hogar, cortes de cabello.&lt;/p&gt;
+&lt;p&gt;La demanda de estas nuevas personas en la economía requiere que las empresas establecidad tengan que contratar más, haciendo que el mercado se compense. Esto fue posible en el caso de los migrantes del puerto de Mariel porque Miami ya tenía migrantes del mismo país y la comunidad Cubana le dió a los nuevos integrantes el apoyo necesario para que salieran adelante.&lt;/p&gt;
+&lt;p&gt;Existen muchas lecciones que aprender sobre lo que deberíamos hacer para enfrentar los retos de la migración, que no son menores y que seguirán con nosotros por los años venideros.&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>0cccf404b1c6bd6c0c5310ec78f6ece3</distill:md5>
+      <category>Causalidad</category>
+      <category>Economía</category>
+      <category>Trabajo</category>
+      <category>Migración</category>
+      <guid>http://marionomics.com/posts/2021-01-15-pensar-en-causalidad-es-pensar-como-economista</guid>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>El valor de la inferencia estadística</title>
       <dc:creator>Mario A. García Meza</dc:creator>
       <link>http://marionomics.com/posts/2020-12-30-el-valor-de-la-inferencia-estadstica</link>
@@ -168,7 +193,7 @@ NOTE: n is number in *each* group&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Hay que admitir que la mayoría de las ocasiones este es el caso: la población no es tan simple como para que un muestreo simple sea la solución. En &lt;a href="https://www.marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta/"&gt;este post&lt;/a&gt; hice un tutorial de cómo obtener los tamaños de muestra para una encuesta con una función hecha por nosotros mismos y &lt;a href="https://www.marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r/"&gt;aquí&lt;/a&gt; explico parte de la teoría y cómo obtener las muestras con la función &lt;code&gt;pwr.t.test()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Pero en esta ocasión, vamos a llevar el análisis un paso más allá y preguntarnos que sucede si la población con la que nos encontramos tiene características heterogéneas. Y siendo sinceros, toda población que vale la pena estudiarse es al menos un poco heterogénea.&lt;/p&gt;
 &lt;p&gt;Recordemos que nuestro objetivo es la &lt;em&gt;inferencia estadística&lt;/em&gt;, es decir, obtener la misma información que obtendríamos de la población, pero usando un conjunto de datos más pequeño. Sin embargo, supongamos que existen tres tipos distintos de población en nuestra muestra. Estos representan el 50%, 40% y 10% de la población respectivamente. Si nosotros tomaramos una muestra uniforme, de los datos, existe la probabilidad de sobrerepresentar o subrepresentar algún estrato.&lt;/p&gt;
-&lt;p&gt;&lt;img src="file1e7b204c4419_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="file39d53e643bad_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
 &lt;p&gt;No solamente se trata de la proporción. Los estratos pueden variar en su desviación estándar. Esto hace que el muestreo estratificado proporcione una visión más clara de lo que está pasando al muestreo simple.&lt;/p&gt;
 &lt;p&gt;Veamos cómo se realiza este muestreo. Consideremos &lt;a href="https://en.wikipedia.org/wiki/Stratified_sampling"&gt;este ejemplo&lt;/a&gt;, donde se encuentra la siguiente distribución de trabajadores en una compañía&lt;/p&gt;
 &lt;table&gt;

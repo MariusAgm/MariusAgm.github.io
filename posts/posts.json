@@ -22,6 +22,28 @@
     "input_file": "cmo-mandar-calificaciones-al-correo-de-manera-automatizada.utf8.md"
   },
   {
+    "path": "posts/2021-01-15-pensar-en-causalidad-es-pensar-como-economista/",
+    "title": "Pensar en causalidad es pensar como economista",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Mario A. García-Meza",
+        "url": {}
+      }
+    ],
+    "date": "2021-01-15",
+    "categories": [
+      "Causalidad",
+      "Economía",
+      "Trabajo",
+      "Migración"
+    ],
+    "contents": "\nEl trabajo más importante que hace un economista aplicado se llama identificación causal. Esto es lo que distingue a los verdaderos economistas del resto de los mortales: la habilidad de realizar inferencias correctas de las causas de un fenómeno (normalmente) social.\nPor ejemplo, consideremos la migración. La migración es un tema muy recurrente en las discusiones de política alrededor del mundo. Es con la retórica con la que se hizo el referéndum en Reino Unido que nos llevó al Brexit y con la que Donald Trump ganó la presidencia en las elecciones de 2016.\nExiste una lógica detrás de esa retórica. Una lógica que tristemente parece resonar con muchas personas, a pesar de lo que pueda mostrar la evidencia, y es que el flujo de migrantes de un país pobre a un país rico trae como consecuencia mayor oferta de trabajo no-calificado. Esto implicaría que más personas compiten por los mismos puestos de trabajo, lo cual traería desempleo y baja general en los salarios.\nLa realidad, naturalmente, es más compleja de lo que parece a simple vista. En 1980, hubo una migración en masa que salió del puerto de Mariel a los Estados Unidos. Diez mil cubanos llegaron al puerto de Miami sin nada más que con lo que pudieron cargar en sus manos. Un escenario de horror si la hipótesis del desempleo causado por la migración es verdad.\nSin embargo, lo que se observó fue sorprendente. En 1990, el economista David Card recopiló información de los hechos . La fuerza laboral de Miami sufrió un incremento de 7% prácticamente de la noche a la mañana. Sin embargo, ni los salarios ni el nivel de empleo parece haber sido afectado por este fenómeno.\nSi eres un lector curioso (y seguramente lo eres, si has llegado hasta este punto), seguramente te preguntarás cuál es la causa de que no se haya dado ningún efecto. Responder a esto requiere comprender la forma en la que las personas y las empresas se comportan y no dejarse confundir por señales falsas que los datos pueden arrojar. En otras palabras, requiere pensar como economista.\nSi bien es verdad que existe mayor oferta de trabajo (los economistas consideramos oferta a las personas que ofrecen sus servicios en el mercado laboral) también es verdad que la migración suele traer consigo mayor demanda. Las personas tienen necesidades que cubrir desde el primer momento en el que llegan a un lugar nuevo: comida, ropa, hogar, cortes de cabello.\nLa demanda de estas nuevas personas en la economía requiere que las empresas establecidad tengan que contratar más, haciendo que el mercado se compense. Esto fue posible en el caso de los migrantes del puerto de Mariel porque Miami ya tenía migrantes del mismo país y la comunidad Cubana le dió a los nuevos integrantes el apoyo necesario para que salieran adelante.\nExisten muchas lecciones que aprender sobre lo que deberíamos hacer para enfrentar los retos de la migración, que no son menores y que seguirán con nosotros por los años venideros.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-01-15T16:46:51-06:00",
+    "input_file": "pensar-en-causalidad-es-pensar-como-economista.utf8.md"
+  },
+  {
     "path": "posts/2020-12-30-el-valor-de-la-inferencia-estadstica/",
     "title": "El valor de la inferencia estadística",
     "description": "La Ley de los Rendimientos Decrecientes",
