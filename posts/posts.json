@@ -1,5 +1,25 @@
 [
   {
+    "path": "posts/2021-01-16-sumatorias-en-r/",
+    "title": "Sumatorias en R",
+    "description": "Bases de R.",
+    "author": [
+      {
+        "name": "Mario A. García-Meza",
+        "url": {}
+      }
+    ],
+    "date": "2021-01-16",
+    "categories": [
+      "R",
+      "Tutorial"
+    ],
+    "contents": "\n¿Te has topado ecuaciones que tienen este símbolo intimidante?: \\(\\sum\\). No temas más, en esta sección te voy a enseñar que es, cómo utilizarlo y por qué es tan popular. En poco tiempo estarás luciendo tus ecuaciones con sumatorias tú también.\nSe trata de la sumatoria. No es más que un indicador de que es necesario iterar entre los elementos de una lista y sumarlos todos. Por ejemplo,\n\\[\\begin{equation}\\label{sumatoria}\n  \\sum_{i=1}^n x_i,\n\\end{equation}\\]\nes lo mismo que decir\n\\[\\begin{equation}\nx_1+ x_2 + \\cdots + x_n.\n\\end{equation}\\]\nEsto significa que \\(i\\) va a tomar los valores desde el 1 al \\(n\\). De manera implícita, estamos diciendo que existe una lista de valores que hemos nombrado \\(x_1\\), \\(x_2\\) y así hasta el valor que toma \\(n\\). Si \\(n = 10\\), entonces esto significa que tenemos una lista con 10 elementos y la ecuación  nos dice que queremos sumar todos los elementos de esta lista.\nEl equivalente en R es la función sum(). Digamos que tenemos un vector al que llamaremos x y que definimos con\n\n\n\nPodemos llamar al elemento \\(x_1\\) usando x[1]. De hecho, si imaginamos que \\(i\\) puede tomar cualquier valor entre 1 y 10, que es el tamaño de x, entonces x[i] nos muestra el \\(i\\)-ésimo elemento de nuestra lista. Para hacer la sumatoria en R, no se necesita más que teclear\n\n[1] 143\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-01-16T16:09:25-06:00",
+    "input_file": "sumatorias-en-r.utf8.md"
+  },
+  {
     "path": "posts/2021-01-15-cmo-mandar-calificaciones-al-correo-de-manera-automatizada/",
     "title": "Cómo mandar calificaciones al correo de manera automatizada",
     "description": "Una guía para profesores",

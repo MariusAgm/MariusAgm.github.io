@@ -7,7 +7,34 @@
     <description>Blog de Mario Alberto García Meza
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Sumatorias en R</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2021-01-16-sumatorias-en-r</link>
+      <description>
+
+
+&lt;p&gt;¿Te has topado ecuaciones que tienen este símbolo intimidante?: &lt;span class="math inline"&gt;\(\sum\)&lt;/span&gt;. No temas más, en esta sección te voy a enseñar que es, cómo utilizarlo y por qué es tan popular. En poco tiempo estarás luciendo tus ecuaciones con sumatorias tú también.&lt;/p&gt;
+&lt;p&gt;Se trata de la &lt;em&gt;sumatoria&lt;/em&gt;. No es más que un indicador de que es necesario &lt;em&gt;iterar&lt;/em&gt; entre los elementos de una lista y sumarlos todos. Por ejemplo,&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[\begin{equation}\label{sumatoria}
+  \sum_{i=1}^n x_i,
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;es lo mismo que decir&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[\begin{equation}
+x_1+ x_2 + \cdots + x_n.
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Esto significa que &lt;span class="math inline"&gt;\(i\)&lt;/span&gt; va a tomar los valores desde el 1 al &lt;span class="math inline"&gt;\(n\)&lt;/span&gt;. De manera implícita, estamos diciendo que existe una lista de valores que hemos nombrado &lt;span class="math inline"&gt;\(x_1\)&lt;/span&gt;, &lt;span class="math inline"&gt;\(x_2\)&lt;/span&gt; y así hasta el valor que toma &lt;span class="math inline"&gt;\(n\)&lt;/span&gt;. Si &lt;span class="math inline"&gt;\(n = 10\)&lt;/span&gt;, entonces esto significa que tenemos una lista con 10 elementos y la ecuación  nos dice que queremos sumar todos los elementos de esta lista.&lt;/p&gt;
+&lt;p&gt;El equivalente en R es la función &lt;code&gt;sum()&lt;/code&gt;. Digamos que tenemos un &lt;em&gt;vector&lt;/em&gt; al que llamaremos &lt;code&gt;x&lt;/code&gt; y que definimos con&lt;/p&gt;
+&lt;p&gt;Podemos llamar al elemento &lt;span class="math inline"&gt;\(x_1\)&lt;/span&gt; usando &lt;code&gt;x[1]&lt;/code&gt;. De hecho, si imaginamos que &lt;span class="math inline"&gt;\(i\)&lt;/span&gt; puede tomar cualquier valor entre 1 y 10, que es el tamaño de &lt;code&gt;x&lt;/code&gt;, entonces &lt;code&gt;x[i]&lt;/code&gt; nos muestra el &lt;span class="math inline"&gt;\(i\)&lt;/span&gt;-ésimo elemento de nuestra lista. Para hacer la sumatoria en R, no se necesita más que teclear&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[1] 143&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>45d9709a794d283f838ea0e932e1c560</distill:md5>
+      <category>R</category>
+      <category>Tutorial</category>
+      <guid>http://marionomics.com/posts/2021-01-16-sumatorias-en-r</guid>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Cómo mandar calificaciones al correo de manera automatizada</title>
       <dc:creator>Mario A. García-Meza</dc:creator>
@@ -193,7 +220,7 @@ NOTE: n is number in *each* group&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Hay que admitir que la mayoría de las ocasiones este es el caso: la población no es tan simple como para que un muestreo simple sea la solución. En &lt;a href="https://www.marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta/"&gt;este post&lt;/a&gt; hice un tutorial de cómo obtener los tamaños de muestra para una encuesta con una función hecha por nosotros mismos y &lt;a href="https://www.marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r/"&gt;aquí&lt;/a&gt; explico parte de la teoría y cómo obtener las muestras con la función &lt;code&gt;pwr.t.test()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Pero en esta ocasión, vamos a llevar el análisis un paso más allá y preguntarnos que sucede si la población con la que nos encontramos tiene características heterogéneas. Y siendo sinceros, toda población que vale la pena estudiarse es al menos un poco heterogénea.&lt;/p&gt;
 &lt;p&gt;Recordemos que nuestro objetivo es la &lt;em&gt;inferencia estadística&lt;/em&gt;, es decir, obtener la misma información que obtendríamos de la población, pero usando un conjunto de datos más pequeño. Sin embargo, supongamos que existen tres tipos distintos de población en nuestra muestra. Estos representan el 50%, 40% y 10% de la población respectivamente. Si nosotros tomaramos una muestra uniforme, de los datos, existe la probabilidad de sobrerepresentar o subrepresentar algún estrato.&lt;/p&gt;
-&lt;p&gt;&lt;img src="file39d53e643bad_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="file6ee0ba29e08_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
 &lt;p&gt;No solamente se trata de la proporción. Los estratos pueden variar en su desviación estándar. Esto hace que el muestreo estratificado proporcione una visión más clara de lo que está pasando al muestreo simple.&lt;/p&gt;
 &lt;p&gt;Veamos cómo se realiza este muestreo. Consideremos &lt;a href="https://en.wikipedia.org/wiki/Stratified_sampling"&gt;este ejemplo&lt;/a&gt;, donde se encuentra la siguiente distribución de trabajadores en una compañía&lt;/p&gt;
 &lt;table&gt;
