@@ -7,7 +7,57 @@
     <description>Blog de Mario Alberto García Meza
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 16 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Equilibrio Lineal</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2021-02-05-equilibrio-lineal</link>
+      <description>
+
+
+&lt;h1 id="equilibrio-lineal"&gt;Equilibrio Lineal&lt;/h1&gt;
+&lt;p&gt;Created: Feb 1, 2021 4:55 PM Last edited: Feb 2, 2021 1:41 PM Tags: Clases, Español, Microeconomics&lt;/p&gt;
+&lt;p&gt;Los dos principios fundamentales en los que se basa la teoría microeconómica son la optimización y el equilibrio.&lt;/p&gt;
+&lt;p&gt;Suponemos que tanto las empresas (oferentes) como los compradores (demandantes) consideran los precios como dados (¿por quién?). Cuando los precios son dados, decimos que se trata de un &lt;strong&gt;mercado competitivo&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;En realidad tenemos que dar un paso atrás. La idea fundamental de que el mercado sea &lt;em&gt;competitivo&lt;/em&gt; implica que ninguno de los &lt;em&gt;agentes&lt;/em&gt; (empresas o compradores) puede influir en el precio. En la realidad, esto no es algo tan común como parecería: existen muchos mercados en el que los vendedores son pocos y pueden influir en los precios fácilmente.&lt;/p&gt;
+&lt;p&gt;El precio de equilibrio de un bien es aquel al que su oferta se iguala a la demanda.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img src="https://www.economicshelp.org/wp-content/uploads/2012/11/market-equilibrium.png" alt="" /&gt;
+&lt;p class="caption"&gt;&lt;a href="https://www.economicshelp.org/wp-content/uploads/2012/11/market-equilibrium.png" class="uri"&gt;https://www.economicshelp.org/wp-content/uploads/2012/11/market-equilibrium.png&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;El equilibrio del mercado es donde cruza la curva de oferta y de demanda&lt;/p&gt;
+&lt;p&gt;Denominemos la función de demanda con &lt;span class="math inline"&gt;\(D(p^*)\)&lt;/span&gt; y la de oferta con &lt;span class="math inline"&gt;\(S(p^*)\)&lt;/span&gt;. Nota que estamos usando la &lt;em&gt;notación funcional,&lt;/em&gt; es decir que el valor de la demanda &lt;span class="math inline"&gt;\(D\)&lt;/span&gt; depende directamente del precio de equilibrio, denotado por &lt;span class="math inline"&gt;\(p*\)&lt;/span&gt;. Entonces, cuando hablamos del precio de equilibrio, hablamos del precio en el que la condición&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[D(p^*) = S(p^*)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;se cumple.&lt;/p&gt;
+&lt;p&gt;Existen dos casos especiales de estas curvas: cuando ya sea la oferta o la demanda son fijas.&lt;/p&gt;
+&lt;h2 id="equilibrio-con-curvas-lineales"&gt;Equilibrio con curvas lineales&lt;/h2&gt;
+&lt;p&gt;Cuando decimos &lt;em&gt;curvas&lt;/em&gt;, estamos hablando de una forma funcional cualquiera. Existe un caso especial de estas funciones, que es el más sencillo de trabajar.&lt;/p&gt;
+&lt;p&gt;Podríamos, por ejemplo, asumir que las curvas de oferta o de demanda (o ambas) son &lt;em&gt;lineales&lt;/em&gt;. Una función lineal se puede distinguir de manera geométrica porque forman una línea (sorprendido?).&lt;/p&gt;
+&lt;p&gt;De manera algebraica, podemos representar las curvas de demanda y de oferta como una función lineal de la siguiente forma:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[D(p)= a + b p \\ S(p) = c + dp\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nota que aquí no estamos denotando el precio con un asterisco en el superíndice. Esto es porque formalmente aún no es el precio de equilibrio (a pesar de que sabemos que es, o debe ser el mismo precio). Eso es porque antes de encontrarlo, no sabemos si realmente existe ese precio de equilibrio, pero es una mera formalidad. Como yo ya te dije anteriormente que si existe, tu podrías perfectamente ponerle el asterisco, si te hace mas fácil entender el texto.&lt;/p&gt;
+&lt;p&gt;Ahora, en la primera ecuación vimos que para encontrar el punto de equilibrio solamente es necesario igualar el lado derecho de las dos ecuaciones.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[a +bp = c + dp\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Ahora simplemente tenemos que despejar el valor de &lt;span class="math inline"&gt;\(p\)&lt;/span&gt;. Este debería ser nuestro precio de equilibrio, que se vería geométricamente como el punto en el que se cruzan las curvas de oferta y demanda.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[p^* = \frac{c-a}{b-d}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;En esta ecuación encontramos que el precio ya sólo depende de las constantes del sistema.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id="preguntas"&gt;Preguntas&lt;/h3&gt;
+&lt;ol style="list-style-type: decimal"&gt;
+&lt;li&gt;¿De qué maneras crees tú que podría una empresa influir en el precio de un bien?&lt;/li&gt;
+&lt;li&gt;¿Conoces algún ejemplo en el que los compradores influyan en los precios?&lt;/li&gt;
+&lt;li&gt;Podemos notar que estamos denotando con &lt;span class="math inline"&gt;\(D(\cdot)\)&lt;/span&gt; a la demanda. ¿Entonces, que significa la &lt;span class="math inline"&gt;\(P(\cdot)\)&lt;/span&gt;? (no te asustes cuando veas un puntito en medio, ese sólo significa que al autor le dió flojera escribir la función adentro del paréntesis)&lt;/li&gt;
+&lt;li&gt;Nota que en las curvas lineales, para que la función de la demanda tenga sentido, es necesario que &lt;span class="math inline"&gt;\(b&amp;lt;0\)&lt;/span&gt;. ¿Puedes identificar por qué?&lt;/li&gt;
+&lt;li&gt;Desarrolla el despeje de &lt;span class="math inline"&gt;\(p\)&lt;/span&gt; y demuestra su valor en función de &lt;span class="math inline"&gt;\(a,b,d,c\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;En realidad, las curvas de oferta y demanda podrían tener el valor que quisieran. ¿Cuál sería el valor del precio de equilibrio si&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[D(p)= a + b p^2 \\ S(p) = 6 + dp\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>c9aea8b09167923ce53f00865eb99df9</distill:md5>
+      <category>Microeconomía</category>
+      <guid>http://marionomics.com/posts/2021-02-05-equilibrio-lineal</guid>
+      <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Sumatorias en R</title>
       <dc:creator>Mario A. García-Meza</dc:creator>
@@ -220,7 +270,7 @@ NOTE: n is number in *each* group&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Hay que admitir que la mayoría de las ocasiones este es el caso: la población no es tan simple como para que un muestreo simple sea la solución. En &lt;a href="https://www.marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta/"&gt;este post&lt;/a&gt; hice un tutorial de cómo obtener los tamaños de muestra para una encuesta con una función hecha por nosotros mismos y &lt;a href="https://www.marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r/"&gt;aquí&lt;/a&gt; explico parte de la teoría y cómo obtener las muestras con la función &lt;code&gt;pwr.t.test()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Pero en esta ocasión, vamos a llevar el análisis un paso más allá y preguntarnos que sucede si la población con la que nos encontramos tiene características heterogéneas. Y siendo sinceros, toda población que vale la pena estudiarse es al menos un poco heterogénea.&lt;/p&gt;
 &lt;p&gt;Recordemos que nuestro objetivo es la &lt;em&gt;inferencia estadística&lt;/em&gt;, es decir, obtener la misma información que obtendríamos de la población, pero usando un conjunto de datos más pequeño. Sin embargo, supongamos que existen tres tipos distintos de población en nuestra muestra. Estos representan el 50%, 40% y 10% de la población respectivamente. Si nosotros tomaramos una muestra uniforme, de los datos, existe la probabilidad de sobrerepresentar o subrepresentar algún estrato.&lt;/p&gt;
-&lt;p&gt;&lt;img src="file6ee0ba29e08_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="file5e35e7fe2ec_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
 &lt;p&gt;No solamente se trata de la proporción. Los estratos pueden variar en su desviación estándar. Esto hace que el muestreo estratificado proporcione una visión más clara de lo que está pasando al muestreo simple.&lt;/p&gt;
 &lt;p&gt;Veamos cómo se realiza este muestreo. Consideremos &lt;a href="https://en.wikipedia.org/wiki/Stratified_sampling"&gt;este ejemplo&lt;/a&gt;, donde se encuentra la siguiente distribución de trabajadores en una compañía&lt;/p&gt;
 &lt;table&gt;
