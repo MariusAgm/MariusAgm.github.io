@@ -12,15 +12,15 @@
       "title": "Acerca de mi",
       "description": "Algunos datos sobre mi",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2021-01-02T14:49:45-06:00"
+      "contents": "\nMi nombre es Mario Alberto García Meza, soy profesor/investigador en la Universidad Juárez del Estado de Durango y este es mi blog.\nSobre mi\nDesde pequeño siempre quise ser científico. Viví de niño en Vicente Guerrero, Durango. Mi papá es biólogo y siempre me enseñó a apreciar la naturaleza y la vida, sobre todo los insectos de los cuales tenía una gran colección en el trabajo que me encantaba admirar.\nEstudié la carrera en Administración en la FECA-UJED en Durango y más tarde la maestría en la Escuela Superior de Economía del Instituto Politécnico Nacional, en la Ciudad de México. Al terminar la maestría tomé una de las decisiones más importantes hasta el momento: hacer un doctorado y convertirme en investigador.\nEntré al Doctorado en Ciencias Económicas en 2014 con una beca del Conacyt y entré a diferentes proyectos que me llevaron de viaje por toda la república a estudiar las pequeñas y medianas empresas. Esto me cambiaría la vida por siempre.\nEn 2015 asistí a un congreso en la ciudad de San Petersburgo, en Rusia, donde presenté por primera vez mi trabajo en ecuaciones diferenciales. Ahí me invitaron a tomar una estancia en 2016, donde conocí a María, mi esposa.\nMaría regresó conmigo y desde entonces vivimos en la ciudad de Durango, donde tenemos dos hermosos hijos.\nSobre mi trabajo\nSoy profesor-investigador en la Universidad Juárez del Estado de Durango. Doy clase en licenciatura, maestría y Doctorado, principalmente de Economía y de métodos cuantitativos. Mi línea de investigación es la teoría de juegos diferencial en ocasiones, métodos cuantitativos e inferencia causal en otras y pequeñas empresas otras tantas veces.\nMe encanta la divulgación de la ciencia. Puedes ver mis publicaciones en esta página.\n\n\n\n",
+      "last_modified": "2021-02-11T15:56:52-06:00"
     },
     {
       "path": "index.html",
       "title": "Marionomics: Economía",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-01-02T16:57:23-06:00"
+      "last_modified": "2021-02-05T10:48:58-06:00"
     }
   ],
   "collections": ["posts/posts.json"]
