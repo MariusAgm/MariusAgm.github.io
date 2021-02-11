@@ -86,7 +86,7 @@
   {
     "path": "posts/2021-02-11-no-correlacin-no-significa-no-causalidad/",
     "title": "No Correlación no significa No causalidad",
-    "description": "A short description of the post.",
+    "description": "Un ejemplo para entender lo que parece una paradoja",
     "author": [
       {
         "name": "Mario A. García-Meza",
@@ -104,7 +104,7 @@
     ],
     "contents": "\nSi eres aficionado a la estadística como yo, seguramente has escuchado que correlación no implica causalidad. Esta máxima se repite en las aulas regularmente para advertir a los alumnos cuando ven un coeficiente de correlación. Si cuando el gallo canta, el sol sale, esto no significa que el canto del gallo haga salir al sol.\nMás interesante que eso es que puede haber causalidad, aunque no encontremos correlación. Esto convierte a la causalidad en un asunto poco trivial, si no es que ya lo era para ti.\nPiensa en un barco de vela en medio del mar. En el barco sólamente hay una persona, que gira una manivela a la derecha y a la izquierda para dar dirección al bote. Si las aguas están calmadas, entonces la correlación entre la manivela y la dirección en la que se mueve el bote es perfecta, pues a donde gire la manivela el pasajero, se moverá el bote.\nLa situación cambia si las aguas se vuelven turbias. Las aguas mueven la dirección del bote mientras que el pasajero mueve la manivela para estabilizarlo. Como resultado, el bote sigue en movimiento recto a pesar de que el pasajero esté haciendo muchos movimientos con la manivela.\nPara un observador que sólamente recolecta los datos del evento, la correlación entre la manivela y la dirección del bote es nula. Este observador podría pensar que la manivela no funciona: no hay causalidad entre el movimiento que hace el pasajero y la dirección del bote.\nPero las decisiones de la dirección de la manivela no son aleatorias: estas dependen de los estímulos externos y de la reacción que el pasajero tiene a estas. Si nuestro pasajero usara una moneda para decidir la dirección de la manivela, entonces en algunas ocasiones esta coincidirá con la de la marea y el bote girará (no recomiendo experimentar con esto). El observador notará que si hay correlación y podrá inferir la causalidad a partir de esto.\n¿Y que tiene que ver esto con la economía?\nEste ejemplo no es tan trivial como podría parecer. Realmente hay muchos ejemplos en Economía en los que hay causalidad que no se puede observar por correlación simple.\nComo ejemplo, considera el banco central de un país. En algunos países, parte del mandato de estos organismos es el de vigilar que el país no caiga en recesión. Para eso, tienen mecanismos para inyectar dinero a una economía cuando se requiere estimularala.\nEsos mecanismos son como la manivela. El problema, cuando se quieren estudiar estos efectos, es que las reacciones del Banco central son como las del pasajero en el barco: son reacciones anticipadas a una situación exógena. Cuando el Banco Central nota que puede haber una recesión, compra bonos u otros instrumentos para inundar la economía de dinero.\nUn observador crítico puede notar que al final, no pasó nada. Con mala fe, alguien podría reclamar que los estímulos eran innecesarios. Pero esto no es así. Es solamente un caso de endogeneidad en el que no hay correlación, sin embargo si hay causalidad.\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-02-11T16:46:39-06:00",
+    "last_modified": "2021-02-11T16:49:21-06:00",
     "input_file": "no-correlacin-no-significa-no-causalidad.utf8.md"
   },
   {

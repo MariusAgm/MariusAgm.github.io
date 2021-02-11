@@ -1,7 +1,7 @@
 ---
 title: "No Correlación no significa No causalidad"
 description: |
-  A short description of the post.
+  Un ejemplo para entender lo que parece una paradoja
 author:
   - name: Mario A. García-Meza
 date: 01-15-2021
