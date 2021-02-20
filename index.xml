@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:distill="https://distill.pub/journal/" version="2.0">
   <channel>
     <title>Marionomics</title>
     <link>http://marionomics.com</link>
@@ -7,7 +7,217 @@
     <description>Blog de Mario Alberto García Meza
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 28 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Equilibrio Lineal</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2021-02-05-equilibrio-lineal</link>
+      <description>
+
+
+&lt;h1 id="equilibrio-lineal"&gt;Equilibrio Lineal&lt;/h1&gt;
+&lt;p&gt;Created: Feb 1, 2021 4:55 PM Last edited: Feb 2, 2021 1:41 PM Tags: Clases, Español, Microeconomics&lt;/p&gt;
+&lt;p&gt;Los dos principios fundamentales en los que se basa la teoría microeconómica son la optimización y el equilibrio.&lt;/p&gt;
+&lt;p&gt;Suponemos que tanto las empresas (oferentes) como los compradores (demandantes) consideran los precios como dados (¿por quién?). Cuando los precios son dados, decimos que se trata de un &lt;strong&gt;mercado competitivo&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;En realidad tenemos que dar un paso atrás. La idea fundamental de que el mercado sea &lt;em&gt;competitivo&lt;/em&gt; implica que ninguno de los &lt;em&gt;agentes&lt;/em&gt; (empresas o compradores) puede influir en el precio. En la realidad, esto no es algo tan común como parecería: existen muchos mercados en el que los vendedores son pocos y pueden influir en los precios fácilmente.&lt;/p&gt;
+&lt;p&gt;El precio de equilibrio de un bien es aquel al que su oferta se iguala a la demanda.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img src="https://www.economicshelp.org/wp-content/uploads/2012/11/market-equilibrium.png" alt="" /&gt;
+&lt;p class="caption"&gt;&lt;a href="https://www.economicshelp.org/wp-content/uploads/2012/11/market-equilibrium.png" class="uri"&gt;https://www.economicshelp.org/wp-content/uploads/2012/11/market-equilibrium.png&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;El equilibrio del mercado es donde cruza la curva de oferta y de demanda&lt;/p&gt;
+&lt;p&gt;Denominemos la función de demanda con &lt;span class="math inline"&gt;\(D(p^*)\)&lt;/span&gt; y la de oferta con &lt;span class="math inline"&gt;\(S(p^*)\)&lt;/span&gt;. Nota que estamos usando la &lt;em&gt;notación funcional,&lt;/em&gt; es decir que el valor de la demanda &lt;span class="math inline"&gt;\(D\)&lt;/span&gt; depende directamente del precio de equilibrio, denotado por &lt;span class="math inline"&gt;\(p*\)&lt;/span&gt;. Entonces, cuando hablamos del precio de equilibrio, hablamos del precio en el que la condición&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[D(p^*) = S(p^*)\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;se cumple.&lt;/p&gt;
+&lt;p&gt;Existen dos casos especiales de estas curvas: cuando ya sea la oferta o la demanda son fijas.&lt;/p&gt;
+&lt;h2 id="equilibrio-con-curvas-lineales"&gt;Equilibrio con curvas lineales&lt;/h2&gt;
+&lt;p&gt;Cuando decimos &lt;em&gt;curvas&lt;/em&gt;, estamos hablando de una forma funcional cualquiera. Existe un caso especial de estas funciones, que es el más sencillo de trabajar.&lt;/p&gt;
+&lt;p&gt;Podríamos, por ejemplo, asumir que las curvas de oferta o de demanda (o ambas) son &lt;em&gt;lineales&lt;/em&gt;. Una función lineal se puede distinguir de manera geométrica porque forman una línea (sorprendido?).&lt;/p&gt;
+&lt;p&gt;De manera algebraica, podemos representar las curvas de demanda y de oferta como una función lineal de la siguiente forma:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[D(p)= a + b p \\ S(p) = c + dp\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nota que aquí no estamos denotando el precio con un asterisco en el superíndice. Esto es porque formalmente aún no es el precio de equilibrio (a pesar de que sabemos que es, o debe ser el mismo precio). Eso es porque antes de encontrarlo, no sabemos si realmente existe ese precio de equilibrio, pero es una mera formalidad. Como yo ya te dije anteriormente que si existe, tu podrías perfectamente ponerle el asterisco, si te hace mas fácil entender el texto.&lt;/p&gt;
+&lt;p&gt;Ahora, en la primera ecuación vimos que para encontrar el punto de equilibrio solamente es necesario igualar el lado derecho de las dos ecuaciones.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[a +bp = c + dp\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Ahora simplemente tenemos que despejar el valor de &lt;span class="math inline"&gt;\(p\)&lt;/span&gt;. Este debería ser nuestro precio de equilibrio, que se vería geométricamente como el punto en el que se cruzan las curvas de oferta y demanda.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[p^* = \frac{c-a}{b-d}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;En esta ecuación encontramos que el precio ya sólo depende de las constantes del sistema.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id="preguntas"&gt;Preguntas&lt;/h3&gt;
+&lt;ol style="list-style-type: decimal"&gt;
+&lt;li&gt;¿De qué maneras crees tú que podría una empresa influir en el precio de un bien?&lt;/li&gt;
+&lt;li&gt;¿Conoces algún ejemplo en el que los compradores influyan en los precios?&lt;/li&gt;
+&lt;li&gt;Podemos notar que estamos denotando con &lt;span class="math inline"&gt;\(D(\cdot)\)&lt;/span&gt; a la demanda. ¿Entonces, que significa la &lt;span class="math inline"&gt;\(P(\cdot)\)&lt;/span&gt;? (no te asustes cuando veas un puntito en medio, ese sólo significa que al autor le dió flojera escribir la función adentro del paréntesis)&lt;/li&gt;
+&lt;li&gt;Nota que en las curvas lineales, para que la función de la demanda tenga sentido, es necesario que &lt;span class="math inline"&gt;\(b&amp;lt;0\)&lt;/span&gt;. ¿Puedes identificar por qué?&lt;/li&gt;
+&lt;li&gt;Desarrolla el despeje de &lt;span class="math inline"&gt;\(p\)&lt;/span&gt; y demuestra su valor en función de &lt;span class="math inline"&gt;\(a,b,d,c\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;En realidad, las curvas de oferta y demanda podrían tener el valor que quisieran. ¿Cuál sería el valor del precio de equilibrio si&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[D(p)= a + b p^2 \\ S(p) = 6 + dp\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>c9aea8b09167923ce53f00865eb99df9</distill:md5>
+      <category>Microeconomía</category>
+      <category>Matemáticas</category>
+      <guid>http://marionomics.com/posts/2021-02-05-equilibrio-lineal</guid>
+      <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Sumatorias en R</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2021-01-16-sumatorias-en-r</link>
+      <description>
+
+
+&lt;p&gt;¿Te has topado ecuaciones que tienen este símbolo intimidante?: &lt;span class="math inline"&gt;\(\sum\)&lt;/span&gt;. No temas más, en esta sección te voy a enseñar que es, cómo utilizarlo y por qué es tan popular. En poco tiempo estarás luciendo tus ecuaciones con sumatorias tú también.&lt;/p&gt;
+&lt;p&gt;Se trata de la &lt;em&gt;sumatoria&lt;/em&gt;. No es más que un indicador de que es necesario &lt;em&gt;iterar&lt;/em&gt; entre los elementos de una lista y sumarlos todos. Por ejemplo,&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[\begin{equation}\label{sumatoria}
+  \sum_{i=1}^n x_i,
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;es lo mismo que decir&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[\begin{equation}
+x_1+ x_2 + \cdots + x_n.
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Esto significa que &lt;span class="math inline"&gt;\(i\)&lt;/span&gt; va a tomar los valores desde el 1 al &lt;span class="math inline"&gt;\(n\)&lt;/span&gt;. De manera implícita, estamos diciendo que existe una lista de valores que hemos nombrado &lt;span class="math inline"&gt;\(x_1\)&lt;/span&gt;, &lt;span class="math inline"&gt;\(x_2\)&lt;/span&gt; y así hasta el valor que toma &lt;span class="math inline"&gt;\(n\)&lt;/span&gt;. Si &lt;span class="math inline"&gt;\(n = 10\)&lt;/span&gt;, entonces esto significa que tenemos una lista con 10 elementos y la ecuación  nos dice que queremos sumar todos los elementos de esta lista.&lt;/p&gt;
+&lt;p&gt;El equivalente en R es la función &lt;code&gt;sum()&lt;/code&gt;. Digamos que tenemos un &lt;em&gt;vector&lt;/em&gt; al que llamaremos &lt;code&gt;x&lt;/code&gt; y que definimos con&lt;/p&gt;
+&lt;p&gt;Podemos llamar al elemento &lt;span class="math inline"&gt;\(x_1\)&lt;/span&gt; usando &lt;code&gt;x[1]&lt;/code&gt;. De hecho, si imaginamos que &lt;span class="math inline"&gt;\(i\)&lt;/span&gt; puede tomar cualquier valor entre 1 y 10, que es el tamaño de &lt;code&gt;x&lt;/code&gt;, entonces &lt;code&gt;x[i]&lt;/code&gt; nos muestra el &lt;span class="math inline"&gt;\(i\)&lt;/span&gt;-ésimo elemento de nuestra lista. Para hacer la sumatoria en R, no se necesita más que teclear&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[1] 143&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>45d9709a794d283f838ea0e932e1c560</distill:md5>
+      <category>R</category>
+      <category>Tutorial</category>
+      <guid>http://marionomics.com/posts/2021-01-16-sumatorias-en-r</guid>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cómo mandar calificaciones al correo de manera automatizada</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2021-01-15-cmo-mandar-calificaciones-al-correo-de-manera-automatizada</link>
+      <description>
+
+
+&lt;p&gt;No les quería subir el archivo de Excel y exponer las calificaciones de todos ante los demás. Pero entregarlas de manera individual es demasiado trabajo y las probabilidades de error son muchas. ¿Cómo entregar las calificaciones de manera individual por correo?&lt;/p&gt;
+&lt;p&gt;Si tu eres como yo, probablemente tienes las calificaciones de tus alumnos en un archivo de Excel que extrae las calificaciones que se generan a partir de las entregas en el sistema de gestión de clases (Moodle o Google Classroom). Si es así, este tutorial te puede servir.&lt;/p&gt;
+&lt;p&gt;Lo único que necesitas es una cuenta de developer de Google, un correo de Google (tal vez te convenga que no sea el correo personal) y tu lista de calificaciones en una hoja de cálculo de Google Sheets. Puedes subir el archivo en Excel y guardarlo en Google Drive como hoja de cálculo de Google.&lt;/p&gt;
+&lt;h3 id="prepara-el-archivo-excel"&gt;Prepara el archivo Excel&lt;/h3&gt;
+&lt;p&gt;Necesitamos que en una columna del archivo esté el nombre del alumno (preferible), el correo electrónico (indispensable) y las calificaciones en una columna aparte. Recuérdale a tus alumnos que actualicen su dirección de correo y se aseguren de que es correcta.&lt;/p&gt;
+&lt;p&gt;En una columna puedes generar el mensaje que quieres que incluya el correo. Te muestro un ejemplo de cómo se ve la fórmula que yo usé para hacer el mensaje:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;=CONCATENATE(&amp;quot;Hola &amp;quot;,A2,&amp;quot;. Espero primeramente que te encuentres muy bien. Tu calificación final es de &amp;quot;, ROUND(AB2,2), &amp;quot;, según los archivos del SUV y el modelo de calificación que acordamos al inicio de la clase. En esta consideración tu estatus es &amp;quot;,AD2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Cambia &lt;code&gt;A2&lt;/code&gt; y el resto de las celdas por las que contienen la información que necesitas, como el nombre, la calificación y otros detalles. Por ejemplo, en la celda &lt;code&gt;AD2&lt;/code&gt; yo expreso si el alumno está reprobado, aprobado, exento, u otras características que dependen de la calificación únicamente. Todas estas fueron generadas con fórmula, de tal modo que no tuve que escribirlo yo directamente, ahorrandome la probabilidad de errores en el mensaje.&lt;/p&gt;
+&lt;h3 id="scripts-en-google"&gt;Scripts en Google&lt;/h3&gt;
+&lt;p&gt;Abre un nuevo script en &lt;a href="scripts.google.com"&gt;scripts.google.com&lt;/a&gt;. Si necesitas ayuda puedes ver el tutorial en la &lt;a href="https://developers.google.com/apps-script/overview"&gt;página de desarrolladores de Google&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Escribe el siguiente código&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/**
+ * Sends emails with data from the current spreadsheet.
+ */
+function sendEmails() {
+  var sheet = SpreadsheetApp.openById(&amp;quot;id_de_la_hoja_de_calculo&amp;quot;).getSheets()[0];
+  //var sheet = SpreadsheetApp.getActiveSheet();
+  var startRow = 2; // First row of data to process
+  var numRows = 38; // Number of rows to process
+  // Fetch the range of cells A2:B3
+  var dataRange = sheet.getRange(startRow, 1, numRows, 30);
+  // Fetch values for each row in the Range.
+  var data = dataRange.getValues();
+  for (var i in data) {
+    var row = data[i];
+    var emailAddress = row[2]; // Third column
+    var message = row[28]; // Columna 29
+    var subject = &amp;#39;Calificaciones&amp;#39;;
+    MailApp.sendEmail(emailAddress, subject, message);
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Cambia el ID de la hoja de cálculo de Google. Esa la puedes identificar en el navegador cuando la hoja está abierta. Abre la barra de navegación e identifícala. Es lo que viene después de &lt;code&gt;/d/&lt;/code&gt;. Por ejemplo&lt;/p&gt;
+&lt;pre class="https://docs.google.com/spreadsheets/d/id_de_la_hoja_de_calculo/edit```"&gt;&lt;code&gt;
+Cambia también la fila de inicio `startRow` y el número de filas `numRows`. En mi caso requiero de 38 filas porque son el número de alumnos que tengo en ese grupo y estoy saltando la fila de los nombres de variable.
+
+Sólo queda modificar el ciclo `for`, especificando la fila en la que se encuentra cada cosa. Es importante recordar que los lenguajes de programación comienzan sus iteraciones en 0, por lo que si deseas extraer la columna 3, necesitas poner `row[2]`; lo mismo aplica para el mensaje, tienes que ubicar la fila en la que se encuentra. En mi caso está en la columna 29, por lo que `row[28]` logró extraerlo. Escribe en `var subject` el título del correo.
+
+Aprieta el botón **Run** y verifica en tu correo que se mandó. Recuerda que el script se debe correr con la misma cuenta de Google con la del archivo en Drive. También recuerda que Google te permite mandar hasta 100 correos diariamente y 1000 si tienes una cuenta en GSuite.
+
+```{.r .distill-force-highlighting-css}&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>5357be3f5c7f1c9534a01ccf01da8ec1</distill:md5>
+      <category>Enseñanza</category>
+      <category>Hacks</category>
+      <category>scripts</category>
+      <category>Google</category>
+      <guid>http://marionomics.com/posts/2021-01-15-cmo-mandar-calificaciones-al-correo-de-manera-automatizada</guid>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Pensar en causalidad es pensar como economista</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2021-01-15-pensar-en-causalidad-es-pensar-como-economista</link>
+      <description>
+
+
+&lt;p&gt;El trabajo más importante que hace un economista aplicado se llama &lt;em&gt;identificación causal&lt;/em&gt;. Esto es lo que distingue a los verdaderos economistas del resto de los mortales: la habilidad de realizar inferencias correctas de las causas de un fenómeno (normalmente) social.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, consideremos la migración. La migración es un tema muy recurrente en las discusiones de política alrededor del mundo. Es con la retórica con la que se hizo el referéndum en Reino Unido que nos llevó al &lt;em&gt;Brexit&lt;/em&gt; y con la que Donald Trump ganó la presidencia en las elecciones de 2016.&lt;/p&gt;
+&lt;p&gt;Existe una lógica detrás de esa retórica. Una lógica que tristemente parece resonar con muchas personas, a pesar de lo que pueda mostrar la evidencia, y es que el flujo de migrantes de un país pobre a un país rico trae como consecuencia mayor oferta de trabajo no-calificado. Esto implicaría que más personas compiten por los mismos puestos de trabajo, lo cual traería desempleo y baja general en los salarios.&lt;/p&gt;
+&lt;p&gt;La realidad, naturalmente, es más compleja de lo que parece a simple vista. En 1980, hubo una migración en masa que salió del puerto de Mariel a los Estados Unidos. Diez mil cubanos llegaron al puerto de Miami sin nada más que con lo que pudieron cargar en sus manos. Un escenario de horror si la hipótesis del desempleo causado por la migración es verdad.&lt;/p&gt;
+&lt;p&gt;Sin embargo, lo que se observó fue sorprendente. En 1990, el economista David Card &lt;a href="https://davidcard.berkeley.edu/papers/mariel-impact.pdf"&gt;recopiló información de los hechos&lt;/a&gt; . La fuerza laboral de Miami sufrió un incremento de 7% prácticamente de la noche a la mañana. Sin embargo, ni los salarios ni el nivel de empleo parece haber sido afectado por este fenómeno.&lt;/p&gt;
+&lt;p&gt;Si eres un lector curioso (y seguramente lo eres, si has llegado hasta este punto), seguramente te preguntarás cuál es la &lt;em&gt;causa&lt;/em&gt; de que no se haya dado ningún efecto. Responder a esto requiere comprender la forma en la que las personas y las empresas se comportan y no dejarse confundir por señales falsas que los datos pueden arrojar. En otras palabras, requiere &lt;strong&gt;pensar como economista&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Si bien es verdad que existe mayor oferta de trabajo (los economistas consideramos &lt;em&gt;oferta&lt;/em&gt; a las personas que ofrecen sus servicios en el mercado laboral) también es verdad que la migración suele traer consigo mayor demanda. Las personas tienen necesidades que cubrir desde el primer momento en el que llegan a un lugar nuevo: comida, ropa, hogar, cortes de cabello.&lt;/p&gt;
+&lt;p&gt;La demanda de estas nuevas personas en la economía requiere que las empresas establecidad tengan que contratar más, haciendo que el mercado se compense. Esto fue posible en el caso de los migrantes del puerto de Mariel porque Miami ya tenía migrantes del mismo país y la comunidad Cubana le dió a los nuevos integrantes el apoyo necesario para que salieran adelante.&lt;/p&gt;
+&lt;p&gt;Existen muchas lecciones que aprender sobre lo que deberíamos hacer para enfrentar los retos de la migración, que no son menores y que seguirán con nosotros por los años venideros.&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>0cccf404b1c6bd6c0c5310ec78f6ece3</distill:md5>
+      <category>Causalidad</category>
+      <category>Economía</category>
+      <category>Trabajo</category>
+      <category>Migración</category>
+      <guid>http://marionomics.com/posts/2021-01-15-pensar-en-causalidad-es-pensar-como-economista</guid>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>No Correlación no significa No causalidad</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2021-02-11-no-correlacin-no-significa-no-causalidad</link>
+      <description>
+
+
+&lt;p&gt;Si eres aficionado a la estadística como yo, seguramente has escuchado que &lt;em&gt;correlación no implica causalidad&lt;/em&gt;. Esta máxima se repite en las aulas regularmente para advertir a los alumnos cuando ven un coeficiente de correlación. Si cuando el gallo canta, el sol sale, esto no significa que el canto del gallo haga salir al sol.&lt;/p&gt;
+&lt;p&gt;Más interesante que eso es que &lt;em&gt;puede haber causalidad, aunque no encontremos correlación&lt;/em&gt;. Esto convierte a la causalidad en un asunto poco trivial, si no es que ya lo era para ti.&lt;/p&gt;
+&lt;p&gt;Piensa en un barco de vela en medio del mar. En el barco sólamente hay una persona, que gira una manivela a la derecha y a la izquierda para dar dirección al bote. Si las aguas están calmadas, entonces la correlación entre la manivela y la dirección en la que se mueve el bote es perfecta, pues a donde gire la manivela el pasajero, se moverá el bote.&lt;/p&gt;
+&lt;p&gt;La situación cambia si las aguas se vuelven turbias. Las aguas mueven la dirección del bote mientras que el pasajero mueve la manivela para estabilizarlo. Como resultado, el bote sigue en movimiento recto &lt;em&gt;a pesar&lt;/em&gt; de que el pasajero esté haciendo muchos movimientos con la manivela.&lt;/p&gt;
+&lt;p&gt;Para un observador que sólamente recolecta los datos del evento, la correlación entre la manivela y la dirección del bote es nula. Este observador podría pensar que la manivela no funciona: no hay causalidad entre el movimiento que hace el pasajero y la dirección del bote.&lt;/p&gt;
+&lt;p&gt;Pero las decisiones de la dirección de la manivela no son aleatorias: estas dependen de los &lt;em&gt;estímulos externos&lt;/em&gt; y de la reacción que el pasajero tiene a estas. Si nuestro pasajero usara una moneda para decidir la dirección de la manivela, entonces en algunas ocasiones esta coincidirá con la de la marea y el bote girará (no recomiendo experimentar con esto). El observador notará que si hay correlación y podrá inferir la causalidad a partir de esto.&lt;/p&gt;
+&lt;h3 id="y-que-tiene-que-ver-esto-con-la-economía"&gt;¿Y que tiene que ver esto con la economía?&lt;/h3&gt;
+&lt;p&gt;Este ejemplo no es tan trivial como podría parecer. Realmente hay muchos ejemplos en Economía en los que hay causalidad que no se puede observar por correlación simple.&lt;/p&gt;
+&lt;p&gt;Como ejemplo, considera el banco central de un país. En algunos países, parte del mandato de estos organismos es el de vigilar que el país no caiga en recesión. Para eso, tienen mecanismos para &lt;em&gt;inyectar&lt;/em&gt; dinero a una economía cuando se requiere estimularala.&lt;/p&gt;
+&lt;p&gt;Esos mecanismos son como la manivela. El problema, cuando se quieren estudiar estos efectos, es que las reacciones del Banco central son como las del pasajero en el barco: son reacciones anticipadas a una situación exógena. Cuando el Banco Central nota que puede haber una recesión, compra bonos u otros instrumentos para inundar la economía de dinero.&lt;/p&gt;
+&lt;p&gt;Un observador crítico puede notar que al final, no pasó nada. Con mala fe, alguien podría reclamar que los estímulos eran innecesarios. Pero esto no es así. Es solamente un caso de &lt;em&gt;endogeneidad&lt;/em&gt; en el que no hay correlación, sin embargo &lt;strong&gt;si hay causalidad&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>d6ac8fa8ac7aaa0cb1c440ed0e4d3a1c</distill:md5>
+      <category>Inferencia Causal</category>
+      <category>Estadística</category>
+      <category>Economía</category>
+      <category>Endogeneidad</category>
+      <category>Política Monetaria</category>
+      <category>Recesión</category>
+      <guid>http://marionomics.com/posts/2021-02-11-no-correlacin-no-significa-no-causalidad</guid>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>El valor de la inferencia estadística</title>
+      <dc:creator>Mario A. García Meza</dc:creator>
+      <link>http://marionomics.com/posts/2020-12-30-el-valor-de-la-inferencia-estadstica</link>
+      <description>
+
+
+&lt;blockquote&gt;
+&lt;p&gt;El Azar no es más que la medida de nuesta ignorancia.Los fenómenos fortuitos son, por definición, aquellos cuyas leyes o causas simplemente ignoramos. &lt;em&gt;Henry Poincairé&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;La mayoría de los diseños de encuestas basan la metodología de muestreo en un &lt;em&gt;tradeoff&lt;/em&gt; entre costos y el valor de la información que se obtiene.&lt;/p&gt;
+&lt;p&gt;En la mayoría de los casos en los que vale la pena hacer un estudio, los costos no permiten que este se realice usando a la población en su totalidad. Aquí es donde entra en juego el muestreo.&lt;/p&gt;
+&lt;p&gt;Los economistas tenemos entre nuestras herramientas una que es muy útil para determinar el tamaño óptimo de una encuesta en base a los costos: la Ley de los Rendimientos decrecientes.&lt;/p&gt;
+&lt;p&gt;Para que esta ley tenga sentido, es importante saber pensar en el margen. Pensar en el margen significa que, en lugar de pensar en el costo total de la encuesta, pensamos en el costo de una observación adicional. Cada observación adicional representa un costo adicional, derivado del tiempo que esta toma y de los recursos que se usen.&lt;/p&gt;
+&lt;p&gt;Pero también, cada observación adicional tiene un beneficio adicional en la claridad de la información. Sin embargo, si el muestreo está bien diseñado, el beneficio adicional que generan las primeras observaciones es significativamente mayor que las posteriores.&lt;/p&gt;
+&lt;p&gt;Este beneficio es cuantificable. Se puede calcular, siempre que se tenga información suficiente sobre las desviaciones estándar de los estratos o de la población a estudiarse. Esto significa que el problema se transforma en un cálculo de optimización.&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>9740a864578842ca8c2446d05e40ebc5</distill:md5>
+      <category>Estadistica</category>
+      <category>Muestreo</category>
+      <guid>http://marionomics.com/posts/2020-12-30-el-valor-de-la-inferencia-estadstica</guid>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Muestreo estratificado: Ciudad de Durango</title>
       <dc:creator>Mario</dc:creator>
@@ -20,18 +230,60 @@
       <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Welcome to Marionomics</title>
-      <dc:creator>Mario</dc:creator>
-      <link>http://marionomics.com/posts/welcome</link>
-      <description>Bienvenidos a mi blog. Estoy haciendo cambios actualmente. ¿Cómo se ve?</description>
-      <guid>http://marionomics.com/posts/welcome</guid>
-      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Como calcular el tamaño de muestra en R</title>
       <dc:creator>Mario Alberto García-Meza</dc:creator>
       <link>http://marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r</link>
-      <description>Descripción y código</description>
+      <description>
+
+
+&lt;p&gt;La base de la estadística inferencial es, como su nombre lo indica, obtener inferencias de una &lt;em&gt;población&lt;/em&gt; a partir de una muestra. Normalmente es una cuestión de administración de recursos escasos lo que nos obliga a hacerlo de esta manera, por lo que una pregunta razonable en un experimento o en un estudio es &lt;em&gt;¿De qué tamaño es la muestra que se necesita?&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Una muestra más grande genera resultados más precisos, pero esto naturalmente incrementa los costos de operación, que vienen por el tiempo, el trabajo y el dinero que se debe invertir a la recolección de la información. Por el otro lado, si un tamaño de muestra es demasiado pequeña, los resultados pierden confiabilidad.&lt;/p&gt;
+&lt;p&gt;Para calcular el tamaño de muestra, es necesario conocer cuatro cosas&lt;/p&gt;
+&lt;ol style="list-style-type: decimal"&gt;
+&lt;li&gt;El tamaño de la respuesta que quieres detectar&lt;/li&gt;
+&lt;li&gt;La varianza de la respuesta&lt;/li&gt;
+&lt;li&gt;Los niveles de significancia deseados&lt;/li&gt;
+&lt;li&gt;el poder deseado&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Al tamaño de la respuesta se le puede llamar &lt;strong&gt;delta&lt;/strong&gt; y se refiere a la diferencia entre los grupos de tratamiento y de control en un experimento. Definamos &lt;span class="math inline"&gt;\(\Delta = \mu_1-\mu_2\)&lt;/span&gt;, donde &lt;span class="math inline"&gt;\(\mu_1\)&lt;/span&gt; representa a el grupo de tratamiento y &lt;span class="math inline"&gt;\(\mu_2\)&lt;/span&gt; es el grupo de control. Entonces entre más pequeña la diferencia que se está buscando detectar, más grande tiene que ser el tamaño de la muestra para poderlo encontrar.&lt;/p&gt;
+&lt;p&gt;El segundo punto es la varianza. Es el &lt;em&gt;ruido&lt;/em&gt; que tiene nuestra información. Entre más grande sea el ruido, más grande tiene que ser el tamaño de la muestra para poder identificar las diferencias que se capturan en &lt;span class="math inline"&gt;\(\Delta\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Definamos la varianza como &lt;span class="math inline"&gt;\(\sigma^2\)&lt;/span&gt;, que nos ayuda a identificar el mencionado ruido. Entonces el &lt;strong&gt;tamaño del efecto&lt;/strong&gt; combina la diferencia con la varianza y lo podemos definir con &lt;span class="math inline"&gt;\(\Delta/\sigma^2\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Definamos como &lt;span class="math inline"&gt;\(\alpha\)&lt;/span&gt; la probabilidad de tener un &lt;a href="https://es.wikipedia.org/wiki/Errores_de_tipo_I_y_de_tipo_II"&gt;error de tipo 1&lt;/a&gt;, es decir, que rechacemos nuestra hipótesis nula de manera falsa, o tengamos un falso positivo. El valor de &lt;span class="math inline"&gt;\(\alpha\)&lt;/span&gt; se fija regularmente en 0.05, para alcanzar una significancia de 95%.&lt;/p&gt;
+&lt;p&gt;Finalmente, tenemos que definir el poder de nuestra prueba, que definimos con &lt;span class="math inline"&gt;\(1-\beta\)&lt;/span&gt; donde &lt;span class="math inline"&gt;\(\beta\)&lt;/span&gt; representa la probabilidad de no rechazar la hipótesis nula cuando la hipótesis alternativa es verdadera (&lt;a href="https://es.wikipedia.org/wiki/Errores_de_tipo_I_y_de_tipo_II"&gt;error tipo 2&lt;/a&gt;). Si, por ejemplo, tienes un 20% de &lt;strong&gt;no detectar&lt;/strong&gt; una diferencia que es real, entonces el poder de tu prueba es de 0.8.&lt;/p&gt;
+&lt;h3 id="cálculo-del-tamaño-de-la-muestra"&gt;Cálculo del tamaño de la muestra&lt;/h3&gt;
+&lt;p&gt;El cálculo del tamaño total de la muestra es&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[\begin{equation}
+  n = \frac{4(Z_\alpha + Z_\beta)^2\sigma^2}{\Delta^2}
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;sólo cambiando &lt;span class="math inline"&gt;\(Z_{\alpha}\)&lt;/span&gt; por &lt;span class="math inline"&gt;\(Z_{\alpha/2}\)&lt;/span&gt; si la prueba es de dos lados.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, imaginemos que el tamaño de la diferencia que queremos estimar es de 20 unidades, con un poder de 90% en una prueba de dos lados con un nivel de significancia de 0.05. Investigaciones previas nos indican que la desviación estándar &lt;span class="math inline"&gt;\(\sigma\)&lt;/span&gt; es de alrededor de 60 unidades. Entonces&lt;/p&gt;
+&lt;p&gt;&lt;span class="math display"&gt;\[\begin{equation}
+  n = \frac{4(1.96 + 1.28)^2\sigma^2}{20^2} \approx 378
+\end{equation}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;o aproximadamente 189 para cada uno de los dos grupos de tratamiento.&lt;/p&gt;
+&lt;h3 id="cálculo-en-r"&gt;Cálculo en R&lt;/h3&gt;
+&lt;p&gt;La función &lt;code&gt;pwr.t.test()&lt;/code&gt; de la librería &lt;code&gt;pwr&lt;/code&gt; en R está diseñada para realizar el cálculo del tamaño de muestra que nosotros buscamos.&lt;/p&gt;
+&lt;p&gt;Esta función nos sirve para calcular el valor de nuestro estadístico &lt;span class="math inline"&gt;\(t\)&lt;/span&gt; en función del tamaño de la muestra, pero si, en lugar de eso dejamos el parámetro &lt;span class="math inline"&gt;\(n\)&lt;/span&gt; sin aplicar en la función, esta nos va a regresar nuestro tamaño de muestra. Veamos cómo se vería el ejemplo que hicimos anteriormente&lt;/p&gt;
+&lt;pre class="r"&gt;&lt;code&gt;delta &amp;lt;- 20
+sigma &amp;lt;- 60
+d &amp;lt;- delta/sigma
+
+pwr::pwr.t.test(d = d,
+                sig.level = 0.5,
+                power = .90,
+                type = &amp;#39;two.sample&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+     Two-sample t test power calculation 
+
+              n = 67.18309
+              d = 0.3333333
+      sig.level = 0.5
+          power = 0.9
+    alternative = two.sided
+
+NOTE: n is number in *each* group&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>e8da7ae2a8e5d036cdb7bb052b4b91ee</distill:md5>
       <category>R</category>
       <category>Tutorial</category>
       <category>Estadística</category>
@@ -39,22 +291,106 @@
       <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Tamaños de muestra para una encuesta</title>
-      <dc:creator>Mario A. García-Meza</dc:creator>
-      <link>http://marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta</link>
-      <description>Cómo obtener el tamaño de muestra.</description>
-      <category>Estadistica</category>
-      <guid>http://marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta</guid>
-      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Muestreo estratificado en R</title>
       <dc:creator>Mario A. García-Meza</dc:creator>
       <link>http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r</link>
-      <description>Un tutorial de cómo hacer muestreo, cuando la población es más compleja.</description>
+      <description>
+
+
+&lt;p&gt;Hay que admitir que la mayoría de las ocasiones este es el caso: la población no es tan simple como para que un muestreo simple sea la solución. En &lt;a href="https://www.marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta/"&gt;este post&lt;/a&gt; hice un tutorial de cómo obtener los tamaños de muestra para una encuesta con una función hecha por nosotros mismos y &lt;a href="https://www.marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r/"&gt;aquí&lt;/a&gt; explico parte de la teoría y cómo obtener las muestras con la función &lt;code&gt;pwr.t.test()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pero en esta ocasión, vamos a llevar el análisis un paso más allá y preguntarnos que sucede si la población con la que nos encontramos tiene características heterogéneas. Y siendo sinceros, toda población que vale la pena estudiarse es al menos un poco heterogénea.&lt;/p&gt;
+&lt;p&gt;Recordemos que nuestro objetivo es la &lt;em&gt;inferencia estadística&lt;/em&gt;, es decir, obtener la misma información que obtendríamos de la población, pero usando un conjunto de datos más pequeño. Sin embargo, supongamos que existen tres tipos distintos de población en nuestra muestra. Estos representan el 50%, 40% y 10% de la población respectivamente. Si nosotros tomaramos una muestra uniforme, de los datos, existe la probabilidad de sobrerepresentar o subrepresentar algún estrato.&lt;/p&gt;
+&lt;p&gt;&lt;img src="file328c32657fa9_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;No solamente se trata de la proporción. Los estratos pueden variar en su desviación estándar. Esto hace que el muestreo estratificado proporcione una visión más clara de lo que está pasando al muestreo simple.&lt;/p&gt;
+&lt;p&gt;Veamos cómo se realiza este muestreo. Consideremos &lt;a href="https://en.wikipedia.org/wiki/Stratified_sampling"&gt;este ejemplo&lt;/a&gt;, donde se encuentra la siguiente distribución de trabajadores en una compañía&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class="header"&gt;
+&lt;th&gt;Tipo de personal&lt;/th&gt;
+&lt;th&gt;Número&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="odd"&gt;
+&lt;td&gt;Hombre, tiempo completo&lt;/td&gt;
+&lt;td&gt;9000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td&gt;Hombre, tiempo parcial&lt;/td&gt;
+&lt;td&gt;1800&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="odd"&gt;
+&lt;td&gt;Mujer, tiempo completo&lt;/td&gt;
+&lt;td&gt;900&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td&gt;Mujer, tiempo parcial&lt;/td&gt;
+&lt;td&gt;6300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="odd"&gt;
+&lt;td&gt;–&lt;/td&gt;
+&lt;td&gt;–&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="even"&gt;
+&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;18000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Naturalmente, podemos ver que los estratos difieren mucho entre si, y una distribución uniforme nos daría resultados probablemente sesgados.&lt;/p&gt;
+&lt;p&gt;Usaremos nuevamente la librería &lt;code&gt;samplingbook&lt;/code&gt;, pero en esta ocasión haremos uso de la función &lt;code&gt;stratasize()&lt;/code&gt;, usando los datos de este ejemplo. Consideramos para esto que las desviaciones estándar en cada uno de los estratos están dados por el vector &lt;code&gt;sh&lt;/code&gt;. También estamos considerando un margen de error de 10%.&lt;/p&gt;
+&lt;pre class="r"&gt;&lt;code&gt;Nh &amp;lt;- c(9000,1800,900,6300)
+sh &amp;lt;- c(25,10,40,80)
+sum(Nh)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1] 18000&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="r"&gt;&lt;code&gt;samplingbook::stratasize(0.1, Nh = Nh, Sh = c(5,1,4,.80),
+                         level = 0.95, type = &amp;#39;prop&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+stratamean object: Stratified sample size determination
+
+type of sample: prop
+
+total sample size determinated: 4056&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;En este ejemplo, los argumentos &lt;code&gt;level&lt;/code&gt; y &lt;code&gt;type&lt;/code&gt; vienen por default con esos valores. Sólo los estoy incluyendo con fines ilustrativos.&lt;/p&gt;
+&lt;p&gt;Notamos aquí entonces que de los 18 mil sujetos que tenemos, sólo es necesario obtener información acerca de alrededor de 4 mil para conocerlos, de acuerdo a la información que tenemos disponible.&lt;/p&gt;
+&lt;p&gt;¿Cuáles son aplicaciones interesantes para lo que usarías esta información?&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>296c545eb51ee6c1011c3a46786e5a99</distill:md5>
       <guid>http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r</guid>
       <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
-      <media:content url="http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/muestreo-estratificado-en-r_files/figure-html5/stratified-plot-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
+      <title>Extacción de tablas desde PDF con tabula-py en python</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2021-01-11-extaccin-de-tablas-desde-pdf-con-tabula-py-en-python</link>
+      <description>
+
+
+&lt;p&gt;Es muy molesto que la información disponible se encuentre en PDF. Pero a menos de que el PDF venga de un escaneado de imágen de un documento físico, es posible extraer los datos de las tablas en PDF a un formato más manejable, como csv.&lt;/p&gt;
+&lt;p&gt;Para lograrlo, necesitamos solamente python. Yo hice la extracción usando únicamente la terminal, pero puedes hacer el script completo y correrlo, si así lo deseas.&lt;/p&gt;
+&lt;h3 id="usando-tábula"&gt;Usando tábula&lt;/h3&gt;
+&lt;p&gt;El primer paso es instalar &lt;code&gt;tabula&lt;/code&gt; usando &lt;code&gt;pip&lt;/code&gt; desde terminal usando&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip install tabula-py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;El módulo &lt;code&gt;tabula-py&lt;/code&gt; es muy sencillo pero poderoso. Simplemente ubica el &lt;em&gt;working directory&lt;/em&gt; en la carpeta donde se encuentra el archivo PDF que queremos extraer y ejecuta el siguiente comando:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;df = tabula.read_pdf("archivo.pdf", encoding='utf-8', pages='1-1064')&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Cambia &lt;code&gt;archivo.pdf&lt;/code&gt; por el nombre del documento que te interesa (e incluye la ruta del archivo, si es necesario). En mi caso, este era un documento PDF con una tabla que ocupaba 1064 páginas (lo cual hacía poco factible la idea de etraer los datos de manera manual). Esto se expresa en el argumento &lt;code&gt;pages&lt;/code&gt;. El agrumento &lt;code&gt;encoding&lt;/code&gt; nos permite usar la codificación UTF-8, que es muy útil si estás trabajando con documentos en español.&lt;/p&gt;
+&lt;p&gt;Si el documento que obtienes de aquí es de una sóla página, entonces lo único que tienes que hacer para obtener la tabla en formato csv es ejecutar el siguiente código:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;df.to_csv('tabla.csv', encoding='utf-8')&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Cambia &lt;code&gt;tabla.csv&lt;/code&gt; por el nombre del documento que quieras obtener en formato csv. En mi caso, esto no resultó ser tan sencillo, pues el documento tenía 1064 páginas, por lo que &lt;code&gt;df[0]&lt;/code&gt;, por ejemplo, me mostraba en la consola la tabla correspondiente a la primera página del documento.&lt;/p&gt;
+&lt;h3 id="generar-múltiples-archivos-csv"&gt;Generar múltiples archivos csv&lt;/h3&gt;
+&lt;p&gt;Lo que hice ante esta situación fue generar en loop todos los archivos csv con un ciclo &lt;code&gt;for&lt;/code&gt; en python.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;for page in range(0,1064)&lt;/code&gt; &lt;code&gt;\t df[page].to_csv('tabla'+str(page)+'.csv', encoding='utf-8')&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Este ciclo genera todos los archivos en csv con todos los datos que requiero. El problema es que tal vez tener múltiples archivos no sea tan práctico como tener una base de datos unificada. Para esto, &lt;a href="https://www.freecodecamp.org/news/how-to-combine-multiple-csv-files-with-8-lines-of-code-265183e0854/"&gt;podemos unir los archivos usando &lt;code&gt;pd.concat()&lt;/code&gt; con la librería &lt;code&gt;pandas&lt;/code&gt;&lt;/a&gt;. Esto funciona si la base de datos es bien comportada.&lt;/p&gt;
+&lt;p&gt;Como este no fue mi caso (casi nunca lo es), usé un script sencillo también de python que hace un ciclo &lt;code&gt;for&lt;/code&gt; para extraer las filas de cada uno de los archivos y los unifica en un sólo &lt;code&gt;csv&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="unificar-la-base-de-datos"&gt;Unificar la base de datos&lt;/h3&gt;
+&lt;p&gt;Aprovechando que las bases de datos se generan en un ciclo con diferentes archivos que tienen el mismo nombre y sólamente diferenciados por el número, usamos el siguiente script en Python.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;fout = open("tabla_consolidada.csv", "a")&lt;/code&gt; &lt;code&gt;for line in open("tabla0.csv"):&lt;/code&gt; &lt;code&gt;fout.write(line)&lt;/code&gt; &lt;code&gt;for num in range(1,1063):&lt;/code&gt; &lt;code&gt;\t f = open("tabla"+str(num)+".csv")&lt;/code&gt; &lt;code&gt;\t for line in f:&lt;/code&gt; &lt;code&gt;\t \tfout.write(line)&lt;/code&gt; &lt;code&gt;\t f.close()&lt;/code&gt; &lt;code&gt;fout.close()&lt;/code&gt;&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>5f8336dfee1134c5f49ef6a56b8fe82a</distill:md5>
+      <category>Python</category>
+      <category>Extracción de Datos</category>
+      <guid>http://marionomics.com/posts/2021-01-11-extaccin-de-tablas-desde-pdf-con-tabula-py-en-python</guid>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

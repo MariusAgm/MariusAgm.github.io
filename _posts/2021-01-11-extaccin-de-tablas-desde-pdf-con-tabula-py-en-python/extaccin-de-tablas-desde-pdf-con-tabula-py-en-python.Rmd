@@ -1,0 +1,68 @@
+---
+title: "Extacción de tablas desde PDF con tabula-py en python"
+description: |
+  Un tutorial
+author:
+  - name: Mario A. García-Meza
+    url: https://marionomics.com/about
+date: 12-23-2020
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - Python
+  - Extracción de Datos
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Es muy molesto que la información disponible se encuentre en PDF. Pero a menos de que el PDF venga de un escaneado de imágen de un documento físico, es posible extraer los datos de las tablas en PDF a un formato más manejable, como csv.
+
+Para lograrlo, necesitamos solamente python. Yo hice la extracción usando únicamente la terminal, pero puedes hacer el script completo y correrlo, si así lo deseas.
+
+### Usando tábula
+
+El primer paso es instalar `tabula` usando `pip` desde terminal usando
+
+`pip install tabula-py`
+
+El módulo `tabula-py` es muy sencillo pero poderoso. Simplemente ubica el _working directory_ en la carpeta donde se encuentra el archivo PDF que queremos extraer y ejecuta el siguiente comando:
+
+`df = tabula.read_pdf("archivo.pdf", encoding='utf-8', pages='1-1064')`
+
+Cambia `archivo.pdf` por el nombre del documento que te interesa (e incluye la ruta del archivo, si es necesario). En mi caso, este era un documento PDF con una tabla que ocupaba 1064 páginas (lo cual hacía poco factible la idea de etraer los datos de manera manual). Esto se expresa en el argumento `pages`. El agrumento `encoding` nos permite usar la codificación UTF-8, que es muy útil si estás trabajando con documentos en español.
+
+Si el documento que obtienes de aquí es de una sóla página, entonces lo único que tienes que hacer para obtener la tabla en formato csv es ejecutar el siguiente código:
+  
+`df.to_csv('tabla.csv', encoding='utf-8')`
+
+Cambia `tabla.csv` por el nombre del documento que quieras obtener en formato csv. En mi caso, esto no resultó ser tan sencillo, pues el documento tenía 1064 páginas, por lo que `df[0]`, por ejemplo, me mostraba en la consola la tabla correspondiente a la primera página del documento.
+
+### Generar múltiples archivos csv
+
+Lo que hice ante esta situación fue generar en loop todos los archivos csv con un ciclo `for` en python.
+
+`for page in range(0,1064)`
+`\t df[page].to_csv('tabla'+str(page)+'.csv', encoding='utf-8')`
+
+Este ciclo genera todos los archivos en csv con todos los datos que requiero. El problema es que tal vez tener múltiples archivos no sea tan práctico como tener una base de datos unificada. Para esto, [podemos unir los archivos usando `pd.concat()` con la librería `pandas`](https://www.freecodecamp.org/news/how-to-combine-multiple-csv-files-with-8-lines-of-code-265183e0854/). Esto funciona si la base de datos es bien comportada.
+
+Como este no fue mi caso (casi nunca lo es), usé un script sencillo también de python que hace un ciclo `for` para extraer las filas de cada uno de los archivos y los unifica en un sólo `csv`.
+
+### Unificar la base de datos
+
+Aprovechando que las bases de datos se generan en un ciclo con diferentes archivos que tienen el mismo nombre y sólamente diferenciados por el número, usamos el siguiente script en Python.
+
+`fout = open("tabla_consolidada.csv", "a")`
+`for line in open("tabla0.csv"):`
+` fout.write(line)`
+`for num in range(1,1063):`
+`\t f = open("tabla"+str(num)+".csv")`
+` \t for line in f:`
+`\t \tfout.write(line)`
+`\t f.close()`
+`fout.close()`
+

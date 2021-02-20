@@ -1,10 +1,5 @@
 ---
-title: "Marionomics"
+title: "Marionomics: Economía"
 site: distill::distill_website
 listing: posts
 ---
-### Bienvenidos
-
-Mi nombre es Mario, soy profesor en la [Universidad Juárez del Estado de Durango](ujed.mx) y este es mi blog.
-
-Soy economista, profesor, investigador, miembro del SNI nivel I y nerd de tiempo completo.

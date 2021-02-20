@@ -20,19 +20,18 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -52,7 +51,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
@@ -102,20 +101,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="Un tutorial de cómo hacer muestreo, cuando la población es más compleja."/>
 <meta property="og:url" content="http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/"/>
-<meta property="og:image" content="http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/muestreo-estratificado-en-r_files/figure-html5/stratified-plot-1.png"/>
-<meta property="og:image:width" content="1248"/>
-<meta property="og:image:height" content="768"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Marionomics"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:card" content="summary"/>
 <meta property="twitter:title" content="Marionomics: Muestreo estratificado en R"/>
 <meta property="twitter:description" content="Un tutorial de cómo hacer muestreo, cuando la población es más compleja."/>
 <meta property="twitter:url" content="http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/"/>
-<meta property="twitter:image" content="http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/muestreo-estratificado-en-r_files/figure-html5/stratified-plot-1.png"/>
-<meta property="twitter:image:width" content="1248"/>
-<meta property="twitter:image:height" content="768"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
 <meta name="citation_title" content="Marionomics: Muestreo estratificado en R"/>
@@ -127,12 +120,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Muestreo estratificado en R"]},{"type":"character","attributes":{},"value":["Un tutorial de cómo hacer muestreo, cuando la población es más compleja."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Mario A. García-Meza"]},{"type":"character","attributes":{},"value":["https://marionomics.com/"]}]}]},{"type":"character","attributes":{},"value":["12-23-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/"]},{"type":"character","attributes":{},"value":["http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/"]},{"type":"character","attributes":{},"value":["http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["muestreo-estratificado-en-r_files/figure-html5/stratified-plot-1.png"]}
+  {"type":"character","attributes":{},"value":["muestreo-estratificado-en-r_files/anchor-4.2.2/anchor.min.js","muestreo-estratificado-en-r_files/bowser-1.9.3/bowser.min.js","muestreo-estratificado-en-r_files/distill-2.2.21/template.v2.js","muestreo-estratificado-en-r_files/figure-html5/stratified-plot-1.png","muestreo-estratificado-en-r_files/header-attrs-2.6/header-attrs.js","muestreo-estratificado-en-r_files/jquery-1.11.3/jquery.min.js","muestreo-estratificado-en-r_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2012,12 +2005,20 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.6/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
   <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1TFZZVC9V"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-P1TFZZVC9V');
+</script>
 <!--/radix_placeholder_site_in_header-->
 
 
@@ -2028,7 +2029,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Muestreo estratificado en R","description":"Un tutorial de cómo hacer muestreo, cuando la población es más compleja.","authors":[{"author":"Mario A. García-Meza","authorURL":"https://marionomics.com/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-12-23T00:00:00.000+00:00","citationText":"García-Meza, 2020"}
+{"title":"Muestreo estratificado en R","description":"Un tutorial de cómo hacer muestreo, cuando la población es más compleja.","authors":[{"author":"Mario A. García-Meza","authorURL":"https://marionomics.com/about","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-12-23T00:00:00.000+00:00","citationText":"García-Meza, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2059,7 +2060,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-byline">
-  Mario A. García-Meza <a href="https://marionomics.com/" class="uri">https://marionomics.com/</a> 
+  Mario A. García-Meza <a href="https://marionomics.com/about" class="uri">https://marionomics.com/about</a> 
   
 <br/>12-23-2020
 </div>

@@ -17,10 +17,10 @@ output: distill::distill_article
 google_analytics: "G-P1TFZZVC9V"
 collections:
   posts:
+    feed_items_max: 10
     disqus: marionomics
     share: [twitter]
-footer-links:
-  instagram: marionomics
-  linkedin: marius7
-  twitter: marionomics_
-  youtube: channel/UCk40tRIuaTLnNWqHgrNx3kQ
+search: true
+google_analytics: "G-P1TFZZVC9V"
+rss:
+  full_content: true
