@@ -1,0 +1,36 @@
+---
+title: "Problemas del desarrollo tecnológico en la creación de energías limpias"
+description: |
+ Book bite de **How to avoid climate disaster** de Bill Gates.
+author:
+  - name: Mario A. García-Meza
+    url: https://marionomics.com/about
+date: 03-01-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+El objetivo es llegar a cero emisiones. La razón de esto es que cada kilo de gases de efecto invernadero que agregamos como humanidad a la atmósfera tiene ya un efecto duradero sobre el clima. El problema de esto es que es muy complicado transformar nuestro consumo de energía en energías limpias tan rápido como necesitamos.
+
+Parte del problema viene de la forma en la que se genera innovación en la industria energética. Existen entusiastas que invocan la Ley de Moore para dar esperanza en que la tecnología nos va a salvar del desastre.
+
+La ley de Moore aplica a las computadoras y al hardware y dice que el número de transistores en un microprocesador se duplica cada 5 años aproximadamente. El número de transistores da a un microprocesador el número de bits y, por lo tanto, su potencia. Pero, ¿es posible tener el mismo nivel de crecimiento tecnológico en la creación de energía?
+
+> La ley de Moore indica que el número de transistores en un microprocesador se duplica cada 5 años
+
+Cuando se empezó a usar el motor de combustión interna, que es la tecnología responsable de los automóviles, la eficiencia del Modelo T que lanzó Henry Ford en 1908 [disfrutaba de una eficiencia de 21 millas por galón](https://www.csmonitor.com/Technology/2012/0307/From-Model-T-to-Prius-13-big-moments-in-fuel-efficiency-history). En la actualidad, los autos buscan llegar a un estándar de 54.5 millas por galón a partir de los estándares [CAFE](https://en.wikipedia.org/wiki/Corporate_average_fuel_economy) del gobierno estadounidense. Más de un siglo para poco más de duplicar la eficiencia. Difícilmente se acerca a la ley de Moore.
+
+Adicionalmente, en la industria del software, es posible lanzar un producto con defectos y aún así tener éxito. Siempre y cuando el beneficio neto del cliente sea positivo, siempre será posible sacar una versión con correcciones y nuevas implementaciones a un costo marginal muy bajo. Esto no sucede en otras industrias.
+
+Por ejemplo, considera el lanzamiento de un medicamento nuevo. Se necesita mucha inversión en investigación y desarrollo y pasar por múltiples regulaciones. Si el producto no pasa por estas regulaciones, jamás lo veremos en las farmacias. 
+
+Además, es posible lanzar un software nuevo y hacerle modificaciones una vez ya ha salido al mercado. Si el problema que tenía no representa una afectación grave (por ejemplo, que haya riesgo de que *hackers* roben tu información personal), el cliente estará feliz de actualizar la versión con las mejoras. En cambio, si una medicina nueva genera un efecto adverso, es dudoso que los clientes quieran comprar nuevamente la medicina, aunque esta prometa mejoras.
+
+El mercado energético también es muy exigente en otros aspectos. Es importante que una fuente de energía sea confiable y se eviten las mayores interrupciones posibles. Muchas de nuestras actividades económicas requieren de que siempre que apretemos el switch las luces se enciendan. Por ejemplo, un hospital requiere estar siempre conectado para proporcionar algunos de sus servicios.
+
+Además, el público puede ser muy sensible a la seguridad en la generación de energía. La energía nuclear en la actualidad es mucho más segura de lo que fue en 1986, cuando se dio el [terrible accidente en Chernóbil](https://es.wikipedia.org/wiki/Accidente_de_Chernóbil), pero desde entonces no ha habido mucho entusiasmo por crear nuevas plantas a pesar de ser una fuente de energía relativamente más segura y limpia que la generación por carbón.
+
+## La inversión en energía es complicada
+
+La estructura del mercado y la forma en la que la innovación se da en ese mercado hace también que sea muy difícil hacer un crecimiento acelerado de las energías limpias. Por ejemplo, si tú eres un inversionista de una planta de generación de energía de carbón, esa planta no sirve para hacer otra cosa más que energía en base a carbón. El monto necesario para este tipo de inversiones es alto y tu como inversionista no estarías dispuesto a dejar de operar por los próximos 30 años a menos de que exista un subsidio o que alguna regulación de obligara a salir del mercado.

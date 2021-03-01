@@ -7,7 +7,33 @@
     <description>Blog de Mario Alberto García Meza
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 05 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Problemas del desarrollo tecnológico en la creación de energías limpias</title>
+      <dc:creator>Mario A. García-Meza</dc:creator>
+      <link>http://marionomics.com/posts/2021-03-01-energias-limpias</link>
+      <description>
+
+
+&lt;p&gt;El objetivo es llegar a cero emisiones. La razón de esto es que cada kilo de gases de efecto invernadero que agregamos como humanidad a la atmósfera tiene ya un efecto duradero sobre el clima. El problema de esto es que es muy complicado transformar nuestro consumo de energía en energías limpias tan rápido como necesitamos.&lt;/p&gt;
+&lt;p&gt;Parte del problema viene de la forma en la que se genera innovación en la industria energética. Existen entusiastas que invocan la Ley de Moore para dar esperanza en que la tecnología nos va a salvar del desastre.&lt;/p&gt;
+&lt;p&gt;La ley de Moore aplica a las computadoras y al hardware y dice que el número de transistores en un microprocesador se duplica cada 5 años aproximadamente. El número de transistores da a un microprocesador el número de bits y, por lo tanto, su potencia. Pero, ¿es posible tener el mismo nivel de crecimiento tecnológico en la creación de energía?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;La ley de Moore indica que el número de transistores en un microprocesador se duplica cada 5 años&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Cuando se empezó a usar el motor de combustión interna, que es la tecnología responsable de los automóviles, la eficiencia del Modelo T que lanzó Henry Ford en 1908 &lt;a href="https://www.csmonitor.com/Technology/2012/0307/From-Model-T-to-Prius-13-big-moments-in-fuel-efficiency-history"&gt;disfrutaba de una eficiencia de 21 millas por galón&lt;/a&gt;. En la actualidad, los autos buscan llegar a un estándar de 54.5 millas por galón a partir de los estándares &lt;a href="https://en.wikipedia.org/wiki/Corporate_average_fuel_economy"&gt;CAFE&lt;/a&gt; del gobierno estadounidense. Más de un siglo para poco más de duplicar la eficiencia. Difícilmente se acerca a la ley de Moore.&lt;/p&gt;
+&lt;p&gt;Adicionalmente, en la industria del software, es posible lanzar un producto con defectos y aún así tener éxito. Siempre y cuando el beneficio neto del cliente sea positivo, siempre será posible sacar una versión con correcciones y nuevas implementaciones a un costo marginal muy bajo. Esto no sucede en otras industrias.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, considera el lanzamiento de un medicamento nuevo. Se necesita mucha inversión en investigación y desarrollo y pasar por múltiples regulaciones. Si el producto no pasa por estas regulaciones, jamás lo veremos en las farmacias.&lt;/p&gt;
+&lt;p&gt;Además, es posible lanzar un software nuevo y hacerle modificaciones una vez ya ha salido al mercado. Si el problema que tenía no representa una afectación grave (por ejemplo, que haya riesgo de que &lt;em&gt;hackers&lt;/em&gt; roben tu información personal), el cliente estará feliz de actualizar la versión con las mejoras. En cambio, si una medicina nueva genera un efecto adverso, es dudoso que los clientes quieran comprar nuevamente la medicina, aunque esta prometa mejoras.&lt;/p&gt;
+&lt;p&gt;El mercado energético también es muy exigente en otros aspectos. Es importante que una fuente de energía sea confiable y se eviten las mayores interrupciones posibles. Muchas de nuestras actividades económicas requieren de que siempre que apretemos el switch las luces se enciendan. Por ejemplo, un hospital requiere estar siempre conectado para proporcionar algunos de sus servicios.&lt;/p&gt;
+&lt;p&gt;Además, el público puede ser muy sensible a la seguridad en la generación de energía. La energía nuclear en la actualidad es mucho más segura de lo que fue en 1986, cuando se dio el &lt;a href="https://es.wikipedia.org/wiki/Accidente_de_Chernóbil"&gt;terrible accidente en Chernóbil&lt;/a&gt;, pero desde entonces no ha habido mucho entusiasmo por crear nuevas plantas a pesar de ser una fuente de energía relativamente más segura y limpia que la generación por carbón.&lt;/p&gt;
+&lt;h2 id="la-inversión-en-energía-es-complicada"&gt;La inversión en energía es complicada&lt;/h2&gt;
+&lt;p&gt;La estructura del mercado y la forma en la que la innovación se da en ese mercado hace también que sea muy difícil hacer un crecimiento acelerado de las energías limpias. Por ejemplo, si tú eres un inversionista de una planta de generación de energía de carbón, esa planta no sirve para hacer otra cosa más que energía en base a carbón. El monto necesario para este tipo de inversiones es alto y tu como inversionista no estarías dispuesto a dejar de operar por los próximos 30 años a menos de que exista un subsidio o que alguna regulación de obligara a salir del mercado.&lt;/p&gt;
+&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      <distill:md5>147d3d4edd4641ba24c80734a7f07b70</distill:md5>
+      <guid>http://marionomics.com/posts/2021-03-01-energias-limpias</guid>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Equilibrio Lineal</title>
       <dc:creator>Mario A. García-Meza</dc:creator>
@@ -300,7 +326,7 @@ NOTE: n is number in *each* group&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Hay que admitir que la mayoría de las ocasiones este es el caso: la población no es tan simple como para que un muestreo simple sea la solución. En &lt;a href="https://www.marionomics.com/posts/2020-12-23-tamaos-de-muestra-para-una-encuesta/"&gt;este post&lt;/a&gt; hice un tutorial de cómo obtener los tamaños de muestra para una encuesta con una función hecha por nosotros mismos y &lt;a href="https://www.marionomics.com/posts/2020-12-23-cmo-calcular-el-tamao-de-muestra-en-r/"&gt;aquí&lt;/a&gt; explico parte de la teoría y cómo obtener las muestras con la función &lt;code&gt;pwr.t.test()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Pero en esta ocasión, vamos a llevar el análisis un paso más allá y preguntarnos que sucede si la población con la que nos encontramos tiene características heterogéneas. Y siendo sinceros, toda población que vale la pena estudiarse es al menos un poco heterogénea.&lt;/p&gt;
 &lt;p&gt;Recordemos que nuestro objetivo es la &lt;em&gt;inferencia estadística&lt;/em&gt;, es decir, obtener la misma información que obtendríamos de la población, pero usando un conjunto de datos más pequeño. Sin embargo, supongamos que existen tres tipos distintos de población en nuestra muestra. Estos representan el 50%, 40% y 10% de la población respectivamente. Si nosotros tomaramos una muestra uniforme, de los datos, existe la probabilidad de sobrerepresentar o subrepresentar algún estrato.&lt;/p&gt;
-&lt;p&gt;&lt;img src="filed4f2977bdeb_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="file16707f51f30e_files/figure-html/stratified-plot-1.png" width="672" /&gt;&lt;/p&gt;
 &lt;p&gt;No solamente se trata de la proporción. Los estratos pueden variar en su desviación estándar. Esto hace que el muestreo estratificado proporcione una visión más clara de lo que está pasando al muestreo simple.&lt;/p&gt;
 &lt;p&gt;Veamos cómo se realiza este muestreo. Consideremos &lt;a href="https://en.wikipedia.org/wiki/Stratified_sampling"&gt;este ejemplo&lt;/a&gt;, donde se encuentra la siguiente distribución de trabajadores en una compañía&lt;/p&gt;
 &lt;table&gt;
@@ -357,39 +383,6 @@ total sample size determinated: 4056&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
       <distill:md5>296c545eb51ee6c1011c3a46786e5a99</distill:md5>
       <guid>http://marionomics.com/posts/2020-12-23-muestreo-estratificado-en-r</guid>
-      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Extacción de tablas desde PDF con tabula-py en python</title>
-      <dc:creator>Mario A. García-Meza</dc:creator>
-      <link>http://marionomics.com/posts/2021-01-11-extaccin-de-tablas-desde-pdf-con-tabula-py-en-python</link>
-      <description>
-
-
-&lt;p&gt;Es muy molesto que la información disponible se encuentre en PDF. Pero a menos de que el PDF venga de un escaneado de imágen de un documento físico, es posible extraer los datos de las tablas en PDF a un formato más manejable, como csv.&lt;/p&gt;
-&lt;p&gt;Para lograrlo, necesitamos solamente python. Yo hice la extracción usando únicamente la terminal, pero puedes hacer el script completo y correrlo, si así lo deseas.&lt;/p&gt;
-&lt;h3 id="usando-tábula"&gt;Usando tábula&lt;/h3&gt;
-&lt;p&gt;El primer paso es instalar &lt;code&gt;tabula&lt;/code&gt; usando &lt;code&gt;pip&lt;/code&gt; desde terminal usando&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pip install tabula-py&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;El módulo &lt;code&gt;tabula-py&lt;/code&gt; es muy sencillo pero poderoso. Simplemente ubica el &lt;em&gt;working directory&lt;/em&gt; en la carpeta donde se encuentra el archivo PDF que queremos extraer y ejecuta el siguiente comando:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;df = tabula.read_pdf("archivo.pdf", encoding='utf-8', pages='1-1064')&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Cambia &lt;code&gt;archivo.pdf&lt;/code&gt; por el nombre del documento que te interesa (e incluye la ruta del archivo, si es necesario). En mi caso, este era un documento PDF con una tabla que ocupaba 1064 páginas (lo cual hacía poco factible la idea de etraer los datos de manera manual). Esto se expresa en el argumento &lt;code&gt;pages&lt;/code&gt;. El agrumento &lt;code&gt;encoding&lt;/code&gt; nos permite usar la codificación UTF-8, que es muy útil si estás trabajando con documentos en español.&lt;/p&gt;
-&lt;p&gt;Si el documento que obtienes de aquí es de una sóla página, entonces lo único que tienes que hacer para obtener la tabla en formato csv es ejecutar el siguiente código:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;df.to_csv('tabla.csv', encoding='utf-8')&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Cambia &lt;code&gt;tabla.csv&lt;/code&gt; por el nombre del documento que quieras obtener en formato csv. En mi caso, esto no resultó ser tan sencillo, pues el documento tenía 1064 páginas, por lo que &lt;code&gt;df[0]&lt;/code&gt;, por ejemplo, me mostraba en la consola la tabla correspondiente a la primera página del documento.&lt;/p&gt;
-&lt;h3 id="generar-múltiples-archivos-csv"&gt;Generar múltiples archivos csv&lt;/h3&gt;
-&lt;p&gt;Lo que hice ante esta situación fue generar en loop todos los archivos csv con un ciclo &lt;code&gt;for&lt;/code&gt; en python.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;for page in range(0,1064)&lt;/code&gt; &lt;code&gt;\t df[page].to_csv('tabla'+str(page)+'.csv', encoding='utf-8')&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Este ciclo genera todos los archivos en csv con todos los datos que requiero. El problema es que tal vez tener múltiples archivos no sea tan práctico como tener una base de datos unificada. Para esto, &lt;a href="https://www.freecodecamp.org/news/how-to-combine-multiple-csv-files-with-8-lines-of-code-265183e0854/"&gt;podemos unir los archivos usando &lt;code&gt;pd.concat()&lt;/code&gt; con la librería &lt;code&gt;pandas&lt;/code&gt;&lt;/a&gt;. Esto funciona si la base de datos es bien comportada.&lt;/p&gt;
-&lt;p&gt;Como este no fue mi caso (casi nunca lo es), usé un script sencillo también de python que hace un ciclo &lt;code&gt;for&lt;/code&gt; para extraer las filas de cada uno de los archivos y los unifica en un sólo &lt;code&gt;csv&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id="unificar-la-base-de-datos"&gt;Unificar la base de datos&lt;/h3&gt;
-&lt;p&gt;Aprovechando que las bases de datos se generan en un ciclo con diferentes archivos que tienen el mismo nombre y sólamente diferenciados por el número, usamos el siguiente script en Python.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;fout = open("tabla_consolidada.csv", "a")&lt;/code&gt; &lt;code&gt;for line in open("tabla0.csv"):&lt;/code&gt; &lt;code&gt;fout.write(line)&lt;/code&gt; &lt;code&gt;for num in range(1,1063):&lt;/code&gt; &lt;code&gt;\t f = open("tabla"+str(num)+".csv")&lt;/code&gt; &lt;code&gt;\t for line in f:&lt;/code&gt; &lt;code&gt;\t \tfout.write(line)&lt;/code&gt; &lt;code&gt;\t f.close()&lt;/code&gt; &lt;code&gt;fout.close()&lt;/code&gt;&lt;/p&gt;
-&lt;pre class="r distill-force-highlighting-css"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</description>
-      <distill:md5>5f8336dfee1134c5f49ef6a56b8fe82a</distill:md5>
-      <category>Python</category>
-      <category>Extracción de Datos</category>
-      <guid>http://marionomics.com/posts/2021-01-11-extaccin-de-tablas-desde-pdf-con-tabula-py-en-python</guid>
       <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
     </item>
   </channel>
