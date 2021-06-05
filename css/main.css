@@ -20,9 +20,24 @@ a {
   right: 0;
 }
 
+.home-events-button {
+  width: 150px;
+  height: 70px;
+  background-color: #376CC5;
+  display: grid;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+}
+
 .home-substack-signup{
   width: 70%;
   align-items: center;
+}
+
+.home-substack-signup p{
+  color: white;
+  text-align: center;
 }
 
 .grid-container{
