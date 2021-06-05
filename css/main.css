@@ -20,6 +20,11 @@ a {
   right: 0;
 }
 
+.home-substack-signup{
+  width: 70%;
+  align-items: center;
+}
+
 .grid-container{
   max-width: 980px;
   margin: auto;
